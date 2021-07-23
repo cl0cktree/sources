@@ -1,0 +1,115 @@
+//Layered
+
+// .layered > div{position:fixed;}
+// .layered > div:before{content:'';position:absolute;top:0;left:0;right:0;bottom:0;background-color:rgba(0,0,0,0);transition:background-color .2s;}
+// .layered > div.is-dimmed{overflow:auto;right:0;bottom:0;z-index:$level80;height:auto;}
+// .layered > div.is-dimmed:before{background-color:$dim-color;}
+
+.popup{display:flex;flex-flow:column;position:fixed;top:-9999px;left:0;z-index: $level80;width:100%;height:100%;background-color:$kb-ui11;}
+.popup .popup_buttons{display:none;margin-top:0;}
+.popup.is-active{top:0;}
+.popup.is-active .popup_buttons{display:block;}
+.popup_header{flex:0 0 48px;padding:12px 48px 11px 48px;text-align:center;}
+.popup_header .tit{@include text($size: $text01);display:inline-block;}
+.popup_contents{overflow:auto;flex:1;padding-bottom:24px;}
+.popup_contents.is-hold{overflow:hidden;height:calc(100vh - 48px)};
+.with-button .popup_contents{padding-bottom:60px;}
+.popup > .tit{display:block;padding:2px 0 15px 0;font-size:24px;font-weight:bold;white-space:nowrap;}
+.popup .btn-close {
+    @include iconCancel($size: 16px, $thick: 2px, $color: $kb-ui02, $padding: 4px, $position: absolute);
+	right: 24px;top: 12px;
+}
+
+/* Bottom Sheet */
+.bottom-sheet {position:fixed;left:0;right:0;bottom:-16px;z-index:$level90;max-height:calc(100% - 48px);padding-top:30px;border-top-left-radius: 12px;border-top-right-radius: 12px;background-color: $kb-ui11;transform:translateY(100%);transition:transform .2s, max-height .2s;box-shadow: 0px -6px 8px rgba(0, 0, 0, 0.08);}
+// .bottom-sheet.is-expanded,
+// .bottom-sheet.full-size{max-height:90%}
+.bottom-sheet.is-active{display:flex;flex-flow:column;transform:translateY(-16px);}
+.bottom-sheet .bottom-sheet_header {flex:0 0 24px;padding:0 48px 0 24px;margin-bottom:24px;}
+.bottom-sheet .bottom-sheet_header .tit {font-size:20px;font-weight: bold;line-height: 24px;}
+.bottom-sheet_contents{@include text;flex:1;overflow:auto;padding-bottom:24px;transition:all .1s;}
+.with-button .bottom-sheet_contents{padding-bottom:40px;}//버튼이 있는 경우(ui.js)
+// .bottom-sheet_contents.is-extended{max-height:80vh;}
+.bottom-sheet_contents .kb-sec:first-child{padding-top:0;}
+.bottom-sheet_buttons{display:flex;}
+.bottom-sheet_buttons > button,
+.bottom-sheet_buttons > a[role=button]{flex:1;border-radius:0;}
+.bottom-sheet_buttons > a [role=button]+ a[role=button],
+.bottom-sheet_buttons > button + a[role=button],
+.bottom-sheet_buttons > a[role=button] + button,
+.bottom-sheet_buttons > button + button{flex: 0 0 60%}
+.bottom-sheet_select{overflow:auto;max-height:100%;margin:0 24px;}
+.bottom-sheet_select li button{width:100%;padding:5px 25px 5px 0;text-align:left;font-size:16px;line-height:24px;}
+.bottom-sheet_select li.is-selected button{background:url(../images/common/checkbox_20_on@2x.png) no-repeat right 0 top 50%;background-size:20px;}
+.ios.homebar .bottom-sheet_buttons .btn-solid_sticky{height:86px;}
+.ios.homebar .bottom-sheet_buttons .btn-solid_sticky span{height:86px;line-height:66px;}
+
+.modal{display:none;position:fixed;left:50%;top:50%;z-index:$level100;transform:translate(-50%,-50%);width:calc(100vw - 48px);max-width:340px;max-height:calc(100% - 100px);padding-top:24px;background-color:$kb-ui11;border-radius:2px;}
+.modal.is-active{display:block;}
+.modal_header{min-height:28px;padding:0 24px;}
+.modal_header .tit{@include heading($size: 20px);display:inline-block;padding:0 2px;}
+.modal_contents{@include text($size: $text02);overflow:auto;max-height:calc(100vh - 252px);margin-top:16px;margin-bottom:32px;padding:0 24px;color:$kb-ui03;}
+.modal-not-today{padding:32px 24px}
+.modal_contents ul[data-style=list] li{color:$kb-ui03;}
+.modal_buttons {position: relative; top: 1px;}
+// .modal_contents ul[data-style=list] li:before{top:0.5em;width:3px;height:3px;border-radius:0;background-color:$kb-ui04}
+
+.bottom-sheet .btn-close,
+.modal .btn-close {
+    @include iconCancel($size: 16px, $thick: 2px, $color: $kb-ui05, $padding: 4px, $position: absolute);
+	right: 24px;top: 29px;
+}
+
+.popup .tab,
+.bottom-sheet .tab{margin-bottom:32px;}
+
+.modal .error-code{display:block;margin-top:12px;}
+
+
+//공통
+.popup[data-layered-name=popupAgreeCollectionUsePersonalInfo] .accordian > dt{padding-top:0;border-top:none;}
+.popup[data-layered-name=popupAgreeCollectionUsePersonalInfo] .accordian > dd{display:block;padding-top:24px;padding-bottom:24px;border-top-color:$kb-ui03}
+// .popup[data-layered-name^=popupEmployeeSearch] .employee-search-msg{@include text($text02);padding-top:28px;padding-bottom:28px;background-color:$kb-ui10;color:$kb-ui03;}
+// .popup[data-layered-name^=popupEmployeeSearch] .employee-search-msg .num{font-size:17px;color:$color-blue;}
+// .popup[data-layered-name^=popupEmployeeSearch] .employee-search-list > .tit,
+// .popup[data-layered-name^=popupEmployeeSearch] .branch-search-list > .tit{display:block;margin-top:48px;font-size:18px;font-weight:bold;}
+// .popup[data-layered-name^=popupEmployeeSearch] .employee-search-list li,
+// .popup[data-layered-name^=popupEmployeeSearch] .branch-search-list li{border-bottom:1px solid $kb-ui09;}
+// .popup[data-layered-name^=popupEmployeeSearch] .employee-search-list li button,
+// .popup[data-layered-name^=popupEmployeeSearch] .branch-search-list li button{display:block;width:100%;padding:20px 0;text-align:left;}
+// .popup[data-layered-name^=popupEmployeeSearch] .employee-search-list li button i,
+// .popup[data-layered-name^=popupEmployeeSearch] .branch-search-list li button i{float:right;}
+// .popup[data-layered-name^=popupEmployeeSearch] .employee-search-list li button span,
+// .popup[data-layered-name^=popupEmployeeSearch] .branch-search-list li button span{font-weight:bold;font-size:18px;}
+// .popup[data-layered-name^=popupEmployeeSearch] .employee-search-list .no-data,
+// .popup[data-layered-name^=popupEmployeeSearch] .branch-search-list .no-data{margin-top:100px;}
+// .popup[data-layered-name^=popupEmployeeSearch] .is-branch-search .employee-search-list,
+// .popup[data-layered-name^=popupEmployeeSearch] .is-branch-search .employee{display:none;}
+// .popup[data-layered-name^=popupEmployeeSearch] .is-employee-search .branch,
+// .popup[data-layered-name^=popupEmployeeSearch] .is-employee-search .branch-search-list{display:none;}
+
+[data-page-name^=employeeSearch] .employee-search-msg{@include text($text02);padding-top:28px;padding-bottom:28px;background-color:$kb-ui10;color:$kb-ui03;}
+[data-page-name^=employeeSearch] .employee-search-msg .num{font-size:17px;color:$color-blue;}
+[data-page-name^=employeeSearch] .employee-search-list > .tit,
+[data-page-name^=employeeSearch] .branch-search-list > .tit{display:block;margin-top:48px;font-size:18px;font-weight:bold;}
+[data-page-name^=employeeSearch] .employee-search-list li,
+[data-page-name^=employeeSearch] .branch-search-list li{border-bottom:1px solid $kb-ui09;}
+[data-page-name^=employeeSearch] .employee-search-list li button,
+[data-page-name^=employeeSearch] .branch-search-list li button{display:block;width:100%;padding:20px 0;text-align:left;}
+[data-page-name^=employeeSearch] .employee-search-list li button i,
+[data-page-name^=employeeSearch] .branch-search-list li button i{float:right;}
+[data-page-name^=employeeSearch] .employee-search-list li button span,
+[data-page-name^=employeeSearch] .branch-search-list li button span{font-weight:bold;font-size:18px;}
+[data-page-name^=employeeSearch] .employee-search-list .no-data,
+[data-page-name^=employeeSearch] .branch-search-list .no-data{margin-top:100px;}
+
+[data-page-name^=employeeSearch].is-branch-search .employee-search-list,
+[data-page-name^=employeeSearch].is-branch-search .employee{display:none;}
+[data-page-name^=employeeSearch].is-employee-search .branch,
+[data-page-name^=employeeSearch].is-employee-search .branch-search-list{display:none;}
+.bottopage[data-le-name=bsCalendar] .bottom-sheet_contents{padding-bottom:36px;}
+
+.modal[data-layered-name^=modalNotice] .modal_contents{max-height:calc(100vh - 340px);margin-bottom:0;padding-bottom:32px;}
+
+
+.bottom-sheet[data-layered-name=bsOtherLogin] .select-list li i:first-child{margin-right:10px;}

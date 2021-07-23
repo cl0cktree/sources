@@ -1,0 +1,78 @@
+//보험
+
+.asset-insurance .top-summary{padding-bottom:20px;}
+.asset-insurance .warranty-details{padding-top:32px;position:relative;}
+.asset-insurance .my-insurance-diagnosis{padding-top:32px;padding-bottom:32px;padding-left:0;padding-right:0;}
+.asset-insurance .my-insurance-diagnosis .content-box{margin-left:24px;margin-right:24px;}
+
+.asset-insurance .best-list-con{padding-top:34px;padding-bottom:0;margin-top:0;}
+
+.warranty-details .h4{margin-bottom:24px;}
+.warranty-details .h4 + .btn-line{margin-bottom:8px;}
+.warranty-details .annotation-txt{@include text($size: 14px);color:$kb-ui04;}
+.warranty-details .annotation-txt strong{color:$kb-ui02;}
+.warranty-details .monthly-amount{justify-content:space-between;align-items:center;margin-top:20px;padding-top:20px;border-top:1px solid $kb-ui09;}
+.warranty-details .p-list{margin-top:48px;}
+.warranty-details .p-list .more-view-box dt{border-bottom:none;}
+.warranty-details .p-list .more-view-box.is-show dt{border-bottom:1px solid $kb-ui09;}
+.warranty-details .p-list .btn-hide-account{top:0;}
+.warranty-details .p-name .tag-label{vertical-align:2px;}
+.warranty-details .account{margin-top:4px;}
+.warranty-details .balance .amount{display:block;}
+.warranty-details .balance .amount + .amount{margin-top:8px;}
+.warranty-details .highcharts_column{display:flex;margin-bottom:16px;padding:28px 0;border-top:1px solid $kb-ui09;border-bottom:1px solid $kb-ui09;}
+.warranty-details .highcharts_column > div{flex:1;}
+.warranty-details .highcharts_column > div + div{margin-left:1em;}
+.warranty-details .btn-warranty-details{position:absolute;right:24px;top:32px;}
+.warranty-details .btn-warranty-reanalysis{margin-top:29px;}
+
+.my-insurance-diagnosis .h4{margin-left:24px;margin-right:24px;}
+.my-insurance-diagnosis .highcharts-box{margin-top:20px;}
+.my-insurance-diagnosis .highcharts-box .graph-area{padding:0;}
+.my-insurance-diagnosis-summary{margin-top:24px;}
+.my-insurance-diagnosis-summary p{@include text;}
+.my-insurance-diagnosis-summary > div{display:flex;margin-top:12px;padding:24px 0;text-align:center;border-radius:2px;background-color:#fdf8e4;}
+.my-insurance-diagnosis-summary > div p{flex:1;font-size:14px;color:$kb-ui03;}
+.my-insurance-diagnosis-summary > div p + p{border-left:1px solid $kb-ui07;}
+.my-insurance-diagnosis-summary > div p strong{display:block;margin-bottom:4px;font-weight:bold;font-size:20px;color:$kb-ui02;}
+.my-insurance-diagnosis-summary > div p .num{font-size:21px;}
+
+.my-insurance-diagnosis .graph-info{@include text;margin-bottom:24px;}
+.my-insurance-diagnosis .graph-info .btn-question{position:relative;top:-2px;}
+
+.bottom-sheet[data-layered-name=bsInsuranceProduct] .select-list > li + li{margin-top:0;}
+
+.guarantee-history-analysis-summary h2{@include text($size: $text01, $line-height:1)}
+.guarantee-history-analysis-summary div{@include text($size: $text02);margin-top:24px;}
+.guarantee-history-analysis-summary p{font-size:$text03;color:$kb-ui04;}
+.guarantee-history-analysis-chart{margin-top:24px;}
+.guarantee-history-analysis-chart .highcharts_column{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:flex-start;}
+.guarantee-history-analysis-chart .highcharts_column .insu-report-circles{width:calc(50% - 7px);border:1px solid $kb-ui09;padding: 38px 0 45px;}
+.guarantee-history-analysis-chart .highcharts_column .insu-report-circles .report-circle{margin:0 auto;}
+.guarantee-history-analysis-chart .highcharts_column + .highcharts_column{margin-top:14px;}
+.guarantee-traffic-light{margin-top:32px;}
+.guarantee-traffic-light .grid-list > li{width:calc(33.33% - 8px);margin-left:12px;padding:18px 0;background-color:$kb-ui10;text-align:center;font-weight:bold;}
+.guarantee-traffic-light .grid-list > li:after{display:inline-block;margin-top:12px;padding:8px 7px;font-size:14px;font-weight:bold;border:1px solid $kb-ui09;background-color:$kb-ui11;}
+.guarantee-traffic-light .grid-list > li[data-status=good]:after{content:'충분';color:$color-blue;}
+.guarantee-traffic-light .grid-list > li[data-status=caution]:after{content:'유의';color:$color-yellow-positive;}
+.guarantee-traffic-light .grid-list > li[data-status=short]:after{content:'부족';color:#d672f6;}
+.guarantee-traffic-light .grid-list > li:nth-child(3n + 1){margin-left:0;}
+.guarantee-traffic-light .grid-list > li:nth-child(n + 4){margin-top:12px;}
+
+.guarantee-support{margin-top:52px;}
+.guarantee-support .guarantee-support-list{margin-top:16px;}
+.guarantee-support-list > li + li{margin-top:20px;}
+
+.guarantee-history-analysis .recommend-prod{padding-top:48px;padding-bottom:0;border-bottom:none;}
+
+.bottom-sheet[data-layered-name=bsPersonInfoCollection] p{display:flex;margin-top:32px;}
+.bottom-sheet[data-layered-name=bsPersonInfoCollection] p .form-checkbox_24{flex:1;}
+.bottom-sheet[data-layered-name=bsPersonInfoCollection] p button{flex:0 0 24px;margin-left:10px;}
+
+.mo_account-info{display:block;position:relative;padding:26px 20px 25px 60px;border:1px solid $kb-ui09;}
+.mo_account-info .img-resize_32{position:absolute;left:19px}
+.mo_account-info .tit{@include text($size: $text02, $weight:bold);text-indent:2px;}
+.mo_account-info .desc{@include text($size: $text03);color:$kb-ui04;}
+.mo_account-info .tit + .desc{margin-top:8px;}
+
+

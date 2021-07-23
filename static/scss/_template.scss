@@ -1,0 +1,31 @@
+
+//NATIVE
+
+.tutorial{padding-bottom:0;}
+.tutorial .swiper-container{background-color:$kb-ui10;}
+.tutorial .swiper-slide{overflow:hidden;height:100vh;padding-top:8vh;background-color:$kb-ui10;}
+.tutorial h2{@include heading($size: 24px);width:250px;margin:0 auto;}
+.tutorial h2 + p{@include text;width:250px;margin:20px auto 0 auto;}
+.tutorial h2,
+.tutorial h2 + p{position:relative;z-index:1;}
+.tutorial .img{position:absolute;left:0;top:0px;z-index:0;}
+.tutorial .img img{width:100%;}
+.tutorial .sticky-bottom{position:absolute;bottom:9999px;}
+.tutorial .sticky-bottom .btn-area{opacity:0;transition:opacity .2s;}
+.tutorial .pagination{position:absolute;z-index:1;top:calc(8vh + 175px);left:50%;width:250px;transform:translate(-50%);font-size:0;}
+.tutorial .pagination span{display:inline-block;width:6px;height:6px;border-radius:50%;background-color:$kb-ui08;}
+.tutorial .pagination span + span{margin-left:10px;}
+.tutorial .pagination span.is-active{background-color:$color-yellow-negative;}
+.tutorial.is-complete .sticky-bottom{position:relative;bottom:0;padding-top:0;height:auto;}
+.tutorial.is-complete .sticky-bottom .btn-area{opacity:1;}
+
+.auth-access{padding-top:68px;}
+.auth-access h2{@include heading($size: 24px);}
+.auth-access .auth-access-list{margin-top:40px;}
+.auth-access .auth-access-list li{position:relative;padding-left:42px;}
+.auth-access .auth-access-list li + li{margin-top:32px;}
+.auth-access .auth-access-list li i{position:absolute;left:0;}
+.auth-access .auth-access-list li strong{display:block;font-weight:bold;line-height:32px;}
+.auth-access .auth-access-list li p{@include text($size: $text03);color:$kb-ui03;}
+.auth-access .sticky-bottom-menu{bottom:102px;}
+.ios.homebar .auth-access .sticky-bottom-menu{bottom:136px;}

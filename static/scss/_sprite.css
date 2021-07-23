@@ -1,0 +1,2492 @@
+/*
+Icon classes can be used entirely standalone. They are named after their original file names.
+
+Example usage in HTML:
+
+`display: block` sprite:
+<div class="icon-home"></div>
+
+To change `display` (e.g. `display: inline-block;`), we suggest using a common CSS class:
+
+// CSS
+.icon {
+  display: inline-block;
+}
+
+// HTML
+<i class="icon icon-home"></i>
+*/
+.icon-accordian-off {
+  background-image: url(../images/sprite/sprite.png);
+  background-position: -192px -152px;
+  width: 24px;
+  height: 24px;
+}
+.icon-accordian-on {
+  background-image: url(../images/sprite/sprite.png);
+  background-position: -268px -280px;
+  width: 24px;
+  height: 24px;
+}
+.icon-add-data_24 {
+  background-image: url(../images/sprite/sprite.png);
+  background-position: -302px -280px;
+  width: 24px;
+  height: 24px;
+}
+.icon-add_68 {
+  background-image: url(../images/sprite/sprite.png);
+  background-position: 0px 0px;
+  width: 68px;
+  height: 68px;
+}
+.icon-apartment_24 {
+  background-image: url(../images/sprite/sprite.png);
+  background-position: -336px -280px;
+  width: 24px;
+  height: 24px;
+}
+.icon-assets_24 {
+  background-image: url(../images/sprite/sprite.png);
+  background-position: -37px -320px;
+  width: 24px;
+  height: 24px;
+}
+.icon-back {
+  background-image: url(../images/sprite/sprite.png);
+  background-position: -71px -320px;
+  width: 24px;
+  height: 24px;
+}
+.icon-band {
+  background-image: url(../images/sprite/sprite.png);
+  background-position: -105px -320px;
+  width: 24px;
+  height: 24px;
+}
+.icon-band_48 {
+  background-image: url(../images/sprite/sprite.png);
+  background-position: -226px -61px;
+  width: 48px;
+  height: 48px;
+}
+.icon-bang_20_gray {
+  background-image: url(../images/sprite/sprite.png);
+  background-position: -565px -533px;
+  width: 20px;
+  height: 20px;
+}
+.icon-bang_20_red {
+  background-image: url(../images/sprite/sprite.png);
+  background-position: 0px -563px;
+  width: 20px;
+  height: 20px;
+}
+.icon-bang_20_wh {
+  background-image: url(../images/sprite/sprite.png);
+  background-position: -30px -563px;
+  width: 20px;
+  height: 20px;
+}
+.icon-bang_24_bk {
+  background-image: url(../images/sprite/sprite.png);
+  background-position: -139px -320px;
+  width: 24px;
+  height: 24px;
+}
+.icon-bang_28_bk {
+  background-image: url(../images/sprite/sprite.png);
+  background-position: -78px -280px;
+  width: 28px;
+  height: 28px;
+}
+.icon-bank-account_20 {
+  background-image: url(../images/sprite/sprite.png);
+  background-position: -60px -563px;
+  width: 20px;
+  height: 20px;
+}
+.icon-bell2_24 {
+  background-image: url(../images/sprite/sprite.png);
+  background-position: -173px -320px;
+  width: 24px;
+  height: 24px;
+}
+.icon-bell3_24 {
+  background-image: url(../images/sprite/sprite.png);
+  background-position: -207px -320px;
+  width: 24px;
+  height: 24px;
+}
+.icon-bell_24 {
+  background-image: url(../images/sprite/sprite.png);
+  background-position: -241px -320px;
+  width: 24px;
+  height: 24px;
+}
+.icon-calc_64 {
+  background-image: url(../images/sprite/sprite.png);
+  background-position: -78px 0px;
+  width: 64px;
+  height: 64px;
+}
+.icon-calendar {
+  background-image: url(../images/sprite/sprite.png);
+  background-position: -599px -210px;
+  width: 18px;
+  height: 18px;
+}
+.icon-calendar_20 {
+  background-image: url(../images/sprite/sprite.png);
+  background-position: -90px -563px;
+  width: 20px;
+  height: 20px;
+}
+.icon-calendar_20_bk {
+  background-image: url(../images/sprite/sprite.png);
+  background-position: -120px -563px;
+  width: 20px;
+  height: 20px;
+}
+.icon-call {
+  background-image: url(../images/sprite/sprite.png);
+  background-position: -275px -320px;
+  width: 24px;
+  height: 24px;
+}
+.icon-car_24 {
+  background-image: url(../images/sprite/sprite.png);
+  background-position: -309px -320px;
+  width: 24px;
+  height: 24px;
+}
+.icon-car_28 {
+  background-image: url(../images/sprite/sprite.png);
+  background-position: -116px -280px;
+  width: 28px;
+  height: 28px;
+}
+.icon-certificate-active {
+  background-image: url(../images/sprite/sprite.png);
+  background-position: -287px -26px;
+  width: 40px;
+  height: 40px;
+}
+.icon-certificate-expire {
+  background-image: url(../images/sprite/sprite.png);
+  background-position: -337px -26px;
+  width: 40px;
+  height: 40px;
+}
+.icon-certificate-none {
+  background-image: url(../images/sprite/sprite.png);
+  background-position: -287px -76px;
+  width: 40px;
+  height: 40px;
+}
+.icon-certificate {
+  background-image: url(../images/sprite/sprite.png);
+  background-position: -343px -320px;
+  width: 24px;
+  height: 24px;
+}
+.icon-chart-card {
+  background-image: url(../images/sprite/sprite.png);
+  background-position: 0px -78px;
+  width: 64px;
+  height: 64px;
+}
+.icon-classic-certificate {
+  background-image: url(../images/sprite/sprite.png);
+  background-position: 0px -359px;
+  width: 24px;
+  height: 24px;
+}
+.icon-clock {
+  background-image: url(../images/sprite/sprite.png);
+  background-position: -34px -359px;
+  width: 24px;
+  height: 24px;
+}
+.icon-cloud-certificate {
+  background-image: url(../images/sprite/sprite.png);
+  background-position: -68px -359px;
+  width: 24px;
+  height: 24px;
+}
+.icon-coin-won {
+  background-image: url(../images/sprite/sprite.png);
+  background-position: -102px -359px;
+  width: 24px;
+  height: 24px;
+}
+.icon-comment {
+  background-image: url(../images/sprite/sprite.png);
+  background-position: -565px -505px;
+  width: 24px;
+  height: 18px;
+}
+.icon-complete_60 {
+  background-image: url(../images/sprite/sprite.png);
+  background-position: 0px -152px;
+  width: 60px;
+  height: 60px;
+}
+.icon-connected {
+  background-image: url(../images/sprite/sprite.png);
+  background-position: -136px -359px;
+  width: 24px;
+  height: 24px;
+}
+.icon-copy {
+  background-image: url(../images/sprite/sprite.png);
+  background-position: -150px -563px;
+  width: 20px;
+  height: 20px;
+}
+.icon-currency_24 {
+  background-image: url(../images/sprite/sprite.png);
+  background-position: -170px -359px;
+  width: 24px;
+  height: 24px;
+}
+.icon-data-clear_24 {
+  background-image: url(../images/sprite/sprite.png);
+  background-position: -204px -359px;
+  width: 24px;
+  height: 24px;
+}
+.icon-debt_24 {
+  background-image: url(../images/sprite/sprite.png);
+  background-position: -238px -359px;
+  width: 24px;
+  height: 24px;
+}
+.icon-detail-view_24 {
+  background-image: url(../images/sprite/sprite.png);
+  background-position: -272px -359px;
+  width: 24px;
+  height: 24px;
+}
+.icon-doc_24 {
+  background-image: url(../images/sprite/sprite.png);
+  background-position: -306px -359px;
+  width: 24px;
+  height: 24px;
+}
+.icon-domestic {
+  background-image: url(../images/sprite/sprite.png);
+  background-position: -340px -359px;
+  width: 24px;
+  height: 24px;
+}
+.icon-down {
+  background-image: url(../images/sprite/sprite.png);
+  background-position: -395px 0px;
+  width: 24px;
+  height: 24px;
+}
+.icon-earth {
+  background-image: url(../images/sprite/sprite.png);
+  background-position: -395px -34px;
+  width: 24px;
+  height: 24px;
+}
+.icon-eraser {
+  background-image: url(../images/sprite/sprite.png);
+  background-position: -180px -563px;
+  width: 20px;
+  height: 20px;
+}
+.icon-estate_24 {
+  background-image: url(../images/sprite/sprite.png);
+  background-position: -395px -68px;
+  width: 24px;
+  height: 24px;
+}
+.icon-expense-4th-insurance {
+  background-image: url(../images/sprite/sprite.png);
+  background-position: -395px -102px;
+  width: 24px;
+  height: 24px;
+}
+.icon-expense-aso {
+  background-image: url(../images/sprite/sprite.png);
+  background-position: -395px -136px;
+  width: 24px;
+  height: 24px;
+}
+.icon-expense-auto-charge {
+  background-image: url(../images/sprite/sprite.png);
+  background-position: -395px -170px;
+  width: 24px;
+  height: 24px;
+}
+.icon-expense-baby {
+  background-image: url(../images/sprite/sprite.png);
+  background-position: -395px -204px;
+  width: 24px;
+  height: 24px;
+}
+.icon-expense-beauty {
+  background-image: url(../images/sprite/sprite.png);
+  background-position: -395px -238px;
+  width: 24px;
+  height: 24px;
+}
+.icon-expense-business {
+  background-image: url(../images/sprite/sprite.png);
+  background-position: -395px -272px;
+  width: 24px;
+  height: 24px;
+}
+.icon-expense-cafe {
+  background-image: url(../images/sprite/sprite.png);
+  background-position: -395px -306px;
+  width: 24px;
+  height: 24px;
+}
+.icon-expense-car {
+  background-image: url(../images/sprite/sprite.png);
+  background-position: -395px -340px;
+  width: 24px;
+  height: 24px;
+}
+.icon-expense-care {
+  background-image: url(../images/sprite/sprite.png);
+  background-position: 0px -393px;
+  width: 24px;
+  height: 24px;
+}
+.icon-expense-culture {
+  background-image: url(../images/sprite/sprite.png);
+  background-position: -34px -393px;
+  width: 24px;
+  height: 24px;
+}
+.icon-expense-delivery {
+  background-image: url(../images/sprite/sprite.png);
+  background-position: -68px -393px;
+  width: 24px;
+  height: 24px;
+}
+.icon-expense-deposit {
+  background-image: url(../images/sprite/sprite.png);
+  background-position: -102px -393px;
+  width: 24px;
+  height: 24px;
+}
+.icon-expense-donation {
+  background-image: url(../images/sprite/sprite.png);
+  background-position: -136px -393px;
+  width: 24px;
+  height: 24px;
+}
+.icon-expense-drink {
+  background-image: url(../images/sprite/sprite.png);
+  background-position: -170px -393px;
+  width: 24px;
+  height: 24px;
+}
+.icon-expense-edu {
+  background-image: url(../images/sprite/sprite.png);
+  background-position: -204px -393px;
+  width: 24px;
+  height: 24px;
+}
+.icon-expense-etc {
+  background-image: url(../images/sprite/sprite.png);
+  background-position: -238px -393px;
+  width: 24px;
+  height: 24px;
+}
+.icon-expense-fashion {
+  background-image: url(../images/sprite/sprite.png);
+  background-position: -272px -393px;
+  width: 24px;
+  height: 24px;
+}
+.icon-expense-finance-income {
+  background-image: url(../images/sprite/sprite.png);
+  background-position: -306px -393px;
+  width: 24px;
+  height: 24px;
+}
+.icon-expense-finance {
+  background-image: url(../images/sprite/sprite.png);
+  background-position: -340px -393px;
+  width: 24px;
+  height: 24px;
+}
+.icon-expense-food {
+  background-image: url(../images/sprite/sprite.png);
+  background-position: -374px -393px;
+  width: 24px;
+  height: 24px;
+}
+.icon-expense-insurance {
+  background-image: url(../images/sprite/sprite.png);
+  background-position: -429px 0px;
+  width: 24px;
+  height: 24px;
+}
+.icon-expense-investment {
+  background-image: url(../images/sprite/sprite.png);
+  background-position: -429px -34px;
+  width: 24px;
+  height: 24px;
+}
+.icon-expense-lease {
+  background-image: url(../images/sprite/sprite.png);
+  background-position: -429px -68px;
+  width: 24px;
+  height: 24px;
+}
+.icon-expense-living {
+  background-image: url(../images/sprite/sprite.png);
+  background-position: -429px -102px;
+  width: 24px;
+  height: 24px;
+}
+.icon-expense-loan {
+  background-image: url(../images/sprite/sprite.png);
+  background-position: -429px -136px;
+  width: 24px;
+  height: 24px;
+}
+.icon-expense-maintenance-fees {
+  background-image: url(../images/sprite/sprite.png);
+  background-position: -429px -170px;
+  width: 24px;
+  height: 24px;
+}
+.icon-expense-medical {
+  background-image: url(../images/sprite/sprite.png);
+  background-position: -429px -204px;
+  width: 24px;
+  height: 24px;
+}
+.icon-expense-membership-fee {
+  background-image: url(../images/sprite/sprite.png);
+  background-position: -429px -238px;
+  width: 24px;
+  height: 24px;
+}
+.icon-expense-pet {
+  background-image: url(../images/sprite/sprite.png);
+  background-position: -429px -272px;
+  width: 24px;
+  height: 24px;
+}
+.icon-expense-pocket-money {
+  background-image: url(../images/sprite/sprite.png);
+  background-position: -429px -306px;
+  width: 24px;
+  height: 24px;
+}
+.icon-expense-rental {
+  background-image: url(../images/sprite/sprite.png);
+  background-position: -429px -340px;
+  width: 24px;
+  height: 24px;
+}
+.icon-expense-salary {
+  background-image: url(../images/sprite/sprite.png);
+  background-position: -429px -374px;
+  width: 24px;
+  height: 24px;
+}
+.icon-expense-saving {
+  background-image: url(../images/sprite/sprite.png);
+  background-position: 0px -427px;
+  width: 24px;
+  height: 24px;
+}
+.icon-expense-shopping {
+  background-image: url(../images/sprite/sprite.png);
+  background-position: -34px -427px;
+  width: 24px;
+  height: 24px;
+}
+.icon-expense-tell {
+  background-image: url(../images/sprite/sprite.png);
+  background-position: -68px -427px;
+  width: 24px;
+  height: 24px;
+}
+.icon-expense-traffic {
+  background-image: url(../images/sprite/sprite.png);
+  background-position: -102px -427px;
+  width: 24px;
+  height: 24px;
+}
+.icon-expense-travel {
+  background-image: url(../images/sprite/sprite.png);
+  background-position: -136px -427px;
+  width: 24px;
+  height: 24px;
+}
+.icon-expense-user-category01 {
+  background-image: url(../images/sprite/sprite.png);
+  background-position: -170px -427px;
+  width: 24px;
+  height: 24px;
+}
+.icon-expense-user-category02 {
+  background-image: url(../images/sprite/sprite.png);
+  background-position: -204px -427px;
+  width: 24px;
+  height: 24px;
+}
+.icon-expense-user-category03 {
+  background-image: url(../images/sprite/sprite.png);
+  background-position: -238px -427px;
+  width: 24px;
+  height: 24px;
+}
+.icon-expense-user-category04 {
+  background-image: url(../images/sprite/sprite.png);
+  background-position: -272px -427px;
+  width: 24px;
+  height: 24px;
+}
+.icon-expense-user-category05 {
+  background-image: url(../images/sprite/sprite.png);
+  background-position: -306px -427px;
+  width: 24px;
+  height: 24px;
+}
+.icon-expense-user-category06 {
+  background-image: url(../images/sprite/sprite.png);
+  background-position: -340px -427px;
+  width: 24px;
+  height: 24px;
+}
+.icon-expense-user-category07 {
+  background-image: url(../images/sprite/sprite.png);
+  background-position: -374px -427px;
+  width: 24px;
+  height: 24px;
+}
+.icon-expense-user-category08 {
+  background-image: url(../images/sprite/sprite.png);
+  background-position: -408px -427px;
+  width: 24px;
+  height: 24px;
+}
+.icon-expense-user-category09 {
+  background-image: url(../images/sprite/sprite.png);
+  background-position: -463px 0px;
+  width: 24px;
+  height: 24px;
+}
+.icon-expense-user-category10 {
+  background-image: url(../images/sprite/sprite.png);
+  background-position: -463px -34px;
+  width: 24px;
+  height: 24px;
+}
+.icon-expense-user-category11 {
+  background-image: url(../images/sprite/sprite.png);
+  background-position: -463px -68px;
+  width: 24px;
+  height: 24px;
+}
+.icon-expense-user-category12 {
+  background-image: url(../images/sprite/sprite.png);
+  background-position: -463px -102px;
+  width: 24px;
+  height: 24px;
+}
+.icon-expense-user-category13 {
+  background-image: url(../images/sprite/sprite.png);
+  background-position: -463px -136px;
+  width: 24px;
+  height: 24px;
+}
+.icon-expense-user-category14 {
+  background-image: url(../images/sprite/sprite.png);
+  background-position: -463px -170px;
+  width: 24px;
+  height: 24px;
+}
+.icon-expense-user-category15 {
+  background-image: url(../images/sprite/sprite.png);
+  background-position: -463px -204px;
+  width: 24px;
+  height: 24px;
+}
+.icon-expense-user-category16 {
+  background-image: url(../images/sprite/sprite.png);
+  background-position: -463px -238px;
+  width: 24px;
+  height: 24px;
+}
+.icon-expense-user-category17 {
+  background-image: url(../images/sprite/sprite.png);
+  background-position: -463px -272px;
+  width: 24px;
+  height: 24px;
+}
+.icon-expense-user-category18 {
+  background-image: url(../images/sprite/sprite.png);
+  background-position: -463px -306px;
+  width: 24px;
+  height: 24px;
+}
+.icon-expense-user-category19 {
+  background-image: url(../images/sprite/sprite.png);
+  background-position: -463px -340px;
+  width: 24px;
+  height: 24px;
+}
+.icon-expense-user-category20 {
+  background-image: url(../images/sprite/sprite.png);
+  background-position: -463px -374px;
+  width: 24px;
+  height: 24px;
+}
+.icon-expense-user-category21 {
+  background-image: url(../images/sprite/sprite.png);
+  background-position: -463px -408px;
+  width: 24px;
+  height: 24px;
+}
+.icon-expense-user-category22 {
+  background-image: url(../images/sprite/sprite.png);
+  background-position: 0px -461px;
+  width: 24px;
+  height: 24px;
+}
+.icon-expense-user-category23 {
+  background-image: url(../images/sprite/sprite.png);
+  background-position: -34px -461px;
+  width: 24px;
+  height: 24px;
+}
+.icon-expense-user-category24 {
+  background-image: url(../images/sprite/sprite.png);
+  background-position: -68px -461px;
+  width: 24px;
+  height: 24px;
+}
+.icon-expense-user-category25 {
+  background-image: url(../images/sprite/sprite.png);
+  background-position: -102px -461px;
+  width: 24px;
+  height: 24px;
+}
+.icon-expense-user-category26 {
+  background-image: url(../images/sprite/sprite.png);
+  background-position: -136px -461px;
+  width: 24px;
+  height: 24px;
+}
+.icon-expense-user-category27 {
+  background-image: url(../images/sprite/sprite.png);
+  background-position: -170px -461px;
+  width: 24px;
+  height: 24px;
+}
+.icon-expense-user-category28 {
+  background-image: url(../images/sprite/sprite.png);
+  background-position: -204px -461px;
+  width: 24px;
+  height: 24px;
+}
+.icon-expense-user-category29 {
+  background-image: url(../images/sprite/sprite.png);
+  background-position: -238px -461px;
+  width: 24px;
+  height: 24px;
+}
+.icon-expense-user-category30 {
+  background-image: url(../images/sprite/sprite.png);
+  background-position: -272px -461px;
+  width: 24px;
+  height: 24px;
+}
+.icon-expense-user-category31 {
+  background-image: url(../images/sprite/sprite.png);
+  background-position: -306px -461px;
+  width: 24px;
+  height: 24px;
+}
+.icon-expense-user-category32 {
+  background-image: url(../images/sprite/sprite.png);
+  background-position: -340px -461px;
+  width: 24px;
+  height: 24px;
+}
+.icon-expense-user-category33 {
+  background-image: url(../images/sprite/sprite.png);
+  background-position: -374px -461px;
+  width: 24px;
+  height: 24px;
+}
+.icon-expense-user-category34 {
+  background-image: url(../images/sprite/sprite.png);
+  background-position: -408px -461px;
+  width: 24px;
+  height: 24px;
+}
+.icon-expense-user-category35 {
+  background-image: url(../images/sprite/sprite.png);
+  background-position: -442px -461px;
+  width: 24px;
+  height: 24px;
+}
+.icon-expense-user-category36 {
+  background-image: url(../images/sprite/sprite.png);
+  background-position: -497px 0px;
+  width: 24px;
+  height: 24px;
+}
+.icon-expense-user-category37 {
+  background-image: url(../images/sprite/sprite.png);
+  background-position: -497px -34px;
+  width: 24px;
+  height: 24px;
+}
+.icon-expense-user-category38 {
+  background-image: url(../images/sprite/sprite.png);
+  background-position: -497px -68px;
+  width: 24px;
+  height: 24px;
+}
+.icon-expense-user-category39 {
+  background-image: url(../images/sprite/sprite.png);
+  background-position: -497px -102px;
+  width: 24px;
+  height: 24px;
+}
+.icon-expense-user-category40 {
+  background-image: url(../images/sprite/sprite.png);
+  background-position: -497px -136px;
+  width: 24px;
+  height: 24px;
+}
+.icon-expense-user-category41 {
+  background-image: url(../images/sprite/sprite.png);
+  background-position: -497px -170px;
+  width: 24px;
+  height: 24px;
+}
+.icon-expense-user-category42 {
+  background-image: url(../images/sprite/sprite.png);
+  background-position: -497px -204px;
+  width: 24px;
+  height: 24px;
+}
+.icon-expense-user-category43 {
+  background-image: url(../images/sprite/sprite.png);
+  background-position: -497px -238px;
+  width: 24px;
+  height: 24px;
+}
+.icon-expense-user-category44 {
+  background-image: url(../images/sprite/sprite.png);
+  background-position: -497px -272px;
+  width: 24px;
+  height: 24px;
+}
+.icon-expense-user-category45 {
+  background-image: url(../images/sprite/sprite.png);
+  background-position: -497px -306px;
+  width: 24px;
+  height: 24px;
+}
+.icon-expense-utility-bill {
+  background-image: url(../images/sprite/sprite.png);
+  background-position: -497px -340px;
+  width: 24px;
+  height: 24px;
+}
+.icon-expense-vod {
+  background-image: url(../images/sprite/sprite.png);
+  background-position: -497px -374px;
+  width: 24px;
+  height: 24px;
+}
+.icon-expense-withdraw {
+  background-image: url(../images/sprite/sprite.png);
+  background-position: -497px -408px;
+  width: 24px;
+  height: 24px;
+}
+.icon-expense_10 {
+  background-image: url(../images/sprite/sprite.png);
+  background-position: -599px -313px;
+  width: 10px;
+  height: 10px;
+}
+.icon-expense_15 {
+  background-image: url(../images/sprite/sprite.png);
+  background-position: -599px -238px;
+  width: 15px;
+  height: 15px;
+}
+.icon-facebook_48 {
+  background-image: url(../images/sprite/sprite.png);
+  background-position: -226px -119px;
+  width: 48px;
+  height: 48px;
+}
+.icon-fb {
+  background-image: url(../images/sprite/sprite.png);
+  background-position: -497px -442px;
+  width: 24px;
+  height: 24px;
+}
+.icon-file {
+  background-image: url(../images/sprite/sprite.png);
+  background-position: 0px -495px;
+  width: 24px;
+  height: 24px;
+}
+.icon-filter_20 {
+  background-image: url(../images/sprite/sprite.png);
+  background-position: -210px -563px;
+  width: 20px;
+  height: 20px;
+}
+.icon-filter_24 {
+  background-image: url(../images/sprite/sprite.png);
+  background-position: -34px -495px;
+  width: 24px;
+  height: 24px;
+}
+.icon-finace_24 {
+  background-image: url(../images/sprite/sprite.png);
+  background-position: -68px -495px;
+  width: 24px;
+  height: 24px;
+}
+.icon-finance_28 {
+  background-image: url(../images/sprite/sprite.png);
+  background-position: -154px -280px;
+  width: 28px;
+  height: 28px;
+}
+.icon-folder {
+  background-image: url(../images/sprite/sprite.png);
+  background-position: -287px -126px;
+  width: 32px;
+  height: 32px;
+}
+.icon-foler {
+  background-image: url(../images/sprite/sprite.png);
+  background-position: -329px -126px;
+  width: 32px;
+  height: 32px;
+}
+.icon-function_24 {
+  background-image: url(../images/sprite/sprite.png);
+  background-position: -102px -495px;
+  width: 24px;
+  height: 24px;
+}
+.icon-fund_24 {
+  background-image: url(../images/sprite/sprite.png);
+  background-position: -136px -495px;
+  width: 24px;
+  height: 24px;
+}
+.icon-funnel {
+  background-image: url(../images/sprite/sprite.png);
+  background-position: -337px -76px;
+  width: 40px;
+  height: 40px;
+}
+.icon-gift_24 {
+  background-image: url(../images/sprite/sprite.png);
+  background-position: -170px -495px;
+  width: 24px;
+  height: 24px;
+}
+.icon-go_detail_24 {
+  background-image: url(../images/sprite/sprite.png);
+  background-position: -306px -495px;
+  width: 24px;
+  height: 24px;
+}
+.icon-goal_compare {
+  background-image: url(../images/sprite/sprite.png);
+  background-position: -204px -495px;
+  width: 24px;
+  height: 24px;
+}
+.icon-goal_grudge {
+  background-image: url(../images/sprite/sprite.png);
+  background-position: -238px -495px;
+  width: 24px;
+  height: 24px;
+}
+.icon-goal_spend {
+  background-image: url(../images/sprite/sprite.png);
+  background-position: -272px -495px;
+  width: 24px;
+  height: 24px;
+}
+.icon-graph_24 {
+  background-image: url(../images/sprite/sprite.png);
+  background-position: -340px -495px;
+  width: 24px;
+  height: 24px;
+}
+.icon-guarantee_24 {
+  background-image: url(../images/sprite/sprite.png);
+  background-position: -374px -495px;
+  width: 24px;
+  height: 24px;
+}
+.icon-half_coin {
+  background-image: url(../images/sprite/sprite.png);
+  background-position: -70px -152px;
+  width: 51px;
+  height: 51px;
+}
+.icon-half_pig {
+  background-image: url(../images/sprite/sprite.png);
+  background-position: -131px -152px;
+  width: 51px;
+  height: 51px;
+}
+.icon-half_pig_27 {
+  background-image: url(../images/sprite/sprite.png);
+  background-position: 0px -320px;
+  width: 27px;
+  height: 29px;
+}
+.icon-half_star {
+  background-image: url(../images/sprite/sprite.png);
+  background-position: -226px 0px;
+  width: 51px;
+  height: 51px;
+}
+.icon-half_star_24 {
+  background-image: url(../images/sprite/sprite.png);
+  background-position: -408px -495px;
+  width: 24px;
+  height: 24px;
+}
+.icon-house-chimney_24 {
+  background-image: url(../images/sprite/sprite.png);
+  background-position: -442px -495px;
+  width: 24px;
+  height: 24px;
+}
+.icon-house_28 {
+  background-image: url(../images/sprite/sprite.png);
+  background-position: -192px -280px;
+  width: 28px;
+  height: 28px;
+}
+.icon-income_10 {
+  background-image: url(../images/sprite/sprite.png);
+  background-position: -599px -333px;
+  width: 10px;
+  height: 10px;
+}
+.icon-income_15 {
+  background-image: url(../images/sprite/sprite.png);
+  background-position: -599px -263px;
+  width: 15px;
+  height: 15px;
+}
+.icon-info_24 {
+  background-image: url(../images/sprite/sprite.png);
+  background-position: 0px -222px;
+  width: 48px;
+  height: 48px;
+}
+.icon-insurance_24 {
+  background-image: url(../images/sprite/sprite.png);
+  background-position: -476px -495px;
+  width: 24px;
+  height: 24px;
+}
+.icon-interest_rate_24 {
+  background-image: url(../images/sprite/sprite.png);
+  background-position: -531px 0px;
+  width: 24px;
+  height: 24px;
+}
+.icon-kakao {
+  background-image: url(../images/sprite/sprite.png);
+  background-position: -531px -34px;
+  width: 24px;
+  height: 24px;
+}
+.icon-kakao_48 {
+  background-image: url(../images/sprite/sprite.png);
+  background-position: -58px -222px;
+  width: 48px;
+  height: 48px;
+}
+.icon-kb-certificate {
+  background-image: url(../images/sprite/sprite.png);
+  background-position: -531px -68px;
+  width: 24px;
+  height: 24px;
+}
+.icon-liability_28 {
+  background-image: url(../images/sprite/sprite.png);
+  background-position: -230px -280px;
+  width: 28px;
+  height: 28px;
+}
+.icon-link_20 {
+  background-image: url(../images/sprite/sprite.png);
+  background-position: -240px -563px;
+  width: 20px;
+  height: 20px;
+}
+.icon-link_24 {
+  background-image: url(../images/sprite/sprite.png);
+  background-position: -531px -102px;
+  width: 24px;
+  height: 24px;
+}
+.icon-link_b_24 {
+  background-image: url(../images/sprite/sprite.png);
+  background-position: -531px -136px;
+  width: 24px;
+  height: 24px;
+}
+.icon-link_w_24 {
+  background-image: url(../images/sprite/sprite.png);
+  background-position: -531px -170px;
+  width: 24px;
+  height: 24px;
+}
+.icon-list_20 {
+  background-image: url(../images/sprite/sprite.png);
+  background-position: -270px -563px;
+  width: 20px;
+  height: 20px;
+}
+.icon-logo_mymoney {
+  background-image: url(../images/sprite/sprite.png);
+  background-position: -287px 0px;
+  width: 98px;
+  height: 16px;
+}
+.icon-market_conditions_24 {
+  background-image: url(../images/sprite/sprite.png);
+  background-position: -531px -204px;
+  width: 24px;
+  height: 24px;
+}
+.icon-media_24 {
+  background-image: url(../images/sprite/sprite.png);
+  background-position: -531px -238px;
+  width: 24px;
+  height: 24px;
+}
+.icon-menu-grey_24 {
+  background-image: url(../images/sprite/sprite.png);
+  background-position: -531px -272px;
+  width: 24px;
+  height: 24px;
+}
+.icon-menu {
+  background-image: url(../images/sprite/sprite.png);
+  background-position: -531px -306px;
+  width: 24px;
+  height: 24px;
+}
+.icon-mn_asset {
+  background-image: url(../images/sprite/sprite.png);
+  background-position: -329px -210px;
+  width: 30px;
+  height: 30px;
+}
+.icon-mn_mydata {
+  background-image: url(../images/sprite/sprite.png);
+  background-position: -226px -177px;
+  width: 30px;
+  height: 30px;
+}
+.icon-mn_notice {
+  background-image: url(../images/sprite/sprite.png);
+  background-position: -232px -222px;
+  width: 30px;
+  height: 30px;
+}
+.icon-mn_report {
+  background-image: url(../images/sprite/sprite.png);
+  background-position: 0px -280px;
+  width: 30px;
+  height: 30px;
+}
+.icon-more_24 {
+  background-image: url(../images/sprite/sprite.png);
+  background-position: -531px -340px;
+  width: 24px;
+  height: 24px;
+}
+.icon-more_top_24 {
+  background-image: url(../images/sprite/sprite.png);
+  background-position: -531px -374px;
+  width: 24px;
+  height: 24px;
+}
+.icon-move {
+  background-image: url(../images/sprite/sprite.png);
+  background-position: -300px -563px;
+  width: 20px;
+  height: 20px;
+}
+.icon-movie_24 {
+  background-image: url(../images/sprite/sprite.png);
+  background-position: -531px -408px;
+  width: 24px;
+  height: 24px;
+}
+.icon-myfundata-culture {
+  background-image: url(../images/sprite/sprite.png);
+  background-position: -531px -442px;
+  width: 24px;
+  height: 24px;
+}
+.icon-myfundata-future {
+  background-image: url(../images/sprite/sprite.png);
+  background-position: -531px -476px;
+  width: 24px;
+  height: 24px;
+}
+.icon-myfundata-house {
+  background-image: url(../images/sprite/sprite.png);
+  background-position: 0px -529px;
+  width: 24px;
+  height: 24px;
+}
+.icon-myfundata-safebank {
+  background-image: url(../images/sprite/sprite.png);
+  background-position: -34px -529px;
+  width: 24px;
+  height: 24px;
+}
+.icon-myfundata-safebox {
+  background-image: url(../images/sprite/sprite.png);
+  background-position: -68px -529px;
+  width: 24px;
+  height: 24px;
+}
+.icon-myfundata-stock {
+  background-image: url(../images/sprite/sprite.png);
+  background-position: -102px -529px;
+  width: 24px;
+  height: 24px;
+}
+.icon-next-month {
+  background-image: url(../images/sprite/sprite.png);
+  background-position: -330px -563px;
+  width: 20px;
+  height: 20px;
+}
+.icon-pagination_first {
+  background-image: url(../images/sprite/sprite.png);
+  background-position: -360px -563px;
+  width: 20px;
+  height: 20px;
+}
+.icon-pagination_last {
+  background-image: url(../images/sprite/sprite.png);
+  background-position: -390px -563px;
+  width: 20px;
+  height: 20px;
+}
+.icon-pagination_next {
+  background-image: url(../images/sprite/sprite.png);
+  background-position: -420px -563px;
+  width: 20px;
+  height: 20px;
+}
+.icon-pagination_prev {
+  background-image: url(../images/sprite/sprite.png);
+  background-position: -450px -563px;
+  width: 20px;
+  height: 20px;
+}
+.icon-pay_24 {
+  background-image: url(../images/sprite/sprite.png);
+  background-position: -170px -529px;
+  width: 24px;
+  height: 24px;
+}
+.icon-payment_24 {
+  background-image: url(../images/sprite/sprite.png);
+  background-position: -136px -529px;
+  width: 24px;
+  height: 24px;
+}
+.icon-pdf_20 {
+  background-image: url(../images/sprite/sprite.png);
+  background-position: -480px -563px;
+  width: 20px;
+  height: 20px;
+}
+.icon-pension_24 {
+  background-image: url(../images/sprite/sprite.png);
+  background-position: -204px -529px;
+  width: 24px;
+  height: 24px;
+}
+.icon-period_24 {
+  background-image: url(../images/sprite/sprite.png);
+  background-position: -238px -529px;
+  width: 24px;
+  height: 24px;
+}
+.icon-personal_24 {
+  background-image: url(../images/sprite/sprite.png);
+  background-position: -272px -529px;
+  width: 24px;
+  height: 24px;
+}
+.icon-phone {
+  background-image: url(../images/sprite/sprite.png);
+  background-position: -287px -168px;
+  width: 32px;
+  height: 32px;
+}
+.icon-pick_64 {
+  background-image: url(../images/sprite/sprite.png);
+  background-position: -74px -78px;
+  width: 64px;
+  height: 64px;
+}
+.icon-pigbank_23 {
+  background-image: url(../images/sprite/sprite.png);
+  background-position: -565px -474px;
+  width: 23px;
+  height: 21px;
+}
+.icon-plus_20 {
+  background-image: url(../images/sprite/sprite.png);
+  background-position: -510px -563px;
+  width: 20px;
+  height: 20px;
+}
+.icon-plus_24 {
+  background-image: url(../images/sprite/sprite.png);
+  background-position: -306px -529px;
+  width: 24px;
+  height: 24px;
+}
+.icon-point {
+  background-image: url(../images/sprite/sprite.png);
+  background-position: -340px -529px;
+  width: 24px;
+  height: 24px;
+}
+.icon-portrait {
+  background-image: url(../images/sprite/sprite.png);
+  background-position: -374px -529px;
+  width: 24px;
+  height: 24px;
+}
+.icon-prev-month {
+  background-image: url(../images/sprite/sprite.png);
+  background-position: -540px -563px;
+  width: 20px;
+  height: 20px;
+}
+.icon-quiz_64 {
+  background-image: url(../images/sprite/sprite.png);
+  background-position: -152px 0px;
+  width: 64px;
+  height: 64px;
+}
+.icon-register_24 {
+  background-image: url(../images/sprite/sprite.png);
+  background-position: -408px -529px;
+  width: 24px;
+  height: 24px;
+}
+.icon-report_24 {
+  background-image: url(../images/sprite/sprite.png);
+  background-position: -442px -529px;
+  width: 24px;
+  height: 24px;
+}
+.icon-reregister_24 {
+  background-image: url(../images/sprite/sprite.png);
+  background-position: -476px -529px;
+  width: 24px;
+  height: 24px;
+}
+.icon-reset_20 {
+  background-image: url(../images/sprite/sprite.png);
+  background-position: -599px 0px;
+  width: 20px;
+  height: 20px;
+}
+.icon-routine {
+  background-image: url(../images/sprite/sprite.png);
+  background-position: -510px -529px;
+  width: 24px;
+  height: 24px;
+}
+.icon-save_24 {
+  background-image: url(../images/sprite/sprite.png);
+  background-position: -565px 0px;
+  width: 24px;
+  height: 24px;
+}
+.icon-search {
+  background-image: url(../images/sprite/sprite.png);
+  background-position: -565px -442px;
+  width: 22px;
+  height: 22px;
+}
+.icon-search_24 {
+  background-image: url(../images/sprite/sprite.png);
+  background-position: -565px -34px;
+  width: 24px;
+  height: 24px;
+}
+.icon-search_24_gray {
+  background-image: url(../images/sprite/sprite.png);
+  background-position: -565px -68px;
+  width: 24px;
+  height: 24px;
+}
+.icon-setting_24 {
+  background-image: url(../images/sprite/sprite.png);
+  background-position: -565px -102px;
+  width: 24px;
+  height: 24px;
+}
+.icon-setting_menu_24 {
+  background-image: url(../images/sprite/sprite.png);
+  background-position: -565px -136px;
+  width: 24px;
+  height: 24px;
+}
+.icon-share {
+  background-image: url(../images/sprite/sprite.png);
+  background-position: -565px -170px;
+  width: 24px;
+  height: 24px;
+}
+.icon-shield {
+  background-image: url(../images/sprite/sprite.png);
+  background-position: -565px -204px;
+  width: 24px;
+  height: 24px;
+}
+.icon-sms {
+  background-image: url(../images/sprite/sprite.png);
+  background-position: -565px -238px;
+  width: 24px;
+  height: 24px;
+}
+.icon-sms_48 {
+  background-image: url(../images/sprite/sprite.png);
+  background-position: -116px -222px;
+  width: 48px;
+  height: 48px;
+}
+.icon-star-arrow_24 {
+  background-image: url(../images/sprite/sprite.png);
+  background-position: -565px -272px;
+  width: 24px;
+  height: 24px;
+}
+.icon-star {
+  background-image: url(../images/sprite/sprite.png);
+  background-position: -329px -168px;
+  width: 32px;
+  height: 32px;
+}
+.icon-sticker-close_20 {
+  background-image: url(../images/sprite/sprite.png);
+  background-position: -599px -30px;
+  width: 20px;
+  height: 20px;
+}
+.icon-stock_24 {
+  background-image: url(../images/sprite/sprite.png);
+  background-position: -565px -306px;
+  width: 24px;
+  height: 24px;
+}
+.icon-stock_64 {
+  background-image: url(../images/sprite/sprite.png);
+  background-position: -152px -74px;
+  width: 64px;
+  height: 64px;
+}
+.icon-tie {
+  background-image: url(../images/sprite/sprite.png);
+  background-position: -599px -60px;
+  width: 20px;
+  height: 20px;
+}
+.icon-tip_24 {
+  background-image: url(../images/sprite/sprite.png);
+  background-position: -565px -340px;
+  width: 24px;
+  height: 24px;
+}
+.icon-tooltip-que {
+  background-image: url(../images/sprite/sprite.png);
+  background-position: -287px -210px;
+  width: 32px;
+  height: 32px;
+}
+.icon-tooltip-que_20 {
+  background-image: url(../images/sprite/sprite.png);
+  background-position: -599px -90px;
+  width: 20px;
+  height: 20px;
+}
+.icon-transfer_10 {
+  background-image: url(../images/sprite/sprite.png);
+  background-position: -599px -353px;
+  width: 10px;
+  height: 10px;
+}
+.icon-transfer_15 {
+  background-image: url(../images/sprite/sprite.png);
+  background-position: -599px -288px;
+  width: 15px;
+  height: 15px;
+}
+.icon-trash {
+  background-image: url(../images/sprite/sprite.png);
+  background-position: -599px -120px;
+  width: 20px;
+  height: 20px;
+}
+.icon-trophy {
+  background-image: url(../images/sprite/sprite.png);
+  background-position: -40px -280px;
+  width: 28px;
+  height: 29px;
+}
+.icon-trust_24 {
+  background-image: url(../images/sprite/sprite.png);
+  background-position: -565px -374px;
+  width: 24px;
+  height: 24px;
+}
+.icon-twitter {
+  background-image: url(../images/sprite/sprite.png);
+  background-position: -565px -408px;
+  width: 24px;
+  height: 24px;
+}
+.icon-type_agency_20 {
+  background-image: url(../images/sprite/sprite.png);
+  background-position: -599px -150px;
+  width: 20px;
+  height: 20px;
+}
+.icon-type_product_20 {
+  background-image: url(../images/sprite/sprite.png);
+  background-position: -599px -180px;
+  width: 20px;
+  height: 20px;
+}
+.icon-url-copy_48 {
+  background-image: url(../images/sprite/sprite.png);
+  background-position: -174px -222px;
+  width: 48px;
+  height: 48px;
+}
+
+@media (-webkit-min-device-pixel-ratio: 2),
+       (min-resolution: 192dpi) {
+  .icon-accordian-off {
+    background-image: url(../images/sprite/sprite@2x.png);
+    background-size: 619px 583px;
+  }
+  .icon-accordian-on {
+    background-image: url(../images/sprite/sprite@2x.png);
+    background-size: 619px 583px;
+  }
+  .icon-add-data_24 {
+    background-image: url(../images/sprite/sprite@2x.png);
+    background-size: 619px 583px;
+  }
+  .icon-add_68 {
+    background-image: url(../images/sprite/sprite@2x.png);
+    background-size: 619px 583px;
+  }
+  .icon-apartment_24 {
+    background-image: url(../images/sprite/sprite@2x.png);
+    background-size: 619px 583px;
+  }
+  .icon-assets_24 {
+    background-image: url(../images/sprite/sprite@2x.png);
+    background-size: 619px 583px;
+  }
+  .icon-back {
+    background-image: url(../images/sprite/sprite@2x.png);
+    background-size: 619px 583px;
+  }
+  .icon-band {
+    background-image: url(../images/sprite/sprite@2x.png);
+    background-size: 619px 583px;
+  }
+  .icon-band_48 {
+    background-image: url(../images/sprite/sprite@2x.png);
+    background-size: 619px 583px;
+  }
+  .icon-bang_20_gray {
+    background-image: url(../images/sprite/sprite@2x.png);
+    background-size: 619px 583px;
+  }
+  .icon-bang_20_red {
+    background-image: url(../images/sprite/sprite@2x.png);
+    background-size: 619px 583px;
+  }
+  .icon-bang_20_wh {
+    background-image: url(../images/sprite/sprite@2x.png);
+    background-size: 619px 583px;
+  }
+  .icon-bang_24_bk {
+    background-image: url(../images/sprite/sprite@2x.png);
+    background-size: 619px 583px;
+  }
+  .icon-bang_28_bk {
+    background-image: url(../images/sprite/sprite@2x.png);
+    background-size: 619px 583px;
+  }
+  .icon-bank-account_20 {
+    background-image: url(../images/sprite/sprite@2x.png);
+    background-size: 619px 583px;
+  }
+  .icon-bell2_24 {
+    background-image: url(../images/sprite/sprite@2x.png);
+    background-size: 619px 583px;
+  }
+  .icon-bell3_24 {
+    background-image: url(../images/sprite/sprite@2x.png);
+    background-size: 619px 583px;
+  }
+  .icon-bell_24 {
+    background-image: url(../images/sprite/sprite@2x.png);
+    background-size: 619px 583px;
+  }
+  .icon-calc_64 {
+    background-image: url(../images/sprite/sprite@2x.png);
+    background-size: 619px 583px;
+  }
+  .icon-calendar {
+    background-image: url(../images/sprite/sprite@2x.png);
+    background-size: 619px 583px;
+  }
+  .icon-calendar_20 {
+    background-image: url(../images/sprite/sprite@2x.png);
+    background-size: 619px 583px;
+  }
+  .icon-calendar_20_bk {
+    background-image: url(../images/sprite/sprite@2x.png);
+    background-size: 619px 583px;
+  }
+  .icon-call {
+    background-image: url(../images/sprite/sprite@2x.png);
+    background-size: 619px 583px;
+  }
+  .icon-car_24 {
+    background-image: url(../images/sprite/sprite@2x.png);
+    background-size: 619px 583px;
+  }
+  .icon-car_28 {
+    background-image: url(../images/sprite/sprite@2x.png);
+    background-size: 619px 583px;
+  }
+  .icon-certificate-active {
+    background-image: url(../images/sprite/sprite@2x.png);
+    background-size: 619px 583px;
+  }
+  .icon-certificate-expire {
+    background-image: url(../images/sprite/sprite@2x.png);
+    background-size: 619px 583px;
+  }
+  .icon-certificate-none {
+    background-image: url(../images/sprite/sprite@2x.png);
+    background-size: 619px 583px;
+  }
+  .icon-certificate {
+    background-image: url(../images/sprite/sprite@2x.png);
+    background-size: 619px 583px;
+  }
+  .icon-chart-card {
+    background-image: url(../images/sprite/sprite@2x.png);
+    background-size: 619px 583px;
+  }
+  .icon-classic-certificate {
+    background-image: url(../images/sprite/sprite@2x.png);
+    background-size: 619px 583px;
+  }
+  .icon-clock {
+    background-image: url(../images/sprite/sprite@2x.png);
+    background-size: 619px 583px;
+  }
+  .icon-cloud-certificate {
+    background-image: url(../images/sprite/sprite@2x.png);
+    background-size: 619px 583px;
+  }
+  .icon-coin-won {
+    background-image: url(../images/sprite/sprite@2x.png);
+    background-size: 619px 583px;
+  }
+  .icon-comment {
+    background-image: url(../images/sprite/sprite@2x.png);
+    background-size: 619px 583px;
+  }
+  .icon-complete_60 {
+    background-image: url(../images/sprite/sprite@2x.png);
+    background-size: 619px 583px;
+  }
+  .icon-connected {
+    background-image: url(../images/sprite/sprite@2x.png);
+    background-size: 619px 583px;
+  }
+  .icon-copy {
+    background-image: url(../images/sprite/sprite@2x.png);
+    background-size: 619px 583px;
+  }
+  .icon-currency_24 {
+    background-image: url(../images/sprite/sprite@2x.png);
+    background-size: 619px 583px;
+  }
+  .icon-data-clear_24 {
+    background-image: url(../images/sprite/sprite@2x.png);
+    background-size: 619px 583px;
+  }
+  .icon-debt_24 {
+    background-image: url(../images/sprite/sprite@2x.png);
+    background-size: 619px 583px;
+  }
+  .icon-detail-view_24 {
+    background-image: url(../images/sprite/sprite@2x.png);
+    background-size: 619px 583px;
+  }
+  .icon-doc_24 {
+    background-image: url(../images/sprite/sprite@2x.png);
+    background-size: 619px 583px;
+  }
+  .icon-domestic {
+    background-image: url(../images/sprite/sprite@2x.png);
+    background-size: 619px 583px;
+  }
+  .icon-down {
+    background-image: url(../images/sprite/sprite@2x.png);
+    background-size: 619px 583px;
+  }
+  .icon-earth {
+    background-image: url(../images/sprite/sprite@2x.png);
+    background-size: 619px 583px;
+  }
+  .icon-eraser {
+    background-image: url(../images/sprite/sprite@2x.png);
+    background-size: 619px 583px;
+  }
+  .icon-estate_24 {
+    background-image: url(../images/sprite/sprite@2x.png);
+    background-size: 619px 583px;
+  }
+  .icon-expense-4th-insurance {
+    background-image: url(../images/sprite/sprite@2x.png);
+    background-size: 619px 583px;
+  }
+  .icon-expense-aso {
+    background-image: url(../images/sprite/sprite@2x.png);
+    background-size: 619px 583px;
+  }
+  .icon-expense-auto-charge {
+    background-image: url(../images/sprite/sprite@2x.png);
+    background-size: 619px 583px;
+  }
+  .icon-expense-baby {
+    background-image: url(../images/sprite/sprite@2x.png);
+    background-size: 619px 583px;
+  }
+  .icon-expense-beauty {
+    background-image: url(../images/sprite/sprite@2x.png);
+    background-size: 619px 583px;
+  }
+  .icon-expense-business {
+    background-image: url(../images/sprite/sprite@2x.png);
+    background-size: 619px 583px;
+  }
+  .icon-expense-cafe {
+    background-image: url(../images/sprite/sprite@2x.png);
+    background-size: 619px 583px;
+  }
+  .icon-expense-car {
+    background-image: url(../images/sprite/sprite@2x.png);
+    background-size: 619px 583px;
+  }
+  .icon-expense-care {
+    background-image: url(../images/sprite/sprite@2x.png);
+    background-size: 619px 583px;
+  }
+  .icon-expense-culture {
+    background-image: url(../images/sprite/sprite@2x.png);
+    background-size: 619px 583px;
+  }
+  .icon-expense-delivery {
+    background-image: url(../images/sprite/sprite@2x.png);
+    background-size: 619px 583px;
+  }
+  .icon-expense-deposit {
+    background-image: url(../images/sprite/sprite@2x.png);
+    background-size: 619px 583px;
+  }
+  .icon-expense-donation {
+    background-image: url(../images/sprite/sprite@2x.png);
+    background-size: 619px 583px;
+  }
+  .icon-expense-drink {
+    background-image: url(../images/sprite/sprite@2x.png);
+    background-size: 619px 583px;
+  }
+  .icon-expense-edu {
+    background-image: url(../images/sprite/sprite@2x.png);
+    background-size: 619px 583px;
+  }
+  .icon-expense-etc {
+    background-image: url(../images/sprite/sprite@2x.png);
+    background-size: 619px 583px;
+  }
+  .icon-expense-fashion {
+    background-image: url(../images/sprite/sprite@2x.png);
+    background-size: 619px 583px;
+  }
+  .icon-expense-finance-income {
+    background-image: url(../images/sprite/sprite@2x.png);
+    background-size: 619px 583px;
+  }
+  .icon-expense-finance {
+    background-image: url(../images/sprite/sprite@2x.png);
+    background-size: 619px 583px;
+  }
+  .icon-expense-food {
+    background-image: url(../images/sprite/sprite@2x.png);
+    background-size: 619px 583px;
+  }
+  .icon-expense-insurance {
+    background-image: url(../images/sprite/sprite@2x.png);
+    background-size: 619px 583px;
+  }
+  .icon-expense-investment {
+    background-image: url(../images/sprite/sprite@2x.png);
+    background-size: 619px 583px;
+  }
+  .icon-expense-lease {
+    background-image: url(../images/sprite/sprite@2x.png);
+    background-size: 619px 583px;
+  }
+  .icon-expense-living {
+    background-image: url(../images/sprite/sprite@2x.png);
+    background-size: 619px 583px;
+  }
+  .icon-expense-loan {
+    background-image: url(../images/sprite/sprite@2x.png);
+    background-size: 619px 583px;
+  }
+  .icon-expense-maintenance-fees {
+    background-image: url(../images/sprite/sprite@2x.png);
+    background-size: 619px 583px;
+  }
+  .icon-expense-medical {
+    background-image: url(../images/sprite/sprite@2x.png);
+    background-size: 619px 583px;
+  }
+  .icon-expense-membership-fee {
+    background-image: url(../images/sprite/sprite@2x.png);
+    background-size: 619px 583px;
+  }
+  .icon-expense-pet {
+    background-image: url(../images/sprite/sprite@2x.png);
+    background-size: 619px 583px;
+  }
+  .icon-expense-pocket-money {
+    background-image: url(../images/sprite/sprite@2x.png);
+    background-size: 619px 583px;
+  }
+  .icon-expense-rental {
+    background-image: url(../images/sprite/sprite@2x.png);
+    background-size: 619px 583px;
+  }
+  .icon-expense-salary {
+    background-image: url(../images/sprite/sprite@2x.png);
+    background-size: 619px 583px;
+  }
+  .icon-expense-saving {
+    background-image: url(../images/sprite/sprite@2x.png);
+    background-size: 619px 583px;
+  }
+  .icon-expense-shopping {
+    background-image: url(../images/sprite/sprite@2x.png);
+    background-size: 619px 583px;
+  }
+  .icon-expense-tell {
+    background-image: url(../images/sprite/sprite@2x.png);
+    background-size: 619px 583px;
+  }
+  .icon-expense-traffic {
+    background-image: url(../images/sprite/sprite@2x.png);
+    background-size: 619px 583px;
+  }
+  .icon-expense-travel {
+    background-image: url(../images/sprite/sprite@2x.png);
+    background-size: 619px 583px;
+  }
+  .icon-expense-user-category01 {
+    background-image: url(../images/sprite/sprite@2x.png);
+    background-size: 619px 583px;
+  }
+  .icon-expense-user-category02 {
+    background-image: url(../images/sprite/sprite@2x.png);
+    background-size: 619px 583px;
+  }
+  .icon-expense-user-category03 {
+    background-image: url(../images/sprite/sprite@2x.png);
+    background-size: 619px 583px;
+  }
+  .icon-expense-user-category04 {
+    background-image: url(../images/sprite/sprite@2x.png);
+    background-size: 619px 583px;
+  }
+  .icon-expense-user-category05 {
+    background-image: url(../images/sprite/sprite@2x.png);
+    background-size: 619px 583px;
+  }
+  .icon-expense-user-category06 {
+    background-image: url(../images/sprite/sprite@2x.png);
+    background-size: 619px 583px;
+  }
+  .icon-expense-user-category07 {
+    background-image: url(../images/sprite/sprite@2x.png);
+    background-size: 619px 583px;
+  }
+  .icon-expense-user-category08 {
+    background-image: url(../images/sprite/sprite@2x.png);
+    background-size: 619px 583px;
+  }
+  .icon-expense-user-category09 {
+    background-image: url(../images/sprite/sprite@2x.png);
+    background-size: 619px 583px;
+  }
+  .icon-expense-user-category10 {
+    background-image: url(../images/sprite/sprite@2x.png);
+    background-size: 619px 583px;
+  }
+  .icon-expense-user-category11 {
+    background-image: url(../images/sprite/sprite@2x.png);
+    background-size: 619px 583px;
+  }
+  .icon-expense-user-category12 {
+    background-image: url(../images/sprite/sprite@2x.png);
+    background-size: 619px 583px;
+  }
+  .icon-expense-user-category13 {
+    background-image: url(../images/sprite/sprite@2x.png);
+    background-size: 619px 583px;
+  }
+  .icon-expense-user-category14 {
+    background-image: url(../images/sprite/sprite@2x.png);
+    background-size: 619px 583px;
+  }
+  .icon-expense-user-category15 {
+    background-image: url(../images/sprite/sprite@2x.png);
+    background-size: 619px 583px;
+  }
+  .icon-expense-user-category16 {
+    background-image: url(../images/sprite/sprite@2x.png);
+    background-size: 619px 583px;
+  }
+  .icon-expense-user-category17 {
+    background-image: url(../images/sprite/sprite@2x.png);
+    background-size: 619px 583px;
+  }
+  .icon-expense-user-category18 {
+    background-image: url(../images/sprite/sprite@2x.png);
+    background-size: 619px 583px;
+  }
+  .icon-expense-user-category19 {
+    background-image: url(../images/sprite/sprite@2x.png);
+    background-size: 619px 583px;
+  }
+  .icon-expense-user-category20 {
+    background-image: url(../images/sprite/sprite@2x.png);
+    background-size: 619px 583px;
+  }
+  .icon-expense-user-category21 {
+    background-image: url(../images/sprite/sprite@2x.png);
+    background-size: 619px 583px;
+  }
+  .icon-expense-user-category22 {
+    background-image: url(../images/sprite/sprite@2x.png);
+    background-size: 619px 583px;
+  }
+  .icon-expense-user-category23 {
+    background-image: url(../images/sprite/sprite@2x.png);
+    background-size: 619px 583px;
+  }
+  .icon-expense-user-category24 {
+    background-image: url(../images/sprite/sprite@2x.png);
+    background-size: 619px 583px;
+  }
+  .icon-expense-user-category25 {
+    background-image: url(../images/sprite/sprite@2x.png);
+    background-size: 619px 583px;
+  }
+  .icon-expense-user-category26 {
+    background-image: url(../images/sprite/sprite@2x.png);
+    background-size: 619px 583px;
+  }
+  .icon-expense-user-category27 {
+    background-image: url(../images/sprite/sprite@2x.png);
+    background-size: 619px 583px;
+  }
+  .icon-expense-user-category28 {
+    background-image: url(../images/sprite/sprite@2x.png);
+    background-size: 619px 583px;
+  }
+  .icon-expense-user-category29 {
+    background-image: url(../images/sprite/sprite@2x.png);
+    background-size: 619px 583px;
+  }
+  .icon-expense-user-category30 {
+    background-image: url(../images/sprite/sprite@2x.png);
+    background-size: 619px 583px;
+  }
+  .icon-expense-user-category31 {
+    background-image: url(../images/sprite/sprite@2x.png);
+    background-size: 619px 583px;
+  }
+  .icon-expense-user-category32 {
+    background-image: url(../images/sprite/sprite@2x.png);
+    background-size: 619px 583px;
+  }
+  .icon-expense-user-category33 {
+    background-image: url(../images/sprite/sprite@2x.png);
+    background-size: 619px 583px;
+  }
+  .icon-expense-user-category34 {
+    background-image: url(../images/sprite/sprite@2x.png);
+    background-size: 619px 583px;
+  }
+  .icon-expense-user-category35 {
+    background-image: url(../images/sprite/sprite@2x.png);
+    background-size: 619px 583px;
+  }
+  .icon-expense-user-category36 {
+    background-image: url(../images/sprite/sprite@2x.png);
+    background-size: 619px 583px;
+  }
+  .icon-expense-user-category37 {
+    background-image: url(../images/sprite/sprite@2x.png);
+    background-size: 619px 583px;
+  }
+  .icon-expense-user-category38 {
+    background-image: url(../images/sprite/sprite@2x.png);
+    background-size: 619px 583px;
+  }
+  .icon-expense-user-category39 {
+    background-image: url(../images/sprite/sprite@2x.png);
+    background-size: 619px 583px;
+  }
+  .icon-expense-user-category40 {
+    background-image: url(../images/sprite/sprite@2x.png);
+    background-size: 619px 583px;
+  }
+  .icon-expense-user-category41 {
+    background-image: url(../images/sprite/sprite@2x.png);
+    background-size: 619px 583px;
+  }
+  .icon-expense-user-category42 {
+    background-image: url(../images/sprite/sprite@2x.png);
+    background-size: 619px 583px;
+  }
+  .icon-expense-user-category43 {
+    background-image: url(../images/sprite/sprite@2x.png);
+    background-size: 619px 583px;
+  }
+  .icon-expense-user-category44 {
+    background-image: url(../images/sprite/sprite@2x.png);
+    background-size: 619px 583px;
+  }
+  .icon-expense-user-category45 {
+    background-image: url(../images/sprite/sprite@2x.png);
+    background-size: 619px 583px;
+  }
+  .icon-expense-utility-bill {
+    background-image: url(../images/sprite/sprite@2x.png);
+    background-size: 619px 583px;
+  }
+  .icon-expense-vod {
+    background-image: url(../images/sprite/sprite@2x.png);
+    background-size: 619px 583px;
+  }
+  .icon-expense-withdraw {
+    background-image: url(../images/sprite/sprite@2x.png);
+    background-size: 619px 583px;
+  }
+  .icon-expense_10 {
+    background-image: url(../images/sprite/sprite@2x.png);
+    background-size: 619px 583px;
+  }
+  .icon-expense_15 {
+    background-image: url(../images/sprite/sprite@2x.png);
+    background-size: 619px 583px;
+  }
+  .icon-facebook_48 {
+    background-image: url(../images/sprite/sprite@2x.png);
+    background-size: 619px 583px;
+  }
+  .icon-fb {
+    background-image: url(../images/sprite/sprite@2x.png);
+    background-size: 619px 583px;
+  }
+  .icon-file {
+    background-image: url(../images/sprite/sprite@2x.png);
+    background-size: 619px 583px;
+  }
+  .icon-filter_20 {
+    background-image: url(../images/sprite/sprite@2x.png);
+    background-size: 619px 583px;
+  }
+  .icon-filter_24 {
+    background-image: url(../images/sprite/sprite@2x.png);
+    background-size: 619px 583px;
+  }
+  .icon-finace_24 {
+    background-image: url(../images/sprite/sprite@2x.png);
+    background-size: 619px 583px;
+  }
+  .icon-finance_28 {
+    background-image: url(../images/sprite/sprite@2x.png);
+    background-size: 619px 583px;
+  }
+  .icon-folder {
+    background-image: url(../images/sprite/sprite@2x.png);
+    background-size: 619px 583px;
+  }
+  .icon-foler {
+    background-image: url(../images/sprite/sprite@2x.png);
+    background-size: 619px 583px;
+  }
+  .icon-function_24 {
+    background-image: url(../images/sprite/sprite@2x.png);
+    background-size: 619px 583px;
+  }
+  .icon-fund_24 {
+    background-image: url(../images/sprite/sprite@2x.png);
+    background-size: 619px 583px;
+  }
+  .icon-funnel {
+    background-image: url(../images/sprite/sprite@2x.png);
+    background-size: 619px 583px;
+  }
+  .icon-gift_24 {
+    background-image: url(../images/sprite/sprite@2x.png);
+    background-size: 619px 583px;
+  }
+  .icon-go_detail_24 {
+    background-image: url(../images/sprite/sprite@2x.png);
+    background-size: 619px 583px;
+  }
+  .icon-goal_compare {
+    background-image: url(../images/sprite/sprite@2x.png);
+    background-size: 619px 583px;
+  }
+  .icon-goal_grudge {
+    background-image: url(../images/sprite/sprite@2x.png);
+    background-size: 619px 583px;
+  }
+  .icon-goal_spend {
+    background-image: url(../images/sprite/sprite@2x.png);
+    background-size: 619px 583px;
+  }
+  .icon-graph_24 {
+    background-image: url(../images/sprite/sprite@2x.png);
+    background-size: 619px 583px;
+  }
+  .icon-guarantee_24 {
+    background-image: url(../images/sprite/sprite@2x.png);
+    background-size: 619px 583px;
+  }
+  .icon-half_coin {
+    background-image: url(../images/sprite/sprite@2x.png);
+    background-size: 619px 583px;
+  }
+  .icon-half_pig {
+    background-image: url(../images/sprite/sprite@2x.png);
+    background-size: 619px 583px;
+  }
+  .icon-half_pig_27 {
+    background-image: url(../images/sprite/sprite@2x.png);
+    background-size: 619px 583px;
+  }
+  .icon-half_star {
+    background-image: url(../images/sprite/sprite@2x.png);
+    background-size: 619px 583px;
+  }
+  .icon-half_star_24 {
+    background-image: url(../images/sprite/sprite@2x.png);
+    background-size: 619px 583px;
+  }
+  .icon-house-chimney_24 {
+    background-image: url(../images/sprite/sprite@2x.png);
+    background-size: 619px 583px;
+  }
+  .icon-house_28 {
+    background-image: url(../images/sprite/sprite@2x.png);
+    background-size: 619px 583px;
+  }
+  .icon-income_10 {
+    background-image: url(../images/sprite/sprite@2x.png);
+    background-size: 619px 583px;
+  }
+  .icon-income_15 {
+    background-image: url(../images/sprite/sprite@2x.png);
+    background-size: 619px 583px;
+  }
+  .icon-info_24 {
+    background-image: url(../images/sprite/sprite@2x.png);
+    background-size: 619px 583px;
+  }
+  .icon-insurance_24 {
+    background-image: url(../images/sprite/sprite@2x.png);
+    background-size: 619px 583px;
+  }
+  .icon-interest_rate_24 {
+    background-image: url(../images/sprite/sprite@2x.png);
+    background-size: 619px 583px;
+  }
+  .icon-kakao {
+    background-image: url(../images/sprite/sprite@2x.png);
+    background-size: 619px 583px;
+  }
+  .icon-kakao_48 {
+    background-image: url(../images/sprite/sprite@2x.png);
+    background-size: 619px 583px;
+  }
+  .icon-kb-certificate {
+    background-image: url(../images/sprite/sprite@2x.png);
+    background-size: 619px 583px;
+  }
+  .icon-liability_28 {
+    background-image: url(../images/sprite/sprite@2x.png);
+    background-size: 619px 583px;
+  }
+  .icon-link_20 {
+    background-image: url(../images/sprite/sprite@2x.png);
+    background-size: 619px 583px;
+  }
+  .icon-link_24 {
+    background-image: url(../images/sprite/sprite@2x.png);
+    background-size: 619px 583px;
+  }
+  .icon-link_b_24 {
+    background-image: url(../images/sprite/sprite@2x.png);
+    background-size: 619px 583px;
+  }
+  .icon-link_w_24 {
+    background-image: url(../images/sprite/sprite@2x.png);
+    background-size: 619px 583px;
+  }
+  .icon-list_20 {
+    background-image: url(../images/sprite/sprite@2x.png);
+    background-size: 619px 583px;
+  }
+  .icon-logo_mymoney {
+    background-image: url(../images/sprite/sprite@2x.png);
+    background-size: 619px 583px;
+  }
+  .icon-market_conditions_24 {
+    background-image: url(../images/sprite/sprite@2x.png);
+    background-size: 619px 583px;
+  }
+  .icon-media_24 {
+    background-image: url(../images/sprite/sprite@2x.png);
+    background-size: 619px 583px;
+  }
+  .icon-menu-grey_24 {
+    background-image: url(../images/sprite/sprite@2x.png);
+    background-size: 619px 583px;
+  }
+  .icon-menu {
+    background-image: url(../images/sprite/sprite@2x.png);
+    background-size: 619px 583px;
+  }
+  .icon-mn_asset {
+    background-image: url(../images/sprite/sprite@2x.png);
+    background-size: 619px 583px;
+  }
+  .icon-mn_mydata {
+    background-image: url(../images/sprite/sprite@2x.png);
+    background-size: 619px 583px;
+  }
+  .icon-mn_notice {
+    background-image: url(../images/sprite/sprite@2x.png);
+    background-size: 619px 583px;
+  }
+  .icon-mn_report {
+    background-image: url(../images/sprite/sprite@2x.png);
+    background-size: 619px 583px;
+  }
+  .icon-more_24 {
+    background-image: url(../images/sprite/sprite@2x.png);
+    background-size: 619px 583px;
+  }
+  .icon-more_top_24 {
+    background-image: url(../images/sprite/sprite@2x.png);
+    background-size: 619px 583px;
+  }
+  .icon-move {
+    background-image: url(../images/sprite/sprite@2x.png);
+    background-size: 619px 583px;
+  }
+  .icon-movie_24 {
+    background-image: url(../images/sprite/sprite@2x.png);
+    background-size: 619px 583px;
+  }
+  .icon-myfundata-culture {
+    background-image: url(../images/sprite/sprite@2x.png);
+    background-size: 619px 583px;
+  }
+  .icon-myfundata-future {
+    background-image: url(../images/sprite/sprite@2x.png);
+    background-size: 619px 583px;
+  }
+  .icon-myfundata-house {
+    background-image: url(../images/sprite/sprite@2x.png);
+    background-size: 619px 583px;
+  }
+  .icon-myfundata-safebank {
+    background-image: url(../images/sprite/sprite@2x.png);
+    background-size: 619px 583px;
+  }
+  .icon-myfundata-safebox {
+    background-image: url(../images/sprite/sprite@2x.png);
+    background-size: 619px 583px;
+  }
+  .icon-myfundata-stock {
+    background-image: url(../images/sprite/sprite@2x.png);
+    background-size: 619px 583px;
+  }
+  .icon-next-month {
+    background-image: url(../images/sprite/sprite@2x.png);
+    background-size: 619px 583px;
+  }
+  .icon-pagination_first {
+    background-image: url(../images/sprite/sprite@2x.png);
+    background-size: 619px 583px;
+  }
+  .icon-pagination_last {
+    background-image: url(../images/sprite/sprite@2x.png);
+    background-size: 619px 583px;
+  }
+  .icon-pagination_next {
+    background-image: url(../images/sprite/sprite@2x.png);
+    background-size: 619px 583px;
+  }
+  .icon-pagination_prev {
+    background-image: url(../images/sprite/sprite@2x.png);
+    background-size: 619px 583px;
+  }
+  .icon-pay_24 {
+    background-image: url(../images/sprite/sprite@2x.png);
+    background-size: 619px 583px;
+  }
+  .icon-payment_24 {
+    background-image: url(../images/sprite/sprite@2x.png);
+    background-size: 619px 583px;
+  }
+  .icon-pdf_20 {
+    background-image: url(../images/sprite/sprite@2x.png);
+    background-size: 619px 583px;
+  }
+  .icon-pension_24 {
+    background-image: url(../images/sprite/sprite@2x.png);
+    background-size: 619px 583px;
+  }
+  .icon-period_24 {
+    background-image: url(../images/sprite/sprite@2x.png);
+    background-size: 619px 583px;
+  }
+  .icon-personal_24 {
+    background-image: url(../images/sprite/sprite@2x.png);
+    background-size: 619px 583px;
+  }
+  .icon-phone {
+    background-image: url(../images/sprite/sprite@2x.png);
+    background-size: 619px 583px;
+  }
+  .icon-pick_64 {
+    background-image: url(../images/sprite/sprite@2x.png);
+    background-size: 619px 583px;
+  }
+  .icon-pigbank_23 {
+    background-image: url(../images/sprite/sprite@2x.png);
+    background-size: 619px 583px;
+  }
+  .icon-plus_20 {
+    background-image: url(../images/sprite/sprite@2x.png);
+    background-size: 619px 583px;
+  }
+  .icon-plus_24 {
+    background-image: url(../images/sprite/sprite@2x.png);
+    background-size: 619px 583px;
+  }
+  .icon-point {
+    background-image: url(../images/sprite/sprite@2x.png);
+    background-size: 619px 583px;
+  }
+  .icon-portrait {
+    background-image: url(../images/sprite/sprite@2x.png);
+    background-size: 619px 583px;
+  }
+  .icon-prev-month {
+    background-image: url(../images/sprite/sprite@2x.png);
+    background-size: 619px 583px;
+  }
+  .icon-quiz_64 {
+    background-image: url(../images/sprite/sprite@2x.png);
+    background-size: 619px 583px;
+  }
+  .icon-register_24 {
+    background-image: url(../images/sprite/sprite@2x.png);
+    background-size: 619px 583px;
+  }
+  .icon-report_24 {
+    background-image: url(../images/sprite/sprite@2x.png);
+    background-size: 619px 583px;
+  }
+  .icon-reregister_24 {
+    background-image: url(../images/sprite/sprite@2x.png);
+    background-size: 619px 583px;
+  }
+  .icon-reset_20 {
+    background-image: url(../images/sprite/sprite@2x.png);
+    background-size: 619px 583px;
+  }
+  .icon-routine {
+    background-image: url(../images/sprite/sprite@2x.png);
+    background-size: 619px 583px;
+  }
+  .icon-save_24 {
+    background-image: url(../images/sprite/sprite@2x.png);
+    background-size: 619px 583px;
+  }
+  .icon-search {
+    background-image: url(../images/sprite/sprite@2x.png);
+    background-size: 619px 583px;
+  }
+  .icon-search_24 {
+    background-image: url(../images/sprite/sprite@2x.png);
+    background-size: 619px 583px;
+  }
+  .icon-search_24_gray {
+    background-image: url(../images/sprite/sprite@2x.png);
+    background-size: 619px 583px;
+  }
+  .icon-setting_24 {
+    background-image: url(../images/sprite/sprite@2x.png);
+    background-size: 619px 583px;
+  }
+  .icon-setting_menu_24 {
+    background-image: url(../images/sprite/sprite@2x.png);
+    background-size: 619px 583px;
+  }
+  .icon-share {
+    background-image: url(../images/sprite/sprite@2x.png);
+    background-size: 619px 583px;
+  }
+  .icon-shield {
+    background-image: url(../images/sprite/sprite@2x.png);
+    background-size: 619px 583px;
+  }
+  .icon-sms {
+    background-image: url(../images/sprite/sprite@2x.png);
+    background-size: 619px 583px;
+  }
+  .icon-sms_48 {
+    background-image: url(../images/sprite/sprite@2x.png);
+    background-size: 619px 583px;
+  }
+  .icon-star-arrow_24 {
+    background-image: url(../images/sprite/sprite@2x.png);
+    background-size: 619px 583px;
+  }
+  .icon-star {
+    background-image: url(../images/sprite/sprite@2x.png);
+    background-size: 619px 583px;
+  }
+  .icon-sticker-close_20 {
+    background-image: url(../images/sprite/sprite@2x.png);
+    background-size: 619px 583px;
+  }
+  .icon-stock_24 {
+    background-image: url(../images/sprite/sprite@2x.png);
+    background-size: 619px 583px;
+  }
+  .icon-stock_64 {
+    background-image: url(../images/sprite/sprite@2x.png);
+    background-size: 619px 583px;
+  }
+  .icon-tie {
+    background-image: url(../images/sprite/sprite@2x.png);
+    background-size: 619px 583px;
+  }
+  .icon-tip_24 {
+    background-image: url(../images/sprite/sprite@2x.png);
+    background-size: 619px 583px;
+  }
+  .icon-tooltip-que {
+    background-image: url(../images/sprite/sprite@2x.png);
+    background-size: 619px 583px;
+  }
+  .icon-tooltip-que_20 {
+    background-image: url(../images/sprite/sprite@2x.png);
+    background-size: 619px 583px;
+  }
+  .icon-transfer_10 {
+    background-image: url(../images/sprite/sprite@2x.png);
+    background-size: 619px 583px;
+  }
+  .icon-transfer_15 {
+    background-image: url(../images/sprite/sprite@2x.png);
+    background-size: 619px 583px;
+  }
+  .icon-trash {
+    background-image: url(../images/sprite/sprite@2x.png);
+    background-size: 619px 583px;
+  }
+  .icon-trophy {
+    background-image: url(../images/sprite/sprite@2x.png);
+    background-size: 619px 583px;
+  }
+  .icon-trust_24 {
+    background-image: url(../images/sprite/sprite@2x.png);
+    background-size: 619px 583px;
+  }
+  .icon-twitter {
+    background-image: url(../images/sprite/sprite@2x.png);
+    background-size: 619px 583px;
+  }
+  .icon-type_agency_20 {
+    background-image: url(../images/sprite/sprite@2x.png);
+    background-size: 619px 583px;
+  }
+  .icon-type_product_20 {
+    background-image: url(../images/sprite/sprite@2x.png);
+    background-size: 619px 583px;
+  }
+  .icon-url-copy_48 {
+    background-image: url(../images/sprite/sprite@2x.png);
+    background-size: 619px 583px;
+  }
+}

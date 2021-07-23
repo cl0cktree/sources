@@ -1,0 +1,514 @@
+.bottom-sheet_contents .bs-message {display: block; @include text($text01, normal);}
+.bottom-sheet_contents .bs-message strong {font-weight: bold;}
+.bottom-sheet_contents .bs-message + .info-msg {margin-top: 15px;}
+
+.pgbank-terms-agree .checkbox-group {margin-bottom: 40px;}
+.pgbank-terms-agree .checkbox-group:not(ul) {margin-top: 20px;}
+.pgbank-terms-agree .checkbox-group:not(ul) span[class*=form-checkbox] {margin-top: 10px;}
+.pgbank-terms-agree .checkbox-group:not(ul) span[class*=form-checkbox]:first-child {margin-top: 0;}
+.pgbank-terms-agree .kb-form_email {margin-bottom: 20px;}
+
+.pgbank-complete .description-list {margin-top: 40px; padding: 20px 0; grid-template-columns: 64px auto; border-top: 1px solid #ebeef0;}
+.pgbank-complete .description-list .num {margin-left: 2px; margin-top: -3px;}
+.pgbank-complete .banner {border: 1px solid $kb-ui09; border-radius: 12px; overflow: hidden;}
+.pgbank-complete .banner img {display: block;}
+
+.pgbank-join .gbox {margin: 0 (-2.4rem) 25px; padding: 28px 26px; background-color: #f7f7f8; @include text($text01, bold);}
+.pgbank-join .account-link {margin-bottom: 40px;}
+
+.password-input {margin-bottom: 30px;}
+.password-input .h4 {margin-bottom: 25px;}
+.password-input .kb-form {margin-top: 20px;}
+
+
+.pgbank-join-content .recommend-employees .h4 {margin-bottom: 25px;}
+.pgbank-join-content .recommend-employees-form{margin-top:24px;}
+.pgbank-join-content .recommend-employees-form > .kb-form + p:last-child{margin-top:24px;}
+.pgbank-join-content .recommend-employees-form > .kb-form,
+.pgbank-join-content .recommend-employees-form > .kb-form + p:last-child{display:none;}
+
+.trans-history-status {position: relative; margin-bottom: 30px; padding-bottom: 28px; border-bottom: 6px solid #f7f7f8;}
+.trans-history-status .center-text {margin-bottom: 5px; text-align: center;}
+.trans-history-status .center-text .title {font-size: 18px; line-height: 25px;}
+.trans-history-status .center-text .amount {display: block; font-weight: bold; font-size: 20px; line-height: 28px; }
+.trans-history-status .center-text .amount .num {font-size: 21px;}
+.trans-history-status .btn-mng {position: absolute; top: 24px; right: 24px;}
+.trans-history-status .graph-txt .end-txt strong{font-weight:bold;font-size:14px;}
+
+.linked-account {margin-top: 15px; padding: 0 2px;}
+.linked-account::after {content: ''; clear: both; display: block;}
+.linked-account .flag {float: left; padding: 0 7px; margin-right: 8px; font-size: 12px; line-height: 18px; border: 1px solid #26282c; border-radius: 2px;}
+.linked-account .nickname {float: left; font-size: 16px; line-height: 20px;}
+.linked-account .account {float: right; font-size: 17px; line-height: 20px;}
+
+.trans-history-list .tit {display: block; margin-bottom: 10px; font-size: 16px; line-height: 22px; color: #696e76;}
+.trans-history-list .btn-segmented_radio,
+.trans-history-list .challenge-select {margin-bottom: 20px;}
+
+.pgbank-mng-pop .description-list {grid-template-columns: 100px auto;}
+.pgbank-mng-pop .description-list dt {align-items: flex-start;}
+.pgbank-mng-pop .description-list dd {padding: 2px 0;}
+.pgbank-mng-pop .links {margin-top: 20px;}
+.pgbank-mng-pop .links li {position: relative; border-top: 1px solid #ebeef0;}
+.pgbank-mng-pop .links a {display: block; padding: 0 2px; font-size: 18px; line-height: 67px;}
+.pgbank-mng-pop .links i {position: absolute; right: 0; top: 50%; margin-top: -12px;}
+
+.pgbank-trans-history .account-detail{margin-top:20px;}
+.pgbank-trans-history .account-detail .d-list .price-wrap{margin-top:5px;}
+.pgbank-trans-history .account-detail .d-list .price-wrap .txt-con{text-align:right;width:auto;}
+.pgbank-trans-history .account-detail .d-list .price-wrap .type{@include text($weight: bold);}
+.pgbank-trans-history .account-detail .d-list .price-wrap .txt-con .amount{font-weight:bold;display:block;}
+.pgbank-trans-history .account-detail .d-list .price-wrap .txt-con .plus{color:$color-blue;}
+.pgbank-trans-history .account-detail .d-list .price-wrap .txt-con .minus{color:$color-red;}
+.pgbank-trans-history .account-detail .d-list .price-wrap .txt-con .total{display:block;}
+.pgbank-trans-history .account-detail .d-list .price-wrap .txt-con .memo{display:block;margin-top:6px;}
+.pgbank-trans-history .account-detail .description-list dd.amount .num {bottom: 0;}
+
+.pgbank-empty-confirm .description-list {margin-top: 40px; padding: 20px 0; grid-template-columns: 64px auto; border-top: 1px solid #ebeef0;}
+.pgbank-empty-confirm .complete-msg .tit {letter-spacing: -0.96px;}
+
+.pgbank-rules p {margin-bottom: 13px; font-size: 16px; line-height: 23px; color: #696e76;}
+.pgbank-rules p:first-child {padding-top: 8px;}
+.pgbank-rules .main-copy {margin-bottom: 13px; padding-top: 8px; font-size: 28px; line-height: 39px; font-weight: bold; letter-spacing: -1.12px;}
+.pgbank-rules p + .main-copy {margin-bottom: 40px; padding-top: 0;}
+.pgbank-rules .main-copy + p {margin-bottom: 40px; padding-top: 0;}
+.pgbank-rules .h4 {margin-bottom: 24px;}
+.pgbank-rules .character-selection {margin: 0 (-2.4rem) 45px; padding: 0 2.4rem; overflow-x: auto;}
+.pgbank-rules .character-selection::-webkit-scrollbar {display: none;}
+.pgbank-rules .character-selection ul {font-size: 0; white-space: nowrap;}
+.pgbank-rules .character-selection li {display: inline-block; margin-right: 12px; width: 145px; height: 215px;}
+.pgbank-rules .character-selection li:last-child {margin-right: 24px;}
+.pgbank-rules .character-selection li input[type=checkbox],
+.pgbank-rules .character-selection li input[type=radio] {position: absolute; left: -10000px; visibility: hidden;}
+.pgbank-rules .character-selection li label {position: relative; display: block; width: inherit; height: inherit; text-align: center; border: 1px solid #dde1e4; border-radius: 6px; overflow: hidden;  background-image: url(../images/goal/sprite_char_card.png); background-size: 710px 213px;}
+.pgbank-rules .character-selection li[data-theme='lamu'] label {background-position: 0 0;}
+.pgbank-rules .character-selection li[data-theme='kolly'] label {background-position: -142px 0;}
+.pgbank-rules .character-selection li[data-theme='ago'] label {background-position: -284px 0;}
+.pgbank-rules .character-selection li[data-theme='bb'] label {background-position: -426px 0;}
+.pgbank-rules .character-selection li[data-theme='kiki'] label {background-position: -568px 0;}
+.pgbank-rules .character-selection li label::before {display: none; content: '선택완료'; position: absolute; z-index: 1; left: -1px; right: -1px; top: -1px; bottom: -1px; background-color: rgba(0,0,0,.6); font-size: 24px; font-weight: bold; color: #fff; text-align: center; padding-top: 142px;}
+.pgbank-rules .character-selection li label i {display: none; position: absolute; z-index: 2; left: 50%; top: 52px; margin-left: -30px;}
+.pgbank-rules .character-selection li input[type=checkbox]:checked + label::before,
+.pgbank-rules .character-selection li input[type=radio]:checked + label::before,
+.pgbank-rules .character-selection li input[type=checkbox]:checked + label i {display: block;}
+.pgbank-rules .character-selection li input[type=radio]:checked + label i {display: block;}
+.pgbank-rules .character-selection li .desc {display: block; padding-top: 30px;}
+.pgbank-rules .character-selection li .name {display: block; margin-bottom: 102px; font-size: 16px; line-height: 23px; color: #26282c; font-weight: bold;}
+.pgbank-rules .character-selection li .text {display: block; font-size: 14px; line-height: 20px; color: #696e76;}
+.pgbank-rules .character-selection li .text span {color: #26282c;}
+
+.pgbank-complete-rule .box {position: relative; margin-top: 55px; margin-bottom: 30px; padding: 17px 20px; @include text($text02, normal); color: $kb-ui03; border: 1px solid $kb-ui09; border-radius: 2px;}
+.pgbank-complete-rule .box span {display: block;}
+.pgbank-complete-rule .box .title {margin-bottom: 15px; @include text($text01, bold);}
+.pgbank-complete-rule .box .text1 {margin-bottom: 7px;}
+.pgbank-complete-rule .box::before {content: ''; position: absolute; right: 20px; bottom: 100%; background-size: 100% 100%;}
+.pgbank-complete-rule[data-theme='kiki'] .box::before {width: 71.5px; height: 93px; margin-bottom: -7px; background-image: url(../images/goal/char_comp_1.png);}
+.pgbank-complete-rule[data-theme='ago'] .box::before {width: 74.5px; height: 90.5px; margin-bottom: -4px; background-image: url(../images/goal/char_comp_2.png);}
+.pgbank-complete-rule[data-theme='bb'] .box::before {width: 75px; height: 65.5px; margin-bottom: -6px; background-image: url(../images/goal/char_comp_3.png);}
+.pgbank-complete-rule[data-theme='lamu'] .box::before {width: 73.5px; height: 102px; margin-bottom: -2px; background-image: url(../images/goal/char_comp_4.png);}
+.pgbank-complete-rule[data-theme='kolly'] .box::before {width: 69px; height: 64px; margin-bottom: -2px; background-image: url(../images/goal/char_comp_5.png);}
+.pgbank-complete-rule p {padding-left: 2px; @include text($text03, normal); color: $kb-ui06;}
+
+.goal-challenge-msg{display:flex;align-items:center;}
+.goal-challenge-msg .img{flex:0 0 68px;}
+.goal-challenge-msg .img + strong{@include text($size: $text01, $weight:bold);flex:1;margin-left:20px;}
+
+.bottom-sheet[data-layered-name=bsSavingMyAccount] .msg{@include text($size: $text01, $line-height:1, $weight:bold)}
+.bottom-sheet[data-layered-name=bsSavingMyAccount] .saving-acount-info li{@include clfix;line-height:1;margin-top:20px;}
+.bottom-sheet[data-layered-name=bsSavingMyAccount] .saving-acount-info li > span{float:left;color:$kb-ui04;}
+.bottom-sheet[data-layered-name=bsSavingMyAccount] .saving-acount-info li > strong{float:right;font-weight:bold;}
+.bottom-sheet[data-layered-name=bsSavingMyAccount] .saving-acount-info li .num{line-height:1;}
+
+.goal-invest-direct .kb-sec:first-child{padding-top:44px;}
+.goal-invest-direct .kb-sec + .kb-sec{margin-top:48px;}
+.goal-invest-direct .kb-sec > .msg{@include text($size: $text01, $weight:bold);margin-bottom:24px;}
+
+.goal-ama-others-detail .kb-sec.bg-gray{background:$kb-ui10;}
+.goal-ama-others-detail .goal-ama-others-detail-summary{padding-bottom:20px;}
+.goal-ama-others-detail .goal-ama-others-detail-summary ul{margin-top:24px;}
+.goal-ama-others-detail .goal-ama-others-detail-summary li + li{margin-top:8px;}
+.goal-ama-others-detail .goal-ama-others-detail-summary li strong{font-weight:bold;}
+.goal-ama-others-detail .goal-ama-others-detail-summary[data-status=notReady]{opacity:0.6}
+
+.goal-ama-others-detail .challenge-info{margin-top:22px;padding-bottom:20px;position:relative;}
+.goal-ama-others-detail .challenge-info .term-list li{font-size:16px;}
+.goal-ama-others-detail .challenge-info .term-list li + li{margin-top:5px;}
+.goal-ama-others-detail .challenge-info .term-list li strong{font-weight:bold;}
+.goal-ama-others-detail .challenge-info .term-list li strong .num{font-weight:bold;}
+.goal-ama-others-detail .challenge-info .term-list li > span{display:inline-block;font-size:12px;background:#f7f7f8;border:1px solid #8c949e;min-width:63px;padding:0 10px;height:20px;line-height:20px;text-align:center;border-radius:2px;margin-right:6px;}
+.goal-ama-others-detail .challenge-info > i{position:absolute;right:0;bottom:20px;}
+.goal-ama-others-detail .challenge-info .term-list.type2 li{line-height:1.4;}
+.goal-ama-others-detail .challenge-info .term-list.type2 li + li{margin-top:15px;}
+.goal-ama-others-detail .challenge-info .term-list.type2 + i{bottom:auto;top:-50px;}
+
+.goal-ama-others-detail .character-graph .graph-txt .tit{font-size:$text03;}
+.goal-ama-others-detail .character-graph .graph-txt .date{@include number($size: 15px, $weight:bold, $line-height:1);display:block;margin-top:4px;}
+
+.goal-ama-others-detail .account-detail{margin-top:40px;}
+.goal-ama-others-detail .account-detail .search-con{position:relative;padding-right:54px;}
+.goal-ama-others-detail .account-detail .search-con button{position:absolute;right:24px;top:7px;}
+.goal-ama-others-detail .account-detail .d-list .price-wrap{margin-top:5px;}
+.goal-ama-others-detail .account-detail .d-list .price-wrap .txt-con{text-align:right;width:auto;}
+.goal-ama-others-detail .account-detail .d-list .price-wrap .txt-con .description-list{margin-top:10px;}
+.goal-ama-others-detail .account-detail .d-list .price-wrap .txt-con .description-list dt{margin-top:4px;}
+.goal-ama-others-detail .account-detail .d-list .price-wrap .type{@include text($weight: bold);}
+.goal-ama-others-detail .account-detail .d-list .price-wrap .txt-con .amount{font-weight:bold;display:block;}
+.goal-ama-others-detail .account-detail .d-list .price-wrap .txt-con .plus{color:$color-blue;}
+.goal-ama-others-detail .account-detail .d-list .price-wrap .txt-con .minus{color:$color-red;}
+.goal-ama-others-detail .account-detail .d-list .price-wrap .txt-con .total{display:block;}
+.goal-ama-others-detail .account-detail .d-list .price-wrap .txt-con .memo{display:block;margin-top:6px;}
+.goal-ama-others-detail .account-detail .description-list dd.amount .num {bottom: 0;}
+.goal-ama-others-detail .msg{@include text($size: $text01, $weight:bold);margin-top:12px;text-align:center;}
+.goal-ama-others-detail .msg p{margin-top:12px;}
+.goal-ama-others-detail .msg i > img{width:9.5rem;}
+
+.goal-ama-others-detail .success-tit .sub-tit{margin-top:13px;font-weight:bold;}
+
+
+/* 목표 메인 */
+.goals-challenge{padding-bottom:0;}
+.goals-challenge .section-bg{padding-top:24px;background-color:$kb-ui10;}
+.goals-challenge .goals-tit{display:block;margin-bottom:20px;text-align:left;@include text($size: $text02, $weight:bold);padding-left:16px;}
+.goals-challenge .goals-desc{@include text($size:$text03);}
+.goals-challenge .goals-desc.flex-box{justify-content:space-between;}
+.goals-challenge .goals-desc.flex-box > span{text-align:right;}
+.goals-challenge .goals-desc strong{font-weight:bold;}
+.goals-challenge .goals-desc.t01{padding:0 14px;@include text($size:$text02);}
+.goals-challenge .goals-desc.t02{padding:32px 0 0;@include text($size:$text02);}
+.goals-challenge .goals-desc.t03{padding:32px 0 0;@include text($size:$text01);}
+.goals-challenge .goals-desc.no-pad{padding-top:0;}
+.goals-challenge .flex-box .btn-text span{@include text($size:$text03);color:$kb-ui05;}
+.goals-challenge .chart-area.t01{margin-top:-23px;}
+//목표 요약
+.goals-summary{padding-bottom:5px;}
+.goals-summary .summary-piggymoeny{@include flexBetween;padding:25px 20px;}
+.goals-summary .summary-piggymoeny dt>[class^="icon-"]{margin-right:10px;}
+.goals-summary .summary-piggymoeny dt .h4{margin-right:6px;}
+.goals-summary .summary-piggymoeny dd,
+.goals-summary .summary-piggymoeny dd strong{@include text($size:$text01,$weight:bold);}
+.goals-summary .summary-challenge{@include text($size:$text02);}
+.goals-summary .summary-challenge .flex-box{justify-content:space-between;margin-top:20px;}
+.goals-summary .summary-challenge .flex-box .h2{@include text($size: $text01, $weight:normal);}
+.goals-summary .summary-challenge .flex-box .h2 strong{font-weight:bold;}
+.goals-summary .summary-challenge .flex-box .h3{@include text($size: $text02, $weight:normal);}
+.goals-summary .summary-challenge .flex-box .h3 strong{font-weight:bold;}
+.goals-summary .summary-challenge .flex-box .h4{@include text($weight:normal);}
+.goals-summary .summary-challenge .flex-box .h4 strong{font-weight:bold;}
+.goals-summary .summary-challenge button.btn-text u{@include text($size:$text03);color:$kb-ui04;}
+.goals-summary .vertical-blank{height:5px;}
+.goals-summary a.btn-trans{display:block;}
+
+.challenge-box{margin-top:20px;margin-left:-8px;margin-right:-8px;}
+.challenge-box .content-box{width:100%;padding:24px 20px;border:1px solid $kb-ui08;margin:auto;}
+.challenge-box .content-box.swiper-slide{margin-left:0;margin-right:0;}
+.challenge-box .challenge-tit{@include flexBetween;padding-bottom:20px;border-bottom:1px solid $kb-ui09;position:relative;} 
+.challenge-box .challenge-tit i{margin-right:10px;}
+.challenge-box .d-day-patch{position:absolute;display:block;top:-2px;right:0;padding:9px 10px;background:$color-yellow;@include text($size:15px);line-height:1;border-radius:2px;}
+.challenge-box .challenge-info{padding-top:20px;@include text($size:$text02);}
+.challenge-box .challenge-info .tit .tit-area{position:relative;}
+.challenge-box .challenge-info .tit .tit-area .hash{@include text($size:$text03);}
+.challenge-box .challenge-info .tit .tit-area .hash span{display:inline-block;}
+.challenge-box .challenge-info .tit .tit-area .hash span + span{margin-left:5px;}
+.challenge-box .challenge-info .tit .tit-area .tit{@include text($size:$text02,$weight:bold);}
+.challenge-box .challenge-info .tit .tit-area > i{position:absolute;top:50%;right:0;transform:translateY(calc(-50% + 30px));max-width:9.5rem;}
+.challenge-box .challenge-info > strong{position:relative;}
+.challenge-box .challenge-info strong{font-weight:bold;}
+.challenge-box .challenge-info .period{color:$kb-ui05;}
+.challenge-box .challenge-info .graph{margin-bottom:10px;}
+.challenge-box .challenge-info .graph img{width:100%;}
+.challenge-box .challenge-info .total{margin-top:10px;@include text($size:$text03);}
+.challenge-box .challenge-info .content{margin-top:15px;}
+.challenge-box .challenge-info .content .goal-txt{@include text($size:$text03);}
+.challenge-box .challenge-info .img-character{display:inline-block;width:83px;height:83px;vertical-align:top;}
+.challenge-box .challenge-info .txt{position:relative;display:inline-block;width:calc(100% - 98px);height:auto;margin-left:10px;padding:16px 16px 16px 14px;font-size:14px;color:$kb-ui04;background-color:$kb-ui10;}
+.challenge-box .challenge-info .txt::before{position:absolute;top:50%;left:-5px;content:'';display:block;width:0;height:0;margin-top:-3px;border-top:5px solid transparent;border-bottom:5px solid transparent;border-right:5px solid $kb-ui10;}
+.challenge-box .challenge-info .goals-desc > span > i{margin-right:4px;}
+
+.challenge-box .challenge-info.non-tit{padding-top:0;}
+.challenge-box .challenge-info.non-tit .goals-desc{@include text($size:$text03);}
+.challenge-box .challenge-info.non-tit .goals-desc.type2{@include text($size:$text02);}
+
+.challenge-box .challenge-empty{text-align:center;}
+.challenge-box .challenge-empty img{margin-top:6.4rem;width:4.1rem}
+.challenge-box .challenge-empty p{margin-bottom:6.4rem;margin-top:2.8rem;@include text($size:$text01);}
+
+.challenge-box .add-card{height:246px;text-align:center;}
+.challenge-box .add-card button{@include text($size:$text02,$weight:bold);color:$kb-ui06;position:absolute;top:50%;left:50%;transform:translate(-50%, -50%);}
+.challenge-box .add-card button i{display:block;margin:0 auto 20px;}
+.challenge-box .challenge-tit > button{width:calc(100% + 10px);position:absolute;text-align:right;}
+.challenge-box .challenge-tit > button.type2{width:calc(100% + 10px);}
+.challenge-box .list-up .content-box{margin-left:0;margin-right:0;}
+.challenge-box .list-up .content-box + .content-box{margin-top:30px;}
+//목표 내용
+.goals-list{position:relative;}
+.goals-list .goals-filter{text-align:right;}
+.goals-list .chart-area p.tit strong{font-size:18px;font-weight:bold;color:$kb-ui02;}
+.goals-list .chart-area p.tit + p.sub{margin-top:14px;}
+.goals-list .chart-area p.sub{@include text($size:$text02);margin:0;color:$kb-ui02;}
+.goals-list > .content-box{margin:20px -8px 30px;}
+.goals-list.add-fix{margin-bottom:194px;}
+.goals-list .h4.light{font-weight:normal;}
+.goals-list .h4.light strong{font-weight:bold;}
+.goals-list .img-area .img-box{background:red;height:183px;opacity:.2;}
+.goals-list .img-area .img-box + .txt-hash{margin-top:19px;}
+.goals-list .img-area.hash-box{display:flex;align-items:center;}
+.goals-list .img-area.hash-box .txt-hash{@include text($size:$text02);width:calc(100% - 75px);}
+.goals-list .img-area.hash-box .txt-hash span{word-break:keep-all;display:inline-block;margin-right:10px;}
+.goals-list .img-area.hash-box .txt-hash + i{width:7.3rem;}
+.goals-list .tab.depth2,
+.goals-char .tab.depth2,
+.goals-recom .tab.depth2{padding-bottom:25px;padding-top:25px;border-bottom:1px solid #dde1e4;}
+.goals-list .tab.depth2 .swiper-wrapper:after,
+.goals-char .tab.depth2 .swiper-wrapper:after,
+.goals-recom .tab.depth2 .swiper-wrapper:after,
+.goals-others .tab.depth2 .swiper-wrapper:after{background:none;}
+.btn-compare{width:40px;height:40px;position:absolute;top:18px;right:24px;z-index:1;}
+.btn-compare.type2{position:relative;top:0;right:0;}
+//목표 챌린지 추천
+.goals-recommend-challenge{padding-top:24px;}
+.goals-recommend-challenge + .goals-state{padding-top:32px;}
+//목표 달성 상태
+.goals-state .tit{padding-top:8px;}
+.goals-state ul{margin-top:20px;}
+.goals-state li{position:relative;display:flex;justify-content:space-between;padding:14px 20px 14px 60px;border:1px solid $kb-ui08;border-radius:2px;font-size:14px;line-height:22px;}
+.goals-state li + li{margin-top:10px;}
+.goals-state li .info>i{position:absolute;top:25px;left:20px;}
+.goals-state li .list-tit{display:block;font-weight:bold;}
+// .goals-state li > a{position:absolute;width:100%;height:100%;top:0;left:0}
+.goals-state li .stamp{display:block;width:47px;height:47px;position:absolute;right:20px;top:50%;transform:translateY(-50%);}
+.goals-state li .stamp.type2{margin-right:15px;}
+.goals-state li .stamp.type2:after{content:'';width:24px;height:24px;display:block;background:url(../images/goal/go_detail_24.png) no-repeat;background-size:contain;position:absolute;right:-30px;top:12px;}
+.goals-state .goals-desc button.btn-text u{font-size:14px;color:$kb-ui04;}
+.goals-state li a.btn-trans{position:absolute;width:100%;height:100%;top:0;left:0;z-index:1;}
+
+//목표챌린지 > 남들만큼 > 버킷리스트 만들기
+.my-bucket-ist .h4{display:block;margin-bottom:24px;}
+.my-bucket-ist .kb-form{margin-bottom:50px;}
+.my-bucket-ist .kb-form .form-text{padding-top:18px;}
+.input-img-box{width:100%;}
+.input-img-box .input-tit{display:block;margin-bottom:24px;@include text($size:$text02);color:$kb-ui04;}
+.input-img-box .img-box{width:100px;height:90px;}
+.icon-sel:not(ul) .icon-type[class*=form-checkbox]{height:90px;border:1px solid #e3e6e8;border-radius:10px;width:calc(33% - 8px);margin:5px 0;overflow:hidden;}
+.icon-sel:not(ul) .icon-type[class*=form-checkbox]:nth-child(3n-1){margin-left:12px;margin-right:12px;}
+.icon-sel .icon-type label{padding-left:0;width:100%;height:100%;position:relative;}
+.icon-sel .icon-type label i{position:absolute;top:50%;left:50%;transform:translate(-50%, -50%);width:6rem;height:auto;}
+.icon-sel .icon-type input + label:before{display:none;}
+.icon-sel .icon-type input:checked + label:after{content:'';display:block;position:absolute;left:50%;top:50%;transform:translate(-50%, -50%);z-index:1;width:100%;height:100%;background:rgba(0,0,0,.6) url(../images/goal/complete_icon.png);background-size:25px 25px;background-repeat:no-repeat;background-position:center 20px;}
+.icon-sel .icon-type input:checked + label:before{content:'선택완료';font-weight:bold;color:#fff;text-align:center;display:block;background:none;z-index:2;width:100%;margin-top:18px;}
+// .icon-sel .icon-type input:checked + label:after{content:'';background:red;width:100%;height:100%;display:block;}
+.icon-sel .icon-type .dim-area{position:absolute;width:100%;height:100%;background:rgba(0, 0, 0, 0.6);}
+//목표챌린지 > 남들만큼 > 버킷리스트 만들기 완료
+.my-bucket-ist-complete .description-list{border-top:1px solid $kb-ui09;margin-top:67px;padding-top:10px;}
+.my-bucket-ist-complete .description-list .v-top{align-items:flex-start;}
+.my-bucket-ist-complete .img-unit{width:100px;height:90px;border:1px solid #e3e6e8;border-radius:10px;position:relative;margin:8px 0;}
+.my-bucket-ist-complete .img-unit i{position:absolute;top:50%;left:50%;transform:translate(-50%, -50%);width:6rem;height:auto;}
+
+.goals-char{position:relative;}
+.goals-char .swiper-container{padding-top:24px;padding-bottom:0;padding-right:16px;}
+.goals-char .txt-unit{margin-top:32px;position:relative;}
+// .goals-char .txt-unit .tit{font-size:18px;font-weight:bold;color:$kb-ui04;}
+// .goals-char .txt-unit .money{position:absolute;right:0;top:0;@include text($size:$text02,$weight:bold);}
+// .goals-char .txt-unit .money span.num{@include text($size:19px);}
+.goals-char .txt-unit .save-money{@include text($size:$text01,$weight:bold);color:$kb-ui04;position:relative;}
+.goals-char .txt-unit .save-money .money{position:absolute;right:0;top:0;@include text($size:$text01,$weight:bold);}
+.goals-char .txt-unit .save-money .money .num{@include text($size:19px,$weight:bold);}
+.goals-char .txt-unit .info-msg{margin-top:25px;}
+.goals-char .txt-unit .kb-form > label{background:none;@include text($size:$text02,$weight:bold);color:$kb-ui02;}
+.goals-char button.btn-solid{margin-top:31px;}
+.goals-char .char-box{margin-left:-24px;width:calc(100% + 48px);}
+.goals-char .char-box .swiper-wrapper{width:144px;height:215px;position:relative;}
+.goals-char .char-box .swiper-wrapper .swiper-slide.swiper-slide-active{margin-left:2.4rem;}
+.goals-char .char-box .swiper-wrapper .swiper-slide:last-child{margin-right:4.8rem;}
+.goals-char .char-box .swiper-wrapper .swiper-slide{padding:0;margin-left:0;margin-right:0;}
+.goals-char .char-box .swiper-wrapper .swiper-slide > button{position:relative;}
+.goals-char .char-box .swiper-wrapper .swiper-slide > button.is-selected:after{content:'';position:absolute;width:100%;height:60px;background:url(../images/goal/complete_icon.png) center center no-repeat;background-size:contain;top:52px;right:0;z-index:2;}
+.goals-char .char-box .swiper-wrapper .swiper-slide > button.is-selected:before{content:'선택완료';background:rgba(0,0,0,.6);position:absolute;top:0;display:block;width:100%;height:100%;font-size:24px;font-weight:bold;color:#fff;line-height:300px;z-index:1;}
+.goals-char .char-box .swiper-wrapper button p.name{position:absolute;width:100%;@include text($size:$text02,$weight:bold);top:25px;text-align:center;}
+.goals-char .char-box .swiper-wrapper button p.txt{position:absolute;width:100%;@include text($size:$text03);bottom:25px;text-align:center;}
+.goals-char .char-box .swiper-wrapper button p.txt strong{font-weight:bold;}
+.goals-char .img-unit{margin-top:55px;text-align:center;}
+.goals-char .img-unit.all-char > img{max-width:233px;}
+.goals-char .img-unit.all-char +  button.btn-solid{margin-top:40px;}
+
+.goals-others{position:relative;}
+.goals-others > .content-box{margin:20px -8px 30px;}
+.goals-others .tab.depth2, .goals-recom .tab.depth2{padding-top:24px;padding-bottom:25px;border-bottom:1px solid #dde1e4;}
+
+.goals-noti.kb-sec.bg-gray{background:$kb-ui10;padding-bottom:31px;}
+.goals-noti h2{@include text($size:20px,$weight:bold);}
+.goals-noti h3{@include text($size:$text02,$weight:bold);margin-top:13px;}
+.goals-noti h3 + ul{margin-top:20px;}
+
+.goals-use-best{margin-top:34px;margin-bottom:196px;}
+
+.chart-area.dbl-bar > .highcharts_column.type-ratio{margin-top:2rem;margin-bottom:10px;}
+.chart-area .txt-gray{@include text($size:$text03);padding-left:16px;position:relative;}
+.chart-area .txt-gray:before{content:'';width:9px;height:9px;position:absolute;display:block;border-radius:50%;top:5px;left:0;background:$kb-ui07;}
+.chart-area .txt-yellow{@include text($size:$text03);padding-left:16px;position:relative;}
+.chart-area .txt-yellow:before{content:'';width:9px;height:9px;position:absolute;display:block;border-radius:50%;top:5px;left:0;background:$color-yellow;}
+.chart-area .txt-gray .num,
+.chart-area .txt-yellow .num{font-size:$text03;}
+.chart-area p.txt-gray + p.txt-yellow{margin-top:18px;}
+.chart-area p.txt-gray + p.txt-yellow.type2{margin-top:5px;}
+.chart-area span.txt-gray + span.txt-yellow{margin-left:18px;}
+
+.ranking-list .ranking-tit{font-size:18px;line-height:22px;}
+.ranking-list .ranking-tit strong{font-weight:bold;}
+.ranking-list .ranking-tit + .ranking-list{margin-top:27px;}
+.ranking-list ul.ranking-list li{padding-left:33px;position:relative;}
+.ranking-list ul.ranking-list li:before{content:'';@include text($size:$text03,$weight:bold);line-height:24px;width:24px;height:24px;position:absolute;left:0;top:-2px;text-align:center;background:$kb-ui07;display:block;}
+.ranking-list ul.ranking-list li.rank:before{background:$color-yellow;}
+.ranking-list ul.ranking-list li:nth-child(1):before{content:'1';}
+.ranking-list ul.ranking-list li:nth-child(2):before{content:'2';}
+.ranking-list ul.ranking-list li:nth-child(3):before{content:'3';}
+.ranking-list ul.ranking-list li:nth-child(4):before{content:'4';}
+.ranking-list ul.ranking-list li:nth-child(5):before{content:'5';}
+.ranking-list ul.ranking-list li + li{margin-top:19px;}
+
+.goals-setting{padding-top:24px;position:fixed;bottom:52px;width:100%;z-index:1;}
+.goals-setting h2{@include text($text01,$weight:bold)}
+.goals-setting h2 + p{@include text($text02);margin-top:10px;}
+.goals-setting h2 + p strong{@include text($weight:bold)}
+.goals-setting .character-graph{margin-top:42px;}
+.goals-setting .character-graph .graph-txt > p{font-size:14px;font-weight:bold;}
+.goals-setting .character-graph .ui-slider .handle .value{font-size:14px;font-weight:bold;background:#f7f7f8;padding:1px 5px;}
+.goals-setting .character-graph .graph-txt p:after{content:attr(data-unit);}
+
+
+.text-trophy{padding-left:33px;position:relative;@include text($text02);}
+.text-trophy.type2{padding-left:48px;}
+.text-trophy .ico{display:block;position:absolute;left:0;top:50%;transform:translateY(-50%);}
+.text-trophy p{@include text($weight:bold)}
+.text-trophy p + span{margin-top:13px;}
+.text-trophy span{display:block;}
+.text-trophy strong{font-weight:bold;}
+
+.goals-no-spand{padding-top:24px;position:fixed;bottom:52px;width:100%;z-index:1;}
+.goals-no-spand .tit{margin-bottom:10px;}
+.goals-no-spand .text-trophy{margin-top:30px;}
+
+// .goals-detail-list .challenge-tit{border-bottom:none;padding-bottom:0}
+.goals-detail-list .challenge-tit strong > span{display:block;@include text($text02);}
+.goals-detail-list .challenge-tit > span{display:block;font-size:15px;background:$color-yellow;padding:9px 10px;}
+.goals-detail-list .challenge-info{padding-top:10px;padding-bottom:0;}
+.goals-detail-list .challenge-info .term-list li{@include text($text02);}
+.goals-detail-list .challenge-info .term-list li + li{margin-top:6px;}
+.goals-detail-list .challenge-info .term-list li > span{display:inline-block;font-size:12px;background:#f7f7f8;border:1px solid #aab0b8;min-width:63px;height:20px;line-height:20px;text-align:center;border-radius:2px;margin-right:6px;padding:0 10px;}
+.goals-detail-list .challenge-info .txt-goal-stat{@include text($text02);margin-top:35px;}
+// .goals-detail-list .challenge-info .txt-goal-stat + .character-graph{padding-top:100px;}
+.goals-detail-list .challenge-info .txt-goal-success{margin-top:-10px;}
+.goals-detail-list .challenge-info .txt-goal-success .tit{font-weight:bold;margin-bottom:10px;}
+.goals-detail-list .challenge-info .legend-dot{margin-top:24px;}
+.goals-detail-list .challenge-info .legend-dot li{@include text($text03);display:inline-block;}
+.goals-detail-list .challenge-info .legend-dot li + li{margin-left:25px;}
+.goals-detail-list .challenge-info .legend-dot li:before{content:'';width:9px;height:9px;display:inline-block;margin-right:10px;background:$kb-ui07;border-radius:50%;}
+.goals-detail-list .challenge-info .legend-dot li.current:before{background:$color-yellow;}
+
+.goals-detail-list + .goals-pay-list{margin-top:35px;} 
+
+.goals-detail-list .trophy-gray{padding:20px;background:$kb-ui10;}
+
+.goals-pay-list .accordian > dt{border-top:none;font-size:22px;font-weight:bold;}
+.goals-pay-list .accordian > dd{@include text($text01);padding:0;}
+.goals-pay-list .credit-list{padding:0;}
+.goals-pay-list .credit-list dt,
+.goals-pay-list .credit-list dd{padding:20px 0 0;}
+.goals-pay-list .credit-list dt:last-of-type,
+.goals-pay-list .credit-list dd:last-of-type{margin-bottom:-36px;border:none;}
+.goals-pay-list > .credit-list dt,
+.goals-pay-list > .credit-list dd{margin-bottom:-36px;border-bottom:none;}
+.goals-pay-list .credit-list dt .info{font-size:14px;background:$kb-ui10;padding:0 8px;width:125px;text-align:center;top:15px;}
+.goals-pay-list .credit-list dt .tit{margin-top:0;margin-bottom:20px;}
+.goals-pay-list .credit-list dd .label-front{margin-bottom:0;}
+.goals-pay-list .credit-list dd .amount{@include text($text01);}
+.goals-pay-list .credit-list dd .amount .num{font-size:19px;}
+
+.goal-fin-challenge .kb-sec.bg-gray{background:$kb-ui10;}
+.goal-fin-challenge .btn-group{margin-top:10px;text-align:right;}
+.goal-fin-challenge .goals-summary{padding-bottom:20px;}
+.goal-fin-challenge .fin-chall .flex-box{padding-top:48px;padding-bottom:32px;@include text($text01);}
+
+.cicle-badge{width:6.9rem;height:auto;}
+
+//캐릭터 그래프
+.character-graph.add-pad{padding-top:76px;}
+.character-graph:not(.js-slider) .graph-txt{font-size:14px;margin-top:12px;}
+.character-graph:not(.js-slider) .graph-txt .num{font-size:15px;}
+.character-graph:not(.js-slider) .graph-txt strong{font-weight:bold;}
+.character-graph:not(.js-slider) .graph-txt .start-txt{margin-left:0;line-height:1.4;}
+.character-graph:not(.js-slider) .graph-txt .end-txt{margin-right:0;line-height:1.4;}
+.character-graph:not(.js-slider) .graph-area > span{background-color:$color-yellow;}
+.character-graph:not(.js-slider) .graph-area > span i{display:block;position:absolute;bottom:5px;right:8px;background-size:contain;z-index:1;}
+.character-graph:not(.js-slider) .graph-area .flag{position:absolute;right:-10px;bottom:10px;}
+.character-graph.goal{padding-top:64px;}
+.character-graph.goal.fail{margin-top:28px;padding-top:20px;padding-bottom:20px;}
+.character-graph.goal.fail .ico-area{position:absolute;top:10px;left:calc(50% - 50px);}
+.character-graph.goal.fail .ico-area img{width:100px;}
+.character-graph .graph-account{margin-top:3.2rem;position:relative;}
+.character-graph .graph-account .left-txt > em{font-size:1.2rem;border:1px solid #8c949e;border-radius:.2rem;padding:.5rem .9rem;display:inline-block;margin-right:1rem;}
+.character-graph .graph-account .left-txt > span{display:inline-block;vertical-align:middle;@include ellipsis;max-width:calc(100% - 22rem)}
+.character-graph .graph-account .right-txt{position:absolute;right:0;top:50%;transform:translateY(-50%);}
+
+//캐릭터
+.character-graph[data-theme=character]{padding-top:8rem}
+.character-graph[data-theme=character] .graph-area > span.green{background-color:#c6d65e;}
+.character-graph[data-theme=character] .graph-area > span i{width:5.7rem;height:auto;}
+.character-graph[data-theme=bb]{padding-top:76px;}
+.character-graph[data-theme=bb] .graph-area > span{background-color:$color-yellow;}
+.character-graph[data-theme=bb] .graph-area > span i{background-image:url(../images/goal/progress_bb.png);width:61px;height:61px;right:8px;}
+.character-graph[data-theme=kiki]{padding-top:76px;}
+.character-graph[data-theme=kiki] .graph-area > span{background-color:$color-yellow;}
+.character-graph[data-theme=kiki] .graph-area > span i{background-image:url(../images/goal/progress_kiki.png);width:44px;height:79px;right:8px;}
+.character-graph[data-theme=ago]{padding-top:76px;}
+.character-graph[data-theme=ago] .graph-area > span{background-color:#c6d65e;}
+.character-graph[data-theme=ago] .graph-area > span i{background-image:url(../images/goal/progress_ago.png);width:76px;height:58px;right:8px;}
+.character-graph[data-theme=lamu]{padding-top:76px;}
+.character-graph[data-theme=lamu] .graph-area > span{background-color:$color-yellow;}
+.character-graph[data-theme=lamu] .graph-area > span i{background-image:url(../images/goal/progress_lamu.png);width:41px;height:78px;right:8px;}
+.character-graph[data-theme=kolly]{padding-top:76px;}
+.character-graph[data-theme=kolly] .graph-area > span{background-color:#c6d65e;}
+.character-graph[data-theme=kolly] .graph-area > span i{background-image:url(../images/goal/progress_kolly.png);width:62px;height:73px;right:8px;}
+
+//깃발 캐릭터
+.character-graph.goal[data-theme=bb] .graph-area > span i{background-image:url(../images/goal/progress_bb2.png);width:40px;height:62px;}
+.character-graph.goal[data-theme=kiki] .graph-area > span i{background-image:url(../images/goal/progress_kiki3.png);width:46px;height:73px;}
+.character-graph.goal[data-theme=ago] .graph-area > span i{background-image:url(../images/goal/progress_ago2.png);width:43px;height:82px;}
+.character-graph.goal[data-theme=lamu] .graph-area > span i{background-image:url(../images/goal/progress_lamu2.png);width:50px;height:80px;}
+.character-graph.goal[data-theme=kolly] .graph-area > span i{background-image:url(../images/goal/progress_kolly2.png);width:57px;height:67px;}
+
+//성공 캐릭터
+.character-graph.goal.success[data-theme=bb] .graph-area > span i{background-image:url(../images/goal/progress_bb3.png);width:46px;height:42px;right:10px;bottom:10px;}
+
+//쓰는만큼 아이콘
+.character-graph[data-theme=pay] .graph-area > span i{max-width:3.9rem;height:3.9rem;}
+.character-graph[data-theme=pay] .graph-area > span i img{max-height:3.9rem;max-width:3.9rem;}
+.character-graph[data-theme=coffee] .graph-area > span i{background-image:url(../images/goal/progress_coffee.png);width:39px;height:39px;}
+.character-graph[data-theme=alcohol] .graph-area > span i{background-image:url(../images/goal/progress_alcohol.png);width:39px;height:39px;}
+.character-graph[data-theme=store] .graph-area > span i{background-image:url(../images/goal/progress_store.png);width:39px;height:39px;}
+.character-graph[data-theme=taxi] .graph-area > span i{background-image:url(../images/goal/progress_taxi.png);width:39px;height:39px;}
+.character-graph[data-theme=delivery] .graph-area > span i{background-image:url(../images/goal/progress_delivery.png);width:39px;height:39px;}
+.character-graph[data-theme=shopping] .graph-area > span i{background-image:url(../images/goal/progress_shopping.png);width:39px;height:39px;}
+.character-graph[data-theme=oil] .graph-area > span i{background-image:url(../images/goal/progress_oil.png);width:39px;height:39px;}
+.character-graph[data-theme=mobile] .graph-area > span i{background-image:url(../images/goal/progress_mobile.png);width:39px;height:39px;}
+.character-graph[data-theme=fastfood] .graph-area > span i{background-image:url(../images/goal/progress_fastfood.png);width:39px;height:39px;}
+.character-graph[data-theme=eatout] .graph-area > span i{background-image:url(../images/goal/progress_eatout.png);width:39px;height:39px;}
+
+//남들만큼 아이콘
+.character-graph[data-theme=coin] .graph-area > span i{background-image:url(../images/goal/progress_coin.png);width:36px;height:29px;}
+
+// 비교
+.character-graph.type2{padding-top:64px;}
+.character-graph.type2 .graph-area{background:none;}
+.character-graph.type2 .graph-area > span{height:24px;border-radius:0 12px 12px 0;background-color:$color-yellow;}
+.character-graph.type2 .graph-area.sub > span{background-color:#e0e4e6;}
+.character-graph.type2 .graph-txt + .graph-area.sub{margin-top:16px}
+
+//최소사이즈 
+.character-graph .graph-area > span.min-size i,
+.character-graph .graph-area.type2 > span.min-size i{left:0;}
+
+
+/*차트 비율*/
+.highcharts_column.type-ratio{height:calc(75vw - 88px);margin-top:28px;margin-bottom:-20px;}
+.highcharts_column.type-ratio.no-mt{margin-top:0;}
+// .goals-detail-list .challenge-info .type-ratio{margin-bottom:-20px;}

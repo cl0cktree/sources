@@ -1,0 +1,156 @@
+@charset "utf-8";
+
+// html{
+// 	-ms-content-zooming: none;
+// 	-ms-touch-action: pan-x pan-y;
+// }
+
+button:focus,//{outline:1px solid #000;}
+textarea:focus{outline:none;}
+
+/* IE FF remove Click Action*/ 
+button:active span,
+button:active i,
+button:focus span,
+button:focus i{position:relative;top:0;left:0;}
+label:before{box-sizing:border-box;}
+input[readonly]{pointer-events:auto;}
+a, input, select, textarea, button {font-size:inherit;font-weight:inherit;color:inherit;}
+textarea{resize:none;}
+:-ms-input-placeholder{color:$kb-ui07 !important;}/* Internet Explorer 10-11 */
+::-ms-input-placeholder{color:$kb-ui07 !important;}/* Microsoft Edge */
+::placeholder{color:$kb-ui07;opacity:1;text-align:left !important;}/* Chrome, Firefox, Opera, Safari 10.1+ */
+textarea:-ms-input-placeholder{font-size:inherit;color:$kb-ui07 !important;}/* Internet Explorer 10-11 */
+textarea::-ms-input-placeholder{font-size:inherit;color:$kb-ui07 !important;}/* Microsoft Edge */
+textarea::placeholder{font-size:inherit;color:$kb-ui07;opacity:1;}/* Chrome, Firefox, Opera, Safari 10.1+ */
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {-webkit-appearance: none;margin: 0;}
+/* Firefox */
+input[type=number] {-moz-appearance: textfield;}
+
+:root,
+html{font-size:10px;}
+@media screen and (max-width: 359px){
+	:root,
+	html{font-size:9px;}
+
+}
+
+/* COMMON */
+.c-red{color:$color-red;}
+.c-blue{color:$color-blue;}
+.c-black{color:$kb-ui02;}
+.is-hidden{@include hidden;}
+.is-disabled,
+input:read-only,
+input:disabled,
+button:disabled{cursor:default;}
+.full{width:100%;}
+.bold{font-weight:bold;}
+.normal{font-weight:normal;}
+.align-l{text-align:left;}
+.align-c{text-align:center;}
+.align-r{text-align:right;}
+.mt4{margin-top:0.4rem;}
+.mt8{margin-top:0.8rem;}
+.mt12{margin-top:1.2rem;}
+.mt16{margin-top:1.6rem;}
+.mt20{margin-top:2.0rem;}
+.mt24{margin-top:2.4rem;}
+.mt28{margin-top:2.8rem;}
+.mt32{margin-top:3.2rem;}
+.mt36{margin-top:3.6rem;}
+.mt40{margin-top:4.0rem;}
+.mt48{margin-top:4.8rem;}
+.mt60{margin-top:6.0rem;}
+.mb4{margin-bottom:0.4rem;}
+.mb8{margin-bottom:0.8rem;}
+.mb12{margin-bottom:1.2rem;}
+.mb16{margin-bottom:1.6rem;}
+.mb20{margin-bottom:2.0rem;}
+.mb24{margin-bottom:2.4rem;}
+.mb28{margin-bottom:2.8rem;}
+.mb32{margin-bottom:3.2rem;}
+.mb36{margin-bottom:3.6rem;}
+.mb40{margin-bottom:4.0rem;}
+.mb48{margin-bottom:4.8rem;}
+.pb20{padding-bottom:2.0rem;}
+
+/* Default */
+html,body{height:100%;}
+body{min-width:320px;font-family:'KBFGText',sans-serif;font-size:1.6rem;line-height:1;color:$kb-ui02;letter-spacing:-0.02em;word-break:keep-all;word-wrap:break-word;}
+body.is-hold{overflow:hidden;}
+.dim{position:fixed;top:0;left:0;bottom:0;right:0;background-color:$dim-color;z-index:$level70;}
+
+input[type=text],
+input[type=password]{@include text($size : 22px, $weight : bold, $line-height: 31px);letter-spacing:inherit;}
+input[type=tel],
+input[type=number],
+input[inputmode=numeric]{@include number($size: 24px, $weight : bold, $line-height: 31px);letter-spacing:inherit;}
+input[type=tel]::placeholder,
+input[type=number]::placeholder,
+input[inputmode=numeric]::placeholder{@include text($size : 22px, $weight : bold, $line-height: 31px);font-family:'KBFGText';color:$kb-ui07;}
+textarea{width:100%;padding:1.6rem;font-size:1.6rem;}
+
+
+/*  Web Accessibility */
+.skip-nav{position:fixed;top:-6rem;left:0;width:100%;height:6rem;}
+.skip-nav a{position:absolute;top:0;left:0;width:100%;height:6rem;line-height:6rem;font-weight:500;background-color:#000;color:#fff;text-align:center;  }
+.skip-nav a:focus{top:6rem;}
+
+//layout
+.app{display:flex;flex-flow:column;}
+
+.app-container{flex:1;}
+
+/* Section */
+.kb-sec{padding-left:2.4rem;padding-right:2.4rem;}
+.kb-sec:first-child{padding-top:2rem;}
+.kb-sec.full{width:100%;padding-left:0;padding-right:0;}
+.kb-sec.full > div{padding-left:2.4rem;padding-right:2.4rem;}
+.kb-sec.full > div.no-space{padding-left:0;padding-right:0;}
+.kb-sec.bg-gray:first-child{background: linear-gradient(180deg, rgba(255,255,255,0) 0, rgba(255,255,255,0) 4rem, rgba(247,247,248,1) 4rem, rgba(247,247,248,1) 100%);}
+.kb-sec.bg-white:first-child{background: linear-gradient(180deg, rgba(255,255,255,0) 0, rgba(255,255,255,0) 4rem, rgba(255,255,255,1) 4rem, rgba(255,255,255,1) 100%);}
+.app[data-page=submain] .kb-sec:not(:first-child).bg-gray,
+.popup_contents .kb-sec.bg-gray,
+.kb-sec.bg-gray{background-color:$kb-ui10;}
+.app[data-page=submain] .kb-sec:not(:first-child){background-color:$kb-ui11;}
+
+
+.iphone {
+	input[type=text]:focus,
+	input[type=password]:focus,
+	input[type=tel]:focus,
+	input[type=email]:focus,
+	input[type=number]:focus {outline:none;}
+}
+
+body {
+	--sticky-button-height: 5.2rem;
+}
+.ios.homebar body {
+	--sticky-button-height: 8.6rem;
+}
+
+.common-loader{position:fixed;top:50%;left:0;z-index:$level100;width:100%;transform:translateY(-50%);text-align:center;}
+.common-loader .tit{@include text($weight:bold)}
+.common-loader .tit + .loader{margin-top:4rem}
+
+.loader{display:flex;justify-content:center;}
+.loader i{width:1.2rem;height:1.2rem;border-radius:50%;background-color:$color-yellow-negative;animation:blinking 1s infinite alternate forwards;}
+.loader i:nth-child(1){animation-delay:0.2s;}
+.loader i:nth-child(2){animation-delay:0.4s;}
+.loader i:nth-child(3){animation-delay:0.6s;}
+.loader i:nth-child(4){animation-delay:0.8s;}
+.loader i + i{margin-left:2rem;}
+.loader span{@include hidden;}
+
+@keyframes blinking {
+	from{
+		background-color:$kb-ui09;
+	}    
+	to{                
+		background-color:$color-yellow-negative;
+	}
+}

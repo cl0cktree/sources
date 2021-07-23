@@ -1,0 +1,47 @@
+
+/*
+영문 (대문자) : U+0041-005A
+영문 (소문자) : U+0061-007A
+숫자 : U+0030-0039
+한글 : U+AC00-U+D7A3
+
+*/
+
+// 숫자
+@font-face {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: normal;
+    src: local('※'),
+    url('../common/fonts/RobotoR.woff') format('woff');
+    // unicode-range: U+0030-0039;
+}
+
+@font-face {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: bold;
+    src: local('※'),
+    url('../common/fonts/RobotoM.woff') format('woff');
+    // unicode-range: U+0030-0039;
+}
+
+
+
+@font-face {
+    font-family: 'KBFGText';
+    font-style: normal;
+    font-weight: normal;
+    src: local('※'),
+    url('../common/fonts/KBFGTextL.woff') format('woff'),
+    url('../common/fonts/KBFGTextL.woff2') format('woff');
+}
+
+// @font-face {
+//     font-family: 'KBFGText';
+//     font-style: normal;
+//     font-weight: bold;
+//     src: local('※'),
+//     url('../common/fonts/KBFGTextM.woff') format('woff'),
+//     url('../common/fonts/KBFGTextM.woff2') format('woff2');
+// }

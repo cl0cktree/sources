@@ -1,0 +1,131 @@
+/* DASHBOARD */
+$dashboardExpenseMarginTop: 6.67vw;
+
+.kb-sec.dashboard {position: relative; padding: 20px 0 0 0; background-color: #7794ff;}
+.dashboard .link-bell {position: absolute; z-index: 2; right: 20px; top: 16px; padding: 4px;}
+.dashboard .link-bell .message {position: relative; display: inline-block; width: 0; height: 24px; overflow: hidden;}
+.dashboard .link-bell .message span {position: absolute; left: 0; display: inline-block; @include text($text03, bold); line-height: 24px; white-space: nowrap;}
+.dashboard .link-bell .message span::before {content: ''; position: absolute; left: 0; right: 0; bottom: 3px; height: 1px; background-color: #26282c;}
+
+.dashboard-section {position: relative; padding: 56px 24px 24px;}
+.dashboard-section .sec-title {font-size: 31px; line-height: 41px; font-weight: bold;}
+.dashboard-section a.sec-title {position: relative; display: block;}
+
+.dashboard-section .sec-title i {margin-top: 7px;}
+.dashboard-section .sec-title > .num {font-size: 34px;}
+.dashboard-section .sec-amount {display: block; margin-top: -4px; font-size: 30px; line-height: 40px; font-weight: bold;}
+.dashboard-section .sec-amount .num {font-size: 34px; margin-right: 5px;}
+.dashboard-section.sticky-bottom.sticky-bottom:not(.popup_buttons) {height: 0; padding: 0; background-color: #f7f7f8;}
+.dashboard-section.sticky-bottom .btn-solid_sticky span {position: relative; padding-left: 33px;}
+.dashboard-section.sticky-bottom .btn-solid_sticky span::before, 
+.dashboard-section.sticky-bottom .btn-solid_sticky span::after {content: ''; position: absolute; left: 6px; top: 50%; width: 14px; height: 2px; margin-top: -1px; background-color: #26282c; border-radius: 0;}
+.dashboard-section.sticky-bottom .btn-solid_sticky span::after {transform: rotate(90deg);}
+
+.dashboard-asset {z-index: 1; height: 334px; padding-top: 24px; background-color: transparent;}
+// .dashboard-asset::after {content: ''; position: absolute; left: 0; right: 0; top: 100%; height: $dashboardExpenseMarginTop; background-color: #7794ff; background-color: #93aaff;}
+.dashboard-asset .sec-title,
+.dashboard-asset .sec-amount {color: #ffffff;}
+.dashboard-asset .sub-text {margin-top: 3px; @include text($text03, normal);}
+.dashboard-asset .sub-text .num {font-size: 15px;}
+.dashboard-asset .info-text {margin-top: 22px; @include text($text02, bold); line-height: 27px;}
+.dashboard-asset .info-text .num {font-size: 18px;}
+.dashboard-asset .msg {display: block; @include text($text03, normal); color: $kb-ui10;}
+.dashboard-asset .msg i {margin-right: 5px;}
+.dashboard-asset .sec-title + .msg {margin-top: 8px;}
+.dashboard-asset .object .coin-1 {position: absolute; z-index: 2; right: 100px; bottom: 47px; width: 64px; height: 52px; background: url(../images/common/dashboard_coin.png) no-repeat 0 0; background-size: 100% 100%;}
+.dashboard-asset .object .coin-2 {position: absolute; z-index: 2; right: 45px; bottom: 130px; width: 32px; height: 26px; background: url(../images/common/dashboard_coin.png) no-repeat 0 0; background-size: 100% 100%; transform: rotate(35deg)}
+.dashboard-asset .object .card {position: absolute; z-index: 1; right: 0; bottom: -170px; width: 315px; height: 253px; background: url(../images/common/dashboard_card.png) no-repeat 0 0; background-size: 100% 100%;}
+
+.dashboard-asset .object .coin-1 {animation: dsCoinAni 1s ease 0.8s forwards; transform: translateY(35px); opacity: 0;}
+.dashboard-asset .object .coin-2 {animation: dsCoinAni 1s ease 1.0s forwards; transform: translateY(35px); opacity: 0;}
+.dashboard-asset .object .card {animation: dsCardAni 1s ease .3s forwards; transform-origin: 0% 30%; transform: rotate(16deg) translateY(35px);}
+@keyframes dsCardAni {
+	0% {transform: rotate(16deg) translateY(35px);}
+	100% {transform: rotate(0deg) translateY(0);}
+}
+@keyframes dsCoinAni {
+	0% {transform: translateY(35px); opacity: 0;}
+	100% {transform: translateY(0); opacity: 1;}
+}
+
+.dashboard-expense {z-index: 2; margin-top: $dashboardExpenseMarginTop; padding-top: calc(56px - 6.67vw); min-height: 310px; background-color: #696e76;}
+.dashboard-expense::before {content: ''; position: absolute; left: 0; right: 0; bottom: 100%; height: $dashboardExpenseMarginTop; background: url(../images/common/dashboard_bg.png) no-repeat 0 0; background-size: 100% auto;}
+.dashboard-expense .sec-title,
+.dashboard-expense .sec-amount {color: #ffffff;}
+.dashboard-expense .sub-text {color: #ffffff; margin-top: 3px; @include text($text03, normal);}
+.dashboard-expense .sub-text .num {font-size: 15px;}
+.dashboard-expense .link-text {position: relative; display: inline-block; color: #ffffff; padding-right: 13px; margin-top: 22px; font-size: 17px; font-weight: bold; line-height: 27px;}
+.dashboard-expense .link-text::before {content: ''; position: absolute; left: 0; right: 0; bottom: 1px; height: 1px; background-color: #fff;}
+.dashboard-expense .link-text::after {content: ''; position: absolute; right: 0; bottom: 1px; width: 7px; height: 1px; background-color: #fff; transform-origin: 100% 50%; transform: rotate(45deg);}
+.dashboard-expense .link-text .num {font-size: 18px;}
+.dashboard-expense .sec-title + .link-text {margin-top: 0;}
+.dashboard-expense .msg + .link-text {margin-top: 58px;}
+.dashboard-expense .msg {display: block; @include text($text03, normal); color: $kb-ui10;}
+.dashboard-expense .msg i {margin-right: 5px;}
+.dashboard-expense .sec-title + .msg {margin-top: 8px;}
+.dashboard-expense .link-text + .msg {margin-top: 12px;}
+
+.dashboard-goal {padding: 56px 0 24px; background-color: #ffffff;}
+.dashboard-goal .swiper-container.t02{padding-bottom:30px}
+.dashboard-goal .swiper-container.t02 .swiper-pagination{left: 20px; top: 142px; bottom: auto; width: auto;}
+.dashboard-goal .goal-slide {padding: 0 24px; min-height: 420px; overflow: hidden;}
+.dashboard-goal .goal-slide .dday {position: absolute; z-index: 1; top: 0; right: -27px;font-size: 125px; min-width: 220px; font-weight: bold; line-height: 1; color: #f4f4f4; white-space: nowrap;}
+.dashboard-goal .goal-slide .dday span {position: relative; padding-right: 35px;}
+.dashboard-goal .goal-slide .dday span::after {content: ''; position: absolute; top: 50%; right: 0; margin-top: -15px; display: inline-block; width: 30px; height: 12px; background-color: #f4f4f4;}
+.dashboard-goal .goal-slide .sec-title {z-index: 2; height: 123px; max-width: 135px; margin-bottom: 47px; word-break: break-all;}
+.dashboard-goal .goal-slide .sec-title i {position: absolute;}
+
+.dashboard-goal .challenge-info .period {display: inline-block; margin-bottom: 3px; font-size: 17px; color: $kb-ui02;}
+.dashboard-goal .challenge-info > strong {@include text($text02, normal); color: $kb-ui02;}
+
+.dashboard-goal .character-graph {padding-top:140px;}
+.dashboard-goal .character-graph strong {font-weight: bold;}
+.dashboard-goal .character-graph .graph-area {height: 23px; border-radius: 22px;}
+.dashboard-goal .character-graph .graph-area > span {background-color: #fddf3c;}
+.dashboard-goal .character-graph .graph-area .flag {right:-13px;}
+.dashboard-goal .character-graph .graph-txt {font-size:16px;}
+.dashboard-goal .character-graph .graph-txt strong {font-weight:bold;}
+
+.dashboard-goal .character-graph[data-theme=coffee] .graph-area > span i {background-image:url(../images/common/dash_icon_coffee.png);width:71px;height:64px;}
+.dashboard-goal .character-graph[data-theme=alcohol] .graph-area > span i {background-image:url(../images/common/dash_icon_alcohol.png);width:62px;height:71px;}
+.dashboard-goal .character-graph[data-theme=store] .graph-area > span i {background-image:url(../images/common/dash_icon_store.png);width:69px;height:67px;}
+.dashboard-goal .character-graph[data-theme=taxi] .graph-area > span i {background-image:url(../images/common/dash_icon_taxi.png);width:85px;height:64px;}
+.dashboard-goal .character-graph[data-theme=delivery] .graph-area > span i {background-image:url(../images/common/dash_icon_delivery.png);width:78px;height:73px;}
+.dashboard-goal .character-graph[data-theme=shopping] .graph-area > span i {background-image:url(../images/common/dash_icon_shopping.png);width:87px;height:75px;}
+.dashboard-goal .character-graph[data-theme=oil] .graph-area > span i {background-image:url(../images/common/dash_icon_oil.png);width:74px;height:67px;}
+.dashboard-goal .character-graph[data-theme=mobile] .graph-area > span i {background-image:url(../images/common/dash_icon_mobile.png);width:71px;height:68px;}
+.dashboard-goal .character-graph[data-theme=fastfood] .graph-area > span i {background-image:url(../images/common/dash_icon_fastfood.png);width:66px;height:66px;}
+.dashboard-goal .character-graph[data-theme=eatout] .graph-area > span i {background-image:url(../images/common/dash_icon_eatout.png);width:75px;height:47px;}
+
+.dashboard-goal .character-graph[data-theme=kiki] .graph-area > span i {background-image:url(../images/common/dash_kiki.png);width:48px;height:87px;}
+.dashboard-goal .character-graph[data-theme=ago] .graph-area > span i {background-image:url(../images/common/dash_ago.png);width:113.5px;height:86.5px;}
+.dashboard-goal .character-graph[data-theme=bb] .graph-area > span i {background-image:url(../images/common/dash_bb.png);width:89px;height:87.5px;}
+.dashboard-goal .character-graph[data-theme=lamu] .graph-area > span i {background-image:url(../images/common/dash_lamu.png);width:56px;height:99.5px;}
+.dashboard-goal .character-graph[data-theme=kolly] .graph-area > span i {background-image:url(../images/common/dash_kolly.png);width:61px;height:72px;}
+
+.dashboard-goal .character-graph[data-theme=coin] .graph-area > span i {background-image:url(../images/common/dash_coin.png);width:63.5px;height:52px;}
+
+.dashboard-items {background-color: #f7f7f8;}
+.dashboard-items .items {margin-top: 30px; margin-right: -24px;}
+.dashboard-items .item {margin-bottom: 20px;}
+.dashboard-items .item:last-child {margin-bottom: 0;}
+.dashboard-items .item a {position: relative; display: block; padding: 17px 0 14px 130px; min-height: 108px; background-color: #ffffff; border-top-left-radius: 54px; border-bottom-left-radius: 54px; box-shadow: 0 2px 10px rgba(0, 0, 0, 0.07);}
+.dashboard-items .item a::before {background-image: url(../images/common/sprite_dashboard.png); background-repeat: no-repeat; background-size: 70px 280px;}
+.dashboard-items .item a::before {content: ''; position: absolute; left: 32px; top: 50%; width: 70px; height: 70px; margin-top: -35px;}
+.dashboard-items .item-credit a::before {background-position: 0 0;}
+.dashboard-items .item-mysafe a::before {background-position: 0 -70px;}
+.dashboard-items .item-mycar a::before {background-position: 0 -140px;}
+.dashboard-items .item-myhouse a::before {background-position: 0 -210px;}
+.dashboard-items .item a > span {display: block;}
+.dashboard-items .item a .tit {@include text($text02, bold); padding-right: 10px; @include ellipsis(100%);}
+.dashboard-items .item a .vbar {position: relative; margin-left: 7px; padding-left: 9px; @include text($text02, bold);}
+.dashboard-items .item a .vbar::before {content: ''; position: absolute; left: 0; top: 50%; width: 2px; height: 11px; margin-top: -5px; background-color: #dde1e4;}
+.dashboard-items .item a .value {margin-top: 5px; @include text($text02, bold);}
+.dashboard-items .item a .value .num {font-size: 22px; margin-right: 3px;}
+.dashboard-items .item a .desc {margin-top: 3px; @include text($text03, normal);}
+.dashboard-items .item a .tit + .desc,
+.dashboard-items .item a .tit + .msg {margin-top: 11px;}
+.dashboard-items .item a .msg {@include text($text03, normal);}
+.dashboard-items .item a .msg i {margin-right: 5px;}
+.dashboard-items .last-update {margin: 33px 0; text-align: center; font-size: 14px; color: #26282c;}
+.dashboard-items .last-update .datetime {margin-right: 5px; font-size: 15px; font-family: 'Roboto', sans-serif;}

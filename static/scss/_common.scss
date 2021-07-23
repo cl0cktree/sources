@@ -1,0 +1,586 @@
+
+//ICON
+.icon-cloud-download,
+.icon-kb-certificate-download{width:124px;height:124px;}
+.icon-cloud-download{background:url(../images/etc/cloud-download@2x.png) no-repeat;background-size:cover;}
+.icon-kb-certificate-download{background:url(../images/etc/cloud-download@2x.png) no-repeat;background-size:cover;}
+
+
+
+//FACE ID(mys_co_04_01_03_01)
+.face-id .kb-sec + .kb-sec{margin-top:48px;}
+.face-id ul[data-style=list]{margin-top:20px;}
+.face-id ul[data-style=list] li{@include text($size: $text02)}
+.face-id .banner-msg{@include text($size: $text02, $weight: bold);margin-top:40px;padding:20px 24px;background-color:$kb-ui10;color:$kb-ui02;}
+
+//KB모바일인증서(mys_co_04_03_00)
+.app-content[class*=login-certification] .kb-mobile-certification-msg{padding-top:14px;text-align:center;}
+.app-content[class*=login-certification] .kb-mobile-certification-msg p{@include text($size: $text01);margin-top:16px;}
+.app-content[class*=login-certification] .kb-mobile-certification-msg p strong{font-weight:bold;}
+.app-content[class*=login-certification] .kb-mobile-certification-msg + ul{margin-top:80px;margin-bottom:24px;}
+.app-content[class*=login-certification] .starbank-automove{margin-top:24px;margin-bottom:72px;}
+.app-content[class*=login-certification] .other-login .btn-text span{@include text($size:$text03,$weight:bold);}
+.app-content[class*=login-certification] .other-login .btn-text i{@include iconBullet($direction: 'up', $width: 13px, $height: 7px, $thick: 2px, $color: #52565d);top:-3px;margin-left:10px;}
+.app-content[class*=login-certification] .certification-issued{margin-top:20px;text-align:center;}
+.popup[data-layered-name=popupCertificationLoading] .loading-certification .tit{display:block;text-align:center;font-weight:bold;color:$kb-ui02;}
+.popup[data-layered-name=popupCertificationLoading] .loading-certification .loader{margin-top:40px;}
+
+.app-content[class*=login-certification] .certification-tit{@include text($size: 24px, $line-height:34px);margin-top:20px;letter-spacing: -0.05em;}
+.app-content[class*=login-certification] .certification-tit strong{display:inline-block;font-weight:bold;}
+.app-content[class*=login-certification] .certification-tit + .kb-mobile-certification-msg{padding-top:28px;}
+.app-content[class*=login-certification] .app-download-link{margin-top:20px;padding-left:15px;}
+.app-content[class*=login-certification] .app-download-link .btn-text span{font-size:14px;color:$kb-ui04;}
+.app-content[class*=login-certification] .app-download-link i{margin-left:0;vertical-align:-4px;}
+
+//간편 비밀번호
+.simple-password .pw-dots{padding-top:112px;padding-bottom:40px;}
+.simple-password p:not(.other-login){text-align:right;}
+.simple-password p:not(.other-login) + p{margin-top:16px;}
+.simple-password p:not(.other-login) .btn-text span{@include btnText($size: $text02, $underline: true)}
+.simple-password p .form-checkbox_24{display:inline-block;}
+
+//간편비밀번호 입력
+.auto-logout{padding-top:60px;}
+.app-content[class*=simple-password-input] .pw-dots{padding-top:60px;}
+.simple-password-input02 p,
+.simple-password-input04 p{@include text($size: $text03);margin-top:12px;color:$kb-ui04;}
+
+//로그인연장
+.modal[data-layered-name=modalLoginExtension] .login-extension-time{margin-bottom:16px;text-align:center;font-weight:bold;}
+.modal[data-layered-name=modalLoginExtension] .login-extension-time strong{@include number($size:$heading01, $line-height:1);display:inline-block;margin-right:8px;color:$color-yellow-positive;}
+
+//가입완료(mys_co_05_04_00)
+.join-complete .service-join-status-msg{@include text($size: $text02);margin-top:16px;color:$kb-ui04;}
+.join-complete .service-join-status-msg02{@include text($size: $text02);margin-top:48px;color:$kb-ui04;}
+.join-complete .service-join-status-msg02 strong{@include heading($size: $heading04);display:block;margin-bottom:16px;color:$kb-ui02;}
+.join-complete .service-join-status-msg02 + ul{margin-top:16px;}
+
+//금융인증서비스 화면을 불러오는 중
+.popup[data-layered-name=popupCertificationLoading] .popup_contents{display:flex;justify-content:center;align-items:center;}
+
+//휴대폰 인증 MYS_CO_04_04_03_01
+.mobie-cetification .radio-group > li{flex:1;}
+.mobie-cetification .agreement-to-terms{margin-top:48px;}
+.mobie-cetification .btn-extend-time{margin-top:8px;}
+
+//서비스 이용약관 mys_co_05_02_01
+.agree-term .agreement-to-terms{margin-top:48px;}
+.agree-term .simple-message,
+.agree-term .simple-message + p{margin-top:20px;}
+.agree-term .kb-form_email{margin-top:32px;}
+.agree-term .go-service-info{margin-top:20px;text-align:right;}
+.agree-term .go-service-info .btn-text{@include btnText($size: 14px);}
+.agree-term .agreement-to-terms .checkbox-group.st_list:last-child{padding-top:0;padding-bottom:20px;}
+
+.kb-sec.asset-sync{padding-top:12vh;text-align:center;}
+.asset-sync .character-box{width:134px;height:134px;margin:0 auto;}
+.asset-sync .character-box img{width:100%;height:100%;}
+.asset-sync .character-box + p{@include text($size:$text01);margin-top:16px;}
+.asset-sync .loader{margin-top:40px;}
+.asset-sync02{position:absolute;bottom:24px;left:0;width:100%;}
+.asset-sync02 .checkbox-group{overflow:auto;padding-top:28px;padding-bottom:28px;border-top:1px solid $kb-ui03;border-bottom:1px solid $kb-ui09;min-height:80px;max-height:206px}
+.asset-sync02 .checkbox-group label{color:$kb-ui04}
+.ios.homebar .asset-sync02{bottom:58px;}
+
+
+// 전송 요구 방법 선택 mys_co_06_01_00
+.box-option-list:not(.is-link) li{display:flex;margin-bottom:24px;padding:28px 24px;border:1px solid $kb-ui08;border-radius:2px}
+.box-option-list.is-link li [class*="link-box"]{display:flex;margin-bottom:24px;padding:25px 20px;border:1px solid $kb-ui08;border-radius:2px}
+.box-option-list p{margin-left:10px}
+.box-option-list p strong{display:block;font-size:16px;font-weight:bold}
+.box-option-list p span{display:block;margin-top:4px;font-size:14px;line-height:20px;color:$kb-ui03}
+.select-transmission-method .box-option-list p strong{color:$color-blue;line-height:24px;}
+.select-transmission-method .btn-search{padding-left:10px}
+
+// 기관선택 mys_co_06_01_01
+.select-organization{margin-top:24px}
+.select-organization .checkbox-group_icon{margin-top:20px}
+.checkbox-group_icon{display:grid;grid-template-columns:repeat(3, 1fr);grid-auto-rows:110px;padding-top:24px;border-top:1px solid $kb-ui03}
+.checkbox-group_icon li{border:1px solid $kb-ui08;}
+.checkbox-group_icon li:nth-child(n + 4){border-top:none;}
+.checkbox-group_icon li:nth-child(3n + 2),
+.checkbox-group_icon li:nth-child(3n + 3){border-left:none;}
+.form-checkbox_icon input{overflow:hidden;position:absolute;width:1px;height:1px;padding:0;margin:-1px;clip:rect(0, 0, 0, 0);border:0}
+.form-checkbox_icon label{@include flexCenter;flex-wrap:wrap;width:100%;height:100%;padding:24px 5px;background-color:$kb-ui11}
+.form-checkbox_icon label[data-status="inprogress"]{background-color:$kb-ui10}
+.form-checkbox_icon label[data-status="inprogress"] .status{display:inline-block;line-height:32px;color:$color-blue;font-size:12px;}
+.form-checkbox_icon label strong{display:block;width:100%;margin-top:12px;font-size:14px;color:$kb-ui05;text-align:center}
+.form-checkbox_icon input:checked + label{position:relative;color:$kb-ui02;font-weight:bold}
+.form-checkbox_icon input:checked + label:after{content:'';position:absolute;left:-1px;right:-1px;bottom:-1px;top:-1px;border:1px solid $kb-ui02;}
+.form-checkbox_icon input:checked + label strong{font-weight:bold;color:$kb-ui02}
+
+.accordian.t02 li{@include flexBetween}
+.accordian.t02 > dt{border-top:0;border-bottom:1px solid $kb-ui03}
+.accordian.t02 > dt label{font-weight:bold}
+.accordian.t02 > dd{padding-bottom:24px}
+.accordian.t02 > dt.is-active + dd{border-bottom-color:$kb-ui09}
+.accordian.t02 .status{color:$color-blue;font-size:12px;}
+
+// 기관선택 > 검색결과 mys_co_06_01_01_09
+.search-organization-form{position:relative}
+.search-organization-form .form-text{padding-top:30px}
+.search-organization-form .autocomplete-box{position:absolute;top:72px;left:0;z-index:$level20;width:100%;padding:0 24px;background-color:$kb-ui11;display:none}
+.search-organization-form .autocomplete-box.is-active{display:block}
+.search-organization-form .autocomplete-box ul{padding:38px 0 16px;border-top:2px solid $kb-ui02;border-bottom:2px solid $kb-ui02}
+.search-organization-form .autocomplete-box li{padding:10px 0}
+.search-result-list{margin-top:40px}
+.search-result-list .list-tit{margin-top:40px}
+.search-result-list .list-tit span{color:$color-blue}
+.search-result-list .result-list{margin-top:40px;padding:35px 0;border-top:1px solid $kb-ui03;border-bottom:1px solid $kb-ui09}
+.search-result-list .result-list li{position:relative}
+.search-result-list .result-list li+li{margin-top:30px}
+.search-result-list .checkbox-group .form-checkbox_20,
+.search-result-list .checkbox-group label{width:100%}
+.search-result-list .checkbox-group label{@include flexBetween}
+.search-result-list .checkbox-group input:disabled + label{color:$kb-ui04}
+.search-result-list .checkbox-group .status{font-size:12px;color:$color-blue}
+
+// 기관 선택 > 전송요구 항목 설정 mys_co_06_01_01_07
+.count-step{margin-bottom:20px}
+.count-step strong{font-weight:bold}
+.setting-info-list dd + dt{margin-top:20px}
+.setting-info-list dd{color:#484b51}
+.agreement-to-terms .agreement-info{margin-top:24px}
+.agreement-to-terms .agreement-info > strong{font-size:16px}
+.agreement-to-terms .agreement-info .simple-message{margin-top:30px}
+.include-agreement-info .form-checkbox{width:100%}
+.set-transfer-requirements_step04 .agreement-to-terms{margin-top:72px;border-bottom:0}
+.set-transfer-requirements_step04 .agreement-to-terms .form-checkbox{@include flexBetween;width:100%}
+.set-transfer-requirements_step04 .agreement-to-terms .link{position:relative}
+.set-transfer-requirements_step04 .agreement-to-terms .link span{display:block}
+
+.select-assets h1 + p{@include text;margin-top:16px;color:$kb-ui03}
+.select-assets h1 + p + h2{margin-top:44px;}
+.select-assets h2{margin-top:48px;line-height:1;}
+.select-assets h2 .num{font-size:19px;}
+.select-assets h2 .num:before{content:'('}
+.select-assets h2 .num:after{content:')'}
+.select-assets .accordian{margin-top:24px;}
+.select-assets .accordian .num{@include number($size: 17px);display:block;margin-top:8px;color:$kb-ui04;line-height:1;}
+.select-assets .accordian + h2{margin-top:32px;}
+.select-assets .accordian > dt:first-child{border-top:1px solid $kb-ui03;}
+.select-assets .agree-integrated-authentication{margin-top:56px;}
+.select-assets .agree-integrated-authentication .kb-form_inner{padding-bottom:20px;border-bottom:1px solid $kb-ui03}
+.select-assets .agree-integrated-authentication .kb-form_inner .link{position:relative;left:8px;margin-left:auto;}
+
+.select-assets-complete h2 + p{@include text($text02);margin-top:20px;}
+.select-assets-complete .select-recommend-employee{margin-top:100px;}
+.select-assets-complete .radio-group{margin-top:20px;}
+.select-assets-complete .form-radio,
+.select-assets-complete .form-radio label{display:block;font-weight:bold;color:$kb-ui02;}
+.select-assets-complete .employee-info{display:flex;margin-top:4px;color:$kb-ui04;}
+.select-assets-complete .employee-info .date{@include number($size: 17px, $line-height:1);}
+.select-assets-complete .employee-info .branch{@include ellipsis;max-width:calc(100% - 84px)}
+.select-assets-complete .employee-info .branch:before{content:'|';display:inline-block;margin-left:4px;padding-right:4px;}
+.select-assets-complete .recommend-employees{margin-top:20px;margin-bottom:40px;}
+.select-assets-complete .recommend-employees-form{margin-top:24px;}
+.select-assets-complete .recommend-employees-form > .kb-form + p:last-child{margin-top:24px;}
+.select-assets-complete .recommend-employees-form > .kb-form,
+.select-assets-complete .recommend-employees-form > .kb-form + p:last-child{display:none;}
+.select-assets-complete .kb-form.is-disabled input{color:$kb-ui02}
+.select-assets-complete .recommend-mydata-service{margin-top:36px;}
+.recommend-mydata-service .tit{@include text($size: $text01, $weight:bold, $line-height:1);display:block;}
+.recommend-mydata-service ul{display:flex;justify-content:space-around;margin-top:24px;}
+.recommend-mydata-service li{text-align:center;}
+.recommend-mydata-service li i{margin:0 auto;}
+.recommend-mydata-service li span{@include text($size: $text03);display:block;margin-top:16px;line-height:1}
+
+.bottom-sheet[data-layered-name=bsSetTransferResult] .msg{@include text($size:$text01,$line-height:1,$weight:bold);padding-bottom:20px;border-bottom:1px solid $kb-ui02;}
+.bottom-sheet[data-layered-name=bsSetTransferResult] ul{padding-top:8px;}
+.bottom-sheet[data-layered-name=bsSetTransferResult] li{margin-top:24px;color:$kb-ui04;line-height:1;}
+.bottom-sheet[data-layered-name=bsSetTransferResult] li strong{@include text($size: $text02, $line-height:1, $weight: bold);display:block;margin-bottom:8px;color:$kb-ui02}
+
+
+.info-distributer-asset .sticky-bottom.sticky-bottom:not(.popup_buttons){padding-top:0;height:auto;}
+.info-distributer-asset .info-distributer-asset-tit{@include text($size: 24px, $weight: bold);margin-top:20px;}
+.info-distributer-asset .info-distributer-asset-tit .num{font-size:25px;}
+.info-distributer-asset .info-distributer-asset-tit + p{margin-top:20px;color:$kb-ui04;}
+.info-distributer-asset .info-distributer-asset-selector{margin-top:48px;overflow:auto;max-height:calc(100vh - 292px);padding-bottom:20px;}
+.info-distributer-asset .info-distributer-asset-list{margin-top:20px;padding-top:4px;padding-bottom:24px;border-top:1px solid $kb-ui03;border-bottom:1px solid $kb-ui08;}
+.info-distributer-asset .info-distributer-asset-list li{padding-top:20px;}
+.info-distributer-asset .info-distributer-asset-list li + li{margin-top:20px;border-top:1px solid $kb-ui09;}
+.info-distributer-asset .info-distributer-asset-list li .form-checkbox_20{display:block;}
+.info-distributer-asset .info-distributer-asset-list .form-checkbox_20 label{display:block;font-weight:normal;}
+.info-distributer-asset .info-distributer-asset-list .account-number{display:block;margin-top:4px;font-weight:bold;}
+.info-distributer-asset .info-distributer-asset-list .account-amount{display:block;margin-top:4px;text-align:right;font-weight:bold;}
+.info-distributer-asset .info-distributer-asset-list .account-amount .num{font-weight:bold;}
+
+
+//mys_mn_01_01_01.html
+.mydata-kbinfo h2{margin-top:28px;}
+.mydata-kbinfo .mydata-kbinfo-list{margin-top:20px;border-top:1px solid $kb-ui09;}
+.mydata-kbinfo .mydata-kbinfo-list li{padding:20px 0;border-bottom:1px solid $kb-ui09;}
+.mydata-kbinfo .mydata-kbinfo-list li .form-checkbox_20,
+.mydata-kbinfo .mydata-kbinfo-list li label{display:block;}
+.mydata-kbinfo .mydata-kbinfo-list li .asset-name{@include text($size: 16px, $line-height:1);}
+.mydata-kbinfo .mydata-kbinfo-list li .asset-number{@include number($size: 17px, $line-height:1, $weight:bold);display:block;margin-top:4px;}
+.mydata-kbinfo .mydata-kbinfo-list li .asset-owner{@include text($size: 16px, $line-height:1);display:block;margin-top:4px;}
+.mydata-kbinfo .mydata-kbinfo-list li .asset-amount{@include number($size: 17px, $line-height:1, $weight:bold);display:block;margin-top:4px;text-align:right;}
+//스타뱅킹, Liiv
+.app[data-page=submain] .mydata-kbinfo .kb-sec.bg-white:first-child,
+.app[data-page=submain] .reward-coupon .kb-sec.bg-white:first-child,
+.app[data-page=submain] .reward-benefit-detail .kb-sec.bg-white:first-child,
+.app[data-page=submain] .reward-benefit .kb-sec.bg-white:first-child,
+.app[data-page=submain] .recommend-to-friend .kb-sec.bg-white:first-child,
+.app[data-page=submain] .pointree .kb-sec.bg-white:first-child{padding-top:24px;background-color:$kb-ui11}
+.app[data-page=submain] .mydata-kbinfo .mydata-kbinfo-msg,
+.app[data-page=submain] .mydata-kbinfo .h2,
+.app[data-page=submain] .mydata-kbinfo .mydata-kbinfo-nodata p:first-child,
+.app[data-page=submain] .mydata-kbinfo-summary-list02 h2,
+.app[data-page=submain] .mydata-kbinfo .kb-sec:first-child .condition-area{margin-top:0;}
+.app[data-page=submain] .mydata-kbinfo-summary-list02{padding-top:28px;}
+
+.app[data-page=submain] .reward-coupon .condition-area{margin-top:0;}
+.app[data-page=submain] .reward-coupon .kb-sec.bg-white:first-child{padding-bottom:32px;}
+.app[data-page=submain] .pointree .kb-sec.bg-white:first-child{padding-bottom:32px;}
+.app[data-page=submain] .app-lnb + .app-content .kb-sec:first-child .tab_button{margin-top:0;}
+.app[data-page=submain] .pointree .banner-about-pointree{margin-top:0;}
+.app[data-page=submain] .reward-benefit-detail .kb-sec:first-child{min-height:300px;margin-top:0;}
+.app[data-page=submain] .recommend-to-friend .kb-sec:first-child{padding-bottom:20px;}
+.app[data-page=submain] .recommend-to-friend .rtf-code{margin-top:0;}
+.app[data-page=submain] .recommend-to-friend .recommend-history{margin-top:0;padding-top:12px;}
+
+
+
+
+
+.mydata-kbinfo .kb-sec:first-child .condition-area{margin-top:12px;}
+.mydata-kbinfo .mydata-kbinfo-msg{@include text;margin-top:32px;margin-bottom:48px;}
+.mydata-kbinfo .mydata-kbinfo-msg .num{font-size:17px;}
+.mydata-kbinfo .mydata-kbinfo-asset{margin-top:48px;}
+.mydata-kbinfo .mydata-kbinfo-asset dt{padding-bottom:20px;border-bottom:1px solid $kb-ui02}
+.mydata-kbinfo .mydata-kbinfo-asset dd{padding:24px 0;border-bottom:1px solid $kb-ui09;}
+.mydata-kbinfo .mydata-kbinfo-asset .asset-name{@include text($size: $text02, $weight:bold);display:block;}
+.mydata-kbinfo .mydata-kbinfo-asset .account-number{@include number($size: 17px);color:$kb-ui04;display:block;margin-top:4px;}
+.mydata-kbinfo .line-list-wrap .date{@include number($size: 15px, $line-height:1);color:$kb-ui06}
+.mydata-kbinfo .line-list-wrap .status{@include text($weight:bold);margin-top:8px;}
+.mydata-kbinfo .line-list-wrap .company{@include text;color:$kb-ui04;margin-top:8px;}
+.mydata-kbinfo .line-list-wrap .company li{display:flex;justify-content:space-between;align-items:center;}
+.mydata-kbinfo .line-list-wrap .company li + li{margin-top:4px;}
+.mydata-kbinfo .line-list-wrap .company li .btn-text{@include btnText($size: $text03);}
+
+.mydata-kbinfo .no-data{padding-top:52px;}
+.mydata-kbinfo .mydata-kbinfo-nodata p{@include text;margin-top:20px;}
+
+.mydata-kbinfo .mydata-kbinfo-summary-list li{@include clfix;padding-top:48px;padding-bottom:24px;border-bottom:1px solid $kb-ui09;}
+.mydata-kbinfo .mydata-kbinfo-summary-list li .tit{@include text($size:$text01, $line-height:1, $weight:bold);float:left;}
+.mydata-kbinfo .mydata-kbinfo-summary-list li .btn-text{float:right;margin-top:2px;}
+.mydata-kbinfo .mydata-kbinfo-summary-list li .btn-text .icon-link_20{vertical-align:-4px;}
+.mydata-kbinfo .withdraw{margin-top:32px;text-align:right;}
+
+.mydata-kbinfo .mydata-kbinfo-summary-list02 h2 .num{margin-left:4px;color:$color-blue;}
+.mydata-kbinfo .mydata-kbinfo-summary-list02 .accordian{margin-top:24px;}
+.mydata-kbinfo .mydata-kbinfo-summary-list02 .accordian dt label{@include text($text02, $line-height:1, $weight: bold)}
+.mydata-kbinfo .mydata-kbinfo-summary-list02 .accordian dt label .num{@include number($size: 17px, $weight: normal);margin-left:4px;color:$color-blue;}
+.mydata-kbinfo .mydata-kbinfo-summary-list02 .accordian .additional-info{@include text($size:$text02, $line-height:1);margin-top:8px;padding-left:38px;color:$kb-ui05;}
+.mydata-kbinfo .mydata-kbinfo-summary-list02 .accordian .additional-info .num{@include number($size: 15px, $line-height:1);}
+.mydata-kbinfo .mydata-kbinfo-summary-list02 .accordian .additional-info .btn-text{@include btnText($size: 14px);margin-top:-2px;}
+.mydata-kbinfo .mydata-kbinfo-summary-list02 .accordian .additional-info .d-day{@include text($size:$text03, $line-height:1);display:none;margin-left:8px;color:$color-red;}
+.mydata-kbinfo .mydata-kbinfo-summary-list02 .accordian .additional-info .d-day.is-active{display:inline-block;}
+.mydata-kbinfo .mydata-kbinfo-summary-list02 .accordian + h2{margin-top:48px;}
+.mydata-kbinfo .mydata-kbinfo-acount-info li{@include clfix;}
+.mydata-kbinfo .mydata-kbinfo-acount-info li + li{margin-top:24px;}
+.mydata-kbinfo .mydata-kbinfo-acount-info li strong{@include text($text02, $weight:bold)}
+.mydata-kbinfo .mydata-kbinfo-acount-info li span{display:block;margin-top:4px;font-size:16px;color:$kb-ui04;}
+// .mydata-kbinfo .mydata-kbinfo-acount-info li strong{float:left;color:$kb-ui04;}
+// .mydata-kbinfo .mydata-kbinfo-acount-info li span{float:right;font-size:16px;color:$kb-ui04;}
+
+//mys_mn_01_01_02_01.html
+.mydata-kbinfo-detail .kb-sec:first-child{padding-top:0;}
+.mydata-kbinfo-detail .mydata-kbinfo-detail-summary{@include clfix;padding-top:24px;}
+.mydata-kbinfo-detail .mydata-kbinfo-detail-summary .tit{@include heading($size: $heading01, $line-height:1);}
+.mydata-kbinfo-detail .mydata-kbinfo-detail-summary .expiraton{display:block;margin-top:20px;}
+.mydata-kbinfo-detail .mydata-kbinfo-detail-summary .expiraton.is-active{color:$color-red;}
+.mydata-kbinfo-detail .mydata-kbinfo-detail-summary .expiraton strong,
+.mydata-kbinfo-detail .mydata-kbinfo-detail-summary .expiraton .num{font-weight:bold;}
+.mydata-kbinfo-detail h2{margin-top:44px;}
+.mydata-kbinfo-detail h2 + .table{margin-top:20px;}
+.mydata-kbinfo-detail p:last-child{margin-top:32px;text-align:right;}
+.mydata-kbinfo-detail p .btn-text{@include btnText($size: 16px);}
+.mydata-kbinfo-detail p .btn-text .icon-link_20{margin-top:-1px;}
+
+/* 공동 인증서 */
+.joint-certificate-list li{border-bottom:1px solid $kb-ui09;}
+.joint-certificate-list li + li{margin-top:16px;}
+.joint-certificate-list li > a{position:relative;display:block;padding-top:8px;padding-left:56px;padding-bottom:20px;padding-right:24px;}
+.joint-certificate-list li > a:after{content:'';position:absolute;top:50%;right:2px;width:8px;height:8px;border:1px solid $kb-ui04;border-left:none;border-bottom:none;transform:translateY(-50%) rotate(45deg)}
+.joint-certificate-list li i[class^=icon-certificate-]{position:absolute;left:0;top:2px;}
+.joint-certificate-list li .name{@include text($size: $text01, $line-height:1, $weight:bold);display:block;margin-bottom:8px;}
+.joint-certificate-list li .cetificate-number{@include number($size: 15px);line-height:1;color:$kb-ui02;}
+.joint-certificate-list li p + p{margin-top:4px;}
+.joint-certificate-list li p{@include text($size: $text03, $line-height:1);color:$kb-ui04}
+.joint-certificate-list li p > span{display:inline-block;min-width:52px;margin-right:14px;}
+.joint-certificate-list li p > strong.num{@include number($size: 15px, $line-height:1);color:$color-red}
+.joint-certificate-list li p > strong.num.c-black{color:$kb-ui02;}
+.joint-certificate-list li .icon-link_20{position:absolute;right:0;top:calc(50% - 8px);transform:translateY(-50%)}
+.joint-certificate{padding-bottom:100px;}
+
+.kb-sec.joint-certificate-password{padding-top:80px;}
+h1 + .joint-certificate-list{margin-top:28px;}
+.app-lnb + .joint-certificate .kb-sec:first-child{margin-top:24px;}
+
+//공지사항
+.mydata-notie .msg{margin-top:24px;color:$kb-ui03;}
+.mydata-notie .notice-list{border-top:1px solid $kb-ui09;}
+.mydata-notie .notice-view{margin-top:12px;}
+.notice-list{border-top:1px solid $kb-ui09;}
+.notice-list > li{border-bottom:1px solid $kb-ui09;}
+.notice-list > li > a{display:block;padding:20px 0;}
+.notice-list > li p{@include text}
+.notice-list > li p{@include text}
+.notice-list > li .date{@include number($size: 15px);color:$kb-ui05;margin-top:16px;}
+.notice-view dt .tit{@include text($size: $text01, $weight:bold);display:block;}
+.notice-view dt .date{@include number($size: 15px);display:block;margin-top:12px;line-height:1;color:$kb-ui05}
+.notice-view dt + dd{@include text;color:$kb-ui03;margin-top:24px;padding-top:32px;border-top:1px solid $kb-ui09;}
+
+
+//FAQ
+.mydata-faq .accordian{margin-top:32px;}
+.mydata-faq .accordian dt,
+.mydata-faq .accordian dd{position:relative;padding-left:34px;}
+.mydata-faq .accordian dt:before{content:'Q'}
+.mydata-faq .accordian dd:before{content:'A'}
+.mydata-faq .accordian dt:before,
+.mydata-faq .accordian dd:before{@include text($size: $text01, $weight:bold, $line-height:1);position:absolute;left:2px;}
+.mydata-faq .accordian dt:before{top:19px}
+.mydata-faq .accordian dd:before{top:31px}
+
+//전화상담
+.mydata-call-center .operation-time{margin-top:28px;}
+.mydata-call-center .operation-time > span{color:$kb-ui04;}
+.mydata-call-center .operation-time p{@include text($size: $text02, $weight:bold, $line-height:1);margin-top:12px;}
+.mydata-call-center .operation-time p i{margin-right:8px;}
+.mydata-call-center .operation-time p .num{@include number($size: 17px, $weight:bold, $line-height:1);}
+.mydata-call-center .connect-call-center{margin-top:52px;margin-bottom:48px;}
+.mydata-call-center .connect-call-center li{border:1px solid $kb-ui09;border-radius:2px;}
+.mydata-call-center .connect-call-center li + li{margin-top:20px;}
+.mydata-call-center .connect-call-center li > a{display:flex;padding:20px;}
+.mydata-call-center .connect-call-center li .icon-circle{position:relative;width:40px;height:40px;border-radius:50%;background-color:$kb-ui10;}
+.mydata-call-center .connect-call-center li .icon-circle i{@include absCenter;}
+.mydata-call-center .connect-call-center li p{margin-left:10px;}
+.mydata-call-center .connect-call-center li .tit{@include text($size: $text02, $line-height:1, $weight:bold);display:block;margin-bottom:8px;}
+.mydata-call-center .connect-call-center li .num{@include text($size: 17px, $line-height:1, $weight:bold);}
+.mydata-call-center .connect-call-center li .num + span{@include text($size: $text03, $line-height:1);color:$kb-ui06;}
+
+//약관 및 정책
+.term-lists{margin-top:40px;}
+.term-lists > li{border-bottom:1px solid $kb-ui09;}
+.term-lists > li > a{position:relative;display:block;padding:24px 0;}
+.term-lists .tit{@include text($size: $text01, $weight:bold, $line-height:1);}
+.term-lists .icon-link_24{position:absolute;right:-2px;top:50%;transform:translateY(-50%)}
+
+
+//앱설정
+.mm-setting .simple-message + .simple-message{margin-top:12px}
+.mm-setting .kb-sec + .kb-sec{margin-top:48px;}
+.mm-setting .kb-sec:first-child{position:relative;padding-top:40px;padding-bottom:48px;}
+.mm-setting .kb-sec:first-child:after{content:'';position:absolute;left:24px;right:24px;bottom:0;height:1px;background-color:$kb-ui09;}
+.mm-setting h2{@include text($size: $text01, $weight:bold, $line-height:1);margin-bottom:24px;}
+.mm-setting .simple-password-setting{@include clfix;}
+.mm-setting .simple-password-setting .tit{position:relative;float:left;font-weight:bold;margin-top:5px;padding-left:7px;}
+.mm-setting .simple-password-setting .tit:before{content:'';position:absolute;left:0;top:calc(50% - 3px);width:3px;height:3px;background-color:$kb-ui04;}
+.mm-setting .simple-password-setting .btn-switch{float:right;}
+.mm-setting p[class^=bottom-btn-text]{text-align:right;}
+.mm-setting p.bottom-btn-text{margin-top:24px;}
+.mm-setting p.bottom-btn-text .btn-text{@include btnText($size: $text03);color:$kb-ui04;}
+.mm-setting p.bottom-btn-text02{margin-top:48px;}
+.mm-setting p.bottom-btn-text02 .btn-text{@include btnText($size: $text02, $underline: true);}
+.mm-setting .manage-certificate > li{border-bottom:1px solid $kb-ui09}
+.mm-setting .manage-certificate > li > a{@include clfix;@include text($text01, $weight:bold, $line-height:1);display:block;padding:24px 0;}
+.mm-setting .manage-certificate > li .tit{position:relative;font-size:$text02;font-weight:bold;margin-top:5px;padding-left:7px;}
+.mm-setting .manage-certificate > li .tit:before{content:'';position:absolute;left:0;top:calc(50% - 3px);width:3px;height:3px;background-color:$kb-ui04;}
+.mm-setting .manage-certificate > li .icon-link_24{float:right;}
+.mm-setting .my-now-mode{margin-top:20px;}
+.mm-setting .my-now-mode ul{margin-top:24px;}
+.mm-setting .my-now-mode li{@include clfix;}
+.mm-setting .my-now-mode li + li{margin-top:12px;}
+.mm-setting .my-now-mode .tit{float:left;font-weight:bold}
+.mm-setting .my-now-mode .btn-switch{float:right;}
+
+//알림 설정
+.mm-alarm-setting .kb-sec:first-child{padding-top:40px;}
+.mm-alarm-setting .kb-sec + .kb-sec{margin-top:20px;}
+.mm-alarm-setting h2{@include clfix;}
+.mm-alarm-setting h2 .tit{@include text($size: $text01, $line-height:1, $weight:bold);float:left;}
+.mm-alarm-setting h2 .btn-switch{float:right;}
+.mm-alarm-setting h2 + p{@include text;margin-top:16px;}
+.mm-alarm-setting p:last-child{margin-top:12px;}
+.mm-alarm-setting p .btn-text{@include btnText($size:14px);color:$kb-ui04}
+.mm-alarm-setting .mm-alarm-setting-detail{margin-top:28px;border-top:1px solid $kb-ui09;}
+.mm-alarm-setting .mm-alarm-setting-detail li{@include clfix;padding:16px 0;border-bottom:1px solid $kb-ui09;}
+.mm-alarm-setting .mm-alarm-setting-detail li .tit{float:left;margin-top:4px;}
+.mm-alarm-setting .mm-alarm-setting-detail li .btn-switch{float:right;}
+
+//이용동의
+.mn-agreements .kb-sec + .kb-sec{margin-top:48px;}
+.mn-agreements h2{padding-bottom:20px;line-height:1;border-bottom:1px solid $kb-ui02;}
+.mn-agreements .mn-agreements-list{padding:20px 0;border-bottom:1px solid $kb-ui09;}
+.mn-agreements .mn-agreements-list a{@include text;position:relative;display:block;padding-right:32px;}
+.mn-agreements .mn-agreements-list > li + li{margin-top:10px;}
+.mn-agreements .mn-agreements-list02{padding:20px 0;}
+.mn-agreements .mn-agreements-list02 p label{font-weight:bold;}
+.mn-agreements .mn-agreements-list02 dl{margin-top:20px;margin-left:38px;}
+.mn-agreements .mn-agreements-list02 .checkbox-group{flex-flow:row;flex-wrap:wrap;}
+.mn-agreements .mn-agreements-list02 .checkbox-group li{width:50%;}
+.mn-agreements .mn-agreements-list02 .checkbox-group li + li{margin-top:0;}
+.mn-agreements .mn-agreements-list02 .checkbox-group li:nth-child(1),
+.mn-agreements .mn-agreements-list02 .checkbox-group li:nth-child(2){margin-top:16px;}
+.mn-agreements .mn-agreements-list02 .checkbox-group li:nth-child(3),
+.mn-agreements .mn-agreements-list02 .checkbox-group li:nth-child(4){margin-top:20px;}
+.mn-agreements .mn-agreements-list ~ .checkbox-group label{padding-right:30px;}
+.mn-agreements .mn-agreements-list ~ .checkbox-group .link{position:absolute;right:0;top:50%;transform:translateY(-50%)}
+.mn-agreements .mn-agreements-list ~ .checkbox-group .link span:before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 9px;
+    height: 9px;
+    transform: translate(-50%, -50%) scale(1.125, 1) rotate(
+45deg
+);
+    margin-left: -4px;
+    border-top: 1px solid #8c949e;
+    border-right: 1px solid #8c949e;
+}
+.mn-agreements button{position:relative;width:100%;padding:5px 32px 5px 0;text-align:left;line-height:1.4;}
+.mn-agreements li .icon-link_24{position:absolute;right:0;top:calc(50% - 12px);}
+
+.mm-manage-certificate p{@include text}
+.mm-manage-certificate p + p{margin-top:12px;}
+.mm-manage-certificate .no-data{margin-top:100px;}
+.mm-manage-certificate h2{margin-bottom:24px;}
+.mm-manage-certificate .available-certificate{margin-top:28px;}
+.mm-manage-certificate .new-certificate{margin-top:48px;}
+
+//플러스존 -> My 혜택 - > 마이데이터 선물함(리워드 쿠폰)
+.reward-coupon .condition-area{margin-top:32px;}
+.search-bar{display:flex;justify-content:space-between;align-items:center;margin-left:(-2.4rem);margin-right:(-2.4rem);padding-top:12px;padding-bottom:12px;padding-left:2.4rem;padding-right:2.4rem;background-color:$kb-ui10;}
+.search-bar .tit{font-weight:bold;}
+.search-bar .tit .num{font-size:17px;}
+.search-bar .tit + div{display:flex;align-items:center;}
+.search-bar .sorting-status{margin-top:2px;color:$kb-ui04;}
+.search-bar button.btn-search{margin-left:8px;color:$kb-ui04;}
+.search-month{position:relative;margin-left:(-2.4rem);margin-right:(-2.4rem);padding-top:12px;padding-bottom:12px;padding-left:2.4rem;padding-right:2.4rem;background-color:$kb-ui10;text-align:center;}
+.search-month strong{font-weight:bold;}
+.search-month button:first-child,
+.search-month button:last-child{position:absolute;}
+.search-month button:first-child{left:2.4rem;}
+.search-month button:last-child{right:2.4rem;}
+
+.reward-coupon .coupon-list{margin-top:32px;}
+.reward-coupon .no-data{margin-top:100px;}
+.coupon-list li{position:relative;overflow:hidden;}
+.coupon-list li + li{margin-top:24px;}
+.coupon-list li > a{display:flex;width:100%;height:148px;border:1px solid $kb-ui09;border-radius:2px;}
+.coupon-list li > a:before,
+.coupon-list li > a:after{content:'';position:absolute;z-index:1;right:calc(82px - 8px);width:16px;height:16px;border-radius:50%;border:1px solid $kb-ui09;background-color:$kb-ui11}
+.coupon-list li > a:before{top:-8px;}
+.coupon-list li > a:after{bottom:-8px;}
+.coupon-list li .coupon-info{display:flex;flex-flow:column;justify-content:center;flex:1;padding:0 24px;}
+.coupon-list li .coupon-info .tit{@include text($weight:bold);}
+.coupon-list li .coupon-info .desc{@include text($size: $text03);color:$kb-ui03;margin-top:8px;}
+.coupon-list li .coupon-info .due-date{@include number($size: 15px, $line-height:1);margin-top:12px;color:$kb-ui04}
+.coupon-list li .coupon-info .due-date:before{content:'~ '}
+.coupon-list li .use-status{display:flex;flex-flow:column;justify-content:center;flex:0 0 82px;border-left:1px dotted $kb-ui09;text-align:center;font-size:14px;}
+.coupon-list li .use-status .d-day{margin-top:8px;color:$color-blue;font-weight:bold;}
+.coupon-list li .use-status .d-day .num{@include number($size: 15px, $line-height:1, $weight:bold);}
+.coupon-list li.is-new:before,
+.coupon-list li.is-new:after{position:absolute;right:24px;}
+.coupon-list li.is-new:before{content:'New';top:0;width:36px;height:40px;padding-top:12px;background-color:$color-yellow;font-size:12px;text-align:center;font-weight:bold;}
+.coupon-list li.is-new:after{content:'';top:32px;border-bottom:8px solid $kb-ui11;border-left:18px solid transparent;border-right:18px solid transparent;}
+.coupon-list li.is-expired .coupon-info:after{content:'';position:absolute;top:0;right:0;left:0;bottom:0;background-color:rgba(0,0,0,0.5)}
+.coupon-list li.is-expired .use-status{position:relative;color:$kb-ui11;border-left-color:$kb-ui04}
+.coupon-list li.is-expired .btn-text{@include btnText($size:$text03);display:inline-block;margin-top:8px;color:$kb-ui11}
+.coupon-detail .kb-sec:first-child{border-bottom:10px solid $kb-ui09}
+.coupon-detail .kb-sec + .kb-sec{margin-top:28px;}
+.coupon-detail .accordian{margin-top:28px;}
+.coupon-detail .caution-msg{@include text;}
+.coupon-detail-summary .img{margin-left:(-2.4rem);margin-right:(-2.4rem);margin-bottom:32px;}
+.coupon-detail-summary .tit-label{display:inline-block;height:24px;line-height:24px;padding:0 8px;font-size:13px;background-color:$color-yellow}
+.coupon-detail-summary .company-name{@include text($size: $text03, $line-height:1);display:block;margin-top:20px;color:$kb-ui05}
+.coupon-detail-summary .tit{@include text($size: $text01, $weight:bold);margin-top:4px;}
+.coupon-detail-summary .date{@include number($size: 15px, $line-height:1);display:block;color:$kb-ui04;margin-top:16px;}
+.coupon-detail-summary .bar-code{margin-top:32px;padding:20px 40px;border:1px solid $kb-ui09;border-radius:2px;}
+.coupon-detail-summary .btn-solid{margin-top:32px;margin-bottom:48px;}
+
+.pointree .banner-about-pointree{margin-top:32px;}
+.pointree .search-month{margin-top:32px;}
+.banner-about-pointree{padding:32px 24px;background:#fcf1ed url(../images/menu/pointree.png) no-repeat right 0 top 0;background-size:auto 95%;}
+.banner-about-pointree .tit{font-size:18px;font-weight:bold;}
+.banner-about-pointree .tit + p{@include text($size:14px);margin-top:8px;}
+.banner-about-pointree .btn-text{@include btnText($size:14px);margin-top:12px;}
+.pointree-list li{position:relative;padding:24px 2px;border-bottom:1px solid $kb-ui08}
+.pointree-list .date{@include number($size: 15px);line-height:1;color:$kb-ui06;}
+.pointree-list .tit{display:block;margin-top:8px;font-weight:bold;}
+.pointree-list li p{margin-top:10px;font-size:14px;}
+.pointree-list li p .num{font-size:15px;}
+.pointree-list li .point{position:absolute;right:2px;top:50%;transform:translateY(-50%);font-size:$text01;font-weight:bold;color:$color-blue;}
+.pointree-list li .point:after{content:'P';font-family:'KBFGText';}
+.pointree-list + .btn-view-more{width:100%;margin-top:32px;padding:4px 0;}
+
+.bottom-sheet .event-result img{display:block;margin:0 auto;width:155px;height:150px;}
+.bottom-sheet .event-result dl{margin-top:20px;}
+.bottom-sheet .event-result dt{font-weight:bold;text-align:center;}
+.bottom-sheet .event-result dd{@include text;margin-top:28px;}
+.app-lnb + .app-content .kb-sec:first-child .tab_button{margin-top:12px;}
+
+.recommend-to-friend .rtf-code{margin-top:20px;margin-bottom:24px;padding:20px;background-color:$kb-ui10;text-align:center;}
+.recommend-to-friend .event-img{margin-top:24px;}
+.recommend-to-friend .sns-group{margin-top:20px;}
+.sns-group{display:flex;justify-content:space-between;}
+.sns-group button{position:relative;width:48px;height:48px;background-color:$kb-ui10;border-radius:50%;}
+.sns-group button i{@include absCenter;}
+.recommend-to-friend .rtf-detail {margin-top:48px;margin-bottom:24px;padding-bottom:28px;border-bottom:1px solid $kb-ui09;}
+.recommend-to-friend .rtf-detail li + li{margin-top:28px;}
+.recommend-to-friend .rtf-detail .tit{margin-bottom:8px;font-weight:bold;}
+.recommend-to-friend .rtf-detail .tit + div{@include text;color:$kb-ui04}
+
+//친구 추천 이력(mys_mn_06_01_06)
+.recommend-history{margin-top:32px;}
+.recommend-history .join-count{margin-top:20px;padding:16px;text-align:center;color:$kb-ui03;background-color:$kb-ui10;}
+.recommend-history .join-count strong{display:block;margin-top:8px;font-size:26px;font-weight:bold;line-height:1;color:$kb-ui02}
+.recommend-history .join-count .num{@include number($size: 27px, $weight:bold);line-height:1;}
+.recommend-history .recommend-history-list{margin-top:24px;border-top:1px solid $kb-ui09;}
+.recommend-history .recommend-history-list li{display:flex;justify-content:space-between;padding:24px 0;border-bottom:1px solid $kb-ui09}
+.recommend-history .recommend-history-list li .name + div{text-align:right;}
+.recommend-history .recommend-history-list li .date{@include number($size: 15px);display:block;margin-top:8px;color:$kb-ui04}
+.recommend-history .no-data{margin-top:100px;}
+
+//리워드 혜택
+.reward-benefit .search-bar{margin-top:32px;}
+.reward-benefit .no-data{margin-top:100px;}
+.reward-benefit .reward-benefit-list{margin-top:32px;}
+.reward-benefit .reward-benefit-list li > a{position:relative;overflow:hidden;display:flex;flex-flow:column;justify-content:center;height:calc((100vw - 48px) * 0.41);padding-left:25px;padding-right:34%;border-radius:2px;}
+.reward-benefit .reward-benefit-list li + li{margin-top:24px;}
+.reward-benefit .reward-benefit-list li .img{position:absolute;left:0;top:0;right:0;bottom:0;}
+.reward-benefit .reward-benefit-list li .img img{width:100%;}
+.reward-benefit .reward-benefit-list li .tit,
+.reward-benefit .reward-benefit-list li .date,
+.reward-benefit .reward-benefit-list li .application-available-number{position:relative;}
+.reward-benefit .reward-benefit-list li .tit{@include ellipsisMulti($size: 18px, $line : 2, $lh: 25px);font-weight:bold;}
+.reward-benefit .reward-benefit-list li .date{@include number($size: 15px);display:block;margin-top:4px;line-height:1;color:$kb-ui03;}
+.reward-benefit .reward-benefit-list li .application-available-number{margin-top:8px;font-size:14px;color:$color-red;font-weight:bold;}
+.reward-benefit .reward-benefit-list li .application-available-number .num{font-size:15px;}
+.reward-benefit-detail .kb-sec:first-child{margin-top:32px;}
+
+//마이데이터 서비스 소개
+.mydata-service .img{width:100%;}
+.mydata-service dl{margin-top:25px;}
+.mydata-service-introduction h2{@include heading($size: 21px);}
+.mydata-service-introduction .desc{margin-top:26px;}
+.mydata-service-introduction .desc dt{@include text($size: $text01, $weight:bold)}
+.mydata-service-introduction .desc dd{@include text($size: $text03);margin-top:12px;color:$kb-ui03}
+.mydata-service-introduction ul{margin-top:40px;padding-bottom:48px;border-bottom:1px solid $kb-ui09;}
+.mydata-service-introduction li{position:relative;padding-top:2px;padding-left:36px;}
+.mydata-service-introduction li + li{margin-top:26px;}
+.mydata-service-introduction li i{position:absolute;left:0;top:0;}
+.mydata-service-introduction li .tit{@include text($size: $text03, $weight:bold);display:block;}
+.mydata-service-introduction li p{@include text($size: $text03);margin-top:8px;color:$kb-ui04;}
+.mydata-service-specialty{margin-top:48px;}
+.mydata-service-specialty h2{@include heading($size: 21px);}
+.mydata-service-specialty h2 + p{@include text($size: $text03);color:$kb-ui04;margin-top:12px;}
+.mydata-service-specialty h2 + p .tit{@include text($size: $text01, $weight:bold);color:$kb-ui02;display:block;margin-bottom:12px;}
+.mydata-service-specialty dt{@include text($size: $text02, $weight:bold);}
+.mydata-service-specialty dd{@include text($size: $text03);color:$kb-ui04;margin-top:12px;}
+.mydata-service-specialty .desc{margin-top:28px;}

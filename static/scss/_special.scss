@@ -1,0 +1,321 @@
+// 신용관리 약관동의
+.credit-management-agree .agreement-to-terms {margin-bottom: 8px;}
+.credit-management-agree .agree-message {color: $kb-ui04; @include text($text03, normal);}
+.credit-management-agree .descriptions {margin: 30px 0 45px;color: $kb-ui03; @include text($text02, normal);}
+.credit-management-agree .descriptions p {margin: 15px 0;}
+
+// 신용거래 내역
+.credit-transaction-summary {position: relative; margin: 0; padding: 0 24px; background-color: $kb-ui10;}
+.credit-transaction-summary::before {content: ''; position: absolute; left: 24px; right: 0; top: -1px; height: 1px; background-color: $kb-ui08;}
+.credit-transaction-summary:first-child {padding-top: 0;}
+.summary-header {padding: 18px 0; min-height: 110px; border-top-left-radius: 2px; border-top-right-radius: 2px;}
+.summary-header .tit {margin-bottom: 6px; display: block; @include text($text02, normal); color: $kb-ui03;}
+.summary-header .tit i {position: relative; top:-2px;transform:scale(0.5);}
+.summary-header .amount {display: block; font-size: 26px; font-weight: bold;}
+.summary-header .amount .num {margin-right:5px;font-size:30px;}
+.summary-header .two-values {display: flex; margin-top: 17px; text-align: center;}
+.summary-header .two-values .txt {display: block; margin-bottom: 5px; font-size: 14px; color: $kb-ui04; font-weight: normal;}
+.summary-header .two-values .amount {flex:1;font-size: 23px;position: relative;}
+.summary-header .two-values .amount .num {margin-right:3px;font-size: 24px;}
+.summary-header .two-values .amount:first-child::after {content: ''; position: absolute; right: 0; top: 0; bottom: 0; width: 1px; background-color: $kb-ui08;}
+.summary-body {position: relative;padding: 12px 0; border-bottom-left-radius: 2px; border-bottom-right-radius: 2px;}
+.summary-body::before {content: ''; position: absolute; left: 0; right: 0; top: 0; height: 1px; background-color: $kb-ui09;}
+
+@include smallDevice {
+	.summary-header .two-values .amount {font-size: 18px;}
+	.summary-header .two-values .amount .num {margin-right: 2px; font-size: 20px;}
+}
+
+.credit-transaction-graph .title,
+.credit-transaction-list .title {margin: 20px 0; @include text($text01, bold);}
+
+.credit-transaction-graph {position: relative; margin-top: 46px;}
+.credit-transaction-graph .per {position: absolute; right: 24px; top: 2px; font-size: 19px; font-weight: bold;}
+.credit-transaction-graph .bar-wrapper {height: 12px; margin-bottom: 10px; border-radius: 12px; background-color: $kb-ui09;}
+.credit-transaction-graph .bar-wrapper .bar {height: 12px; border-radius: 12px; background-color: #ffd338; transition: width .5s ease-in-out;}
+.credit-transaction-graph .values {@include text($text03, normal); color: $kb-ui04;}
+.credit-transaction-graph .values::after {content: ''; display: block; clear: both;}
+.credit-transaction-graph .values .left {float: left;}
+.credit-transaction-graph .values .right {float: right; text-align: right;}
+.credit-transaction-graph .values .amount {display: block; @include text($text02, normal); color: $kb-ui02; margin-top: -3px;}
+.credit-transaction-graph .values .amount .num {font-size: 17px;}
+
+
+.credit-transaction-list {margin-top:48px;}
+.credit-transaction-list .title + .infomation-lists {padding-top: 0;}
+.credit-transaction-list .accordian dt {position: relative; padding-left: 2px; padding-right: 2px; white-space: nowrap}
+.credit-transaction-list .accordian dt .cnt {position: absolute; right: 32px; top: 20px; font-size: 23px;}
+.credit-transaction-list .accordian dt .cnt .num {font-size: 24px;}
+.credit-transaction-list .accordian .text small {display: block; @include text($text02, normal); color: $kb-ui04;}
+.credit-transaction-list .accordian > dd {padding: 22px 2px 18px;}
+.credit-transaction-list .text .amount {position: absolute; right: 32px; top: 50%; transform: translateY(-50%); @include text(23px);}
+.credit-transaction-list .text .amount .num {margin-right: 4px; @include number(24px); font-weight: normal;}
+.credit-transaction-list .is-active .text .amount,
+.credit-transaction-list .is-active .text .amount .num {font-weight: bold;}
+.credit-transaction-list .no-data {margin: 100px 0;}
+
+.accordian .infomation-lists {margin: -22px 0 -18px; padding: 0;}
+.accordian .infomation-lists ul,
+.accordian .infomation-lists li {border: 0;}
+.accordian .infomation-lists li {margin: 30px 0; padding: 0;}
+
+.credit-transaction-message {margin-bottom: 60px;}
+
+// 휴대폰본인인증
+.phone-auth-agree .agreement-to-terms {border-bottom: 0;}
+.phone-auth-form .kb-form + .btn-area {margin-top: 32px;}
+.phone-auth-form .time-limit {margin-top: 10px; padding-left: 4px;}
+.phone-auth-form .authcode-input {display: none;}
+.phone-auth-form .authcode-input.is-active {display: block;}
+.phone-auth-form .authcode-input .btn-area {margin-bottom: 20px;}
+.phone-auth-form .info-msg {margin-top: 35px;}
+
+.time-limit {color: $kb-ui04; @include text($text03, normal);}
+.time-limit .num {font-weight: bold; font-size: 15px;}
+
+.push-check {position: relative;margin-top: 40px;}
+.push-check .text {display: block; @include text($text02, normal); color: $kb-ui02; line-height: 25px;}
+.push-check .btn-switch {position: absolute; right: 0; top: 0;}
+
+// 신용관리서비스 가입완료
+.credit-management-complete {margin-top: 68px;}
+
+// 정보 목록
+.infomation-lists {padding: 18px 0 20px;}
+.infomation-lists ul {border-top: 1px solid $kb-ui09;}
+.infomation-lists li {padding: 25px 2px 17px; border-bottom: 1px solid $kb-ui09;}
+.infomation-lists .name {display: inline-block; margin-bottom: 5px; font-weight: bold;}
+.infomation-lists .no-data {margin: 100px 0;}
+.infomation-lists .list-summary {margin-bottom: 14px; @include text($text02, normal); color: $kb-ui04;}
+.infomation-lists .list-summary .num {color: $kb-ui02; font-size: 17px; font-weight: bold;}
+
+// 신용평점 올리기
+.credit-score-up:first-child {padding-top: 56px;}
+.credit-score-up .keyvisual {position: relative; padding: 75px 0 43px; text-align: center;}
+.credit-score-up .keyvisual span {display: block; color: $kb-ui03; @include text($text02, normal);}
+.credit-score-up .keyvisual strong {display: block; padding: 10px 0 7px; font-size: 18px; font-weight: bold; color: $kb-ui02;}
+.credit-score-up .keyvisual::after {content: ''; position: absolute; left: 50%; top: 0; margin-left: -32px; width: 64px; height: 64px; background: url(../images/special/img_up.png) no-repeat 0 0 / 100% 100%;}
+.credit-score-up + .toggle-notice {margin-top: 28px;}
+
+.credit-score-complete {position: relative;}
+.credit-score-complete .flex-layout {height: calc(100vh - 68px - 125px); display: flex; flex-direction: column; justify-content: space-between;}
+.credit-score-complete .flex-top {height: 50%; display: flex; align-items: center; justify-content: center;}
+.credit-score-complete .flex-middle {padding: 16px 0; margin-bottom: 50px; border-top: 1px solid $kb-ui09; border-bottom: 1px solid $kb-ui09;}
+.credit-score-complete .flex-bottom {position: absolute; left: 24px; right: 24px; bottom: 0;}
+.credit-score-complete .description-list {padding: 0 2px;}
+.credit-score-complete .description-list dd {color: $kb-ui02;}
+.credit-score-complete .sticky-bottom.sticky-bottom {height: 0; margin: 0; padding: 0;}
+@media (max-height: 650px) {
+	.credit-score-complete .flex-top {height: 30%;}
+	.credit-score-complete .flex-layout {height: calc(100vh - 68px - 145px);}
+	.credit-score-complete .complete-msg {margin-top: 10px;}
+}
+
+// 나만의 대출상품
+.loan-top-box {margin-bottom: 20px; margin-top: 20px;}
+.loan-top-box div.inner {padding: 27px 24px; height: 116px; color: $kb-ui03;}
+.loan-top-box div.inner strong {font-weight: bold;}
+.loan-top-box .name {display: block; margin-bottom: 10px; @include text($text02, normal);}
+.loan-top-box .rate,
+.loan-top-box .rate .num {font-size: 22px;}
+.loan-top-box.my-loan-rate {position: relative; background-color: #f7f7f8;}
+.loan-top-box.my-loan-link {position: relative; background-color: #dcedec;}
+.loan-top-box.my-loan-link a {display: block; padding: 21px 24px; @include text($text02, normal); color: $kb-ui03;}
+.loan-top-box.my-loan-link span {display: block;}
+.loan-top-box.my-loan-link strong {display: block; margin-top: 3px; margin-bottom: 15px; font-size: 22px; font-weight: bold; color: $kb-ui02;}
+
+.loan-product-banners {margin-bottom: 48px;}
+.loan-product-banners .item {display: block; padding: 23px; height: 158px; background-color: #eff2ff; border-radius: 2px;}
+.loan-product-banners .item .text1,
+.loan-product-banners .item .text2 {display: block; font-size: 16px; line-height: 23px; color: $kb-ui03;}
+.loan-product-banners .item .text1 {padding-right: 34px; @include ellipsis(100%);}
+.loan-product-banners .item .text2 {@include ellipsis(100%);}
+.loan-product-banners .item .name {margin: 5px 0;font-size: 22px; line-height: 31px; overflow: hidden; display: -webkit-box; width: 100%; height:62px; -webkit-line-clamp: 2; -webkit-box-orient: vertical;text-overflow: ellipsis; font-weight: bold;}
+.loan-product-banners .no-data {margin-top:0;padding-top:20px; height: 158px;}
+.loan-product-banners .swiper-pagination-fraction {width: auto; left: auto; bottom: auto; right: 24px; top: 24px; font-family: roboto, sans-serif; font-size: 15px; color: $kb-ui05;}
+.loan-product-banners .swiper-pagination-current {color: $kb-ui02;}
+
+.recommend-prod-job .tit {display: block; padding-left: 2px; margin-bottom: 16px; @include text($text01, bold);}
+.recommend-prod-job li {margin-bottom: 24px; border: 1px solid $kb-ui08; border-radius: 2px;}
+.recommend-prod-job li a {display: block; padding: 20px 25px; color: $kb-ui03;}
+.recommend-prod-job li .subtxt {display: block; @include text($text02, normal);}
+.recommend-prod-job li .maintxt {display: -webkit-box; font-size: 22px; line-height: 31px; height: 62px; -webkit-line-clamp: 2; -webkit-box-orient: vertical; text-overflow: ellipsis; font-weight: bold; overflow: hidden;}
+
+// 신용관리를 위한 꿀팁
+.tip-contents {margin-top: 8px;}
+.tip-contents dt {position: relative; padding-left: 32px; @include text($text01, bold);}
+.tip-contents dt::before {content: ''; position: absolute; left:0; top: 0; width: 24px; height: 24px; background-color: rgba(255,0,0,.2);}
+.tip-contents dd {padding: 25px 2px 20px; margin-bottom: 24px; @include text($text02, normal); border-bottom: 1px solid $kb-ui08;}
+.tip-contents .tip .img_area {display: none;}
+.tip-contents .tip .h3 {position: relative; padding-left: 32px; @include text($text01, bold);}
+.tip-contents .tip .h3 .dot {position: absolute; left: 0; top: 2px; width: 24px; height: 24px; background: url(../images/special/icon_tip.png) no-repeat 0 0; background-size: 100% 100%;}
+.tip-contents .tip .txt {padding: 20px; margin-top: 15px; margin-bottom: 24px; @include text($text02, normal); background-color: #f7f7f8;}
+
+// 이메일 수정
+.change-email {margin-top: 40px;}
+.kb-sec.change-email:first-child {padding-top: 0;}
+.change-email .info-msg {margin-top: 20px;}
+
+// 신용평가 상세내역
+.credit-rating-chart {position: relative; padding-bottom: 30px; margin-bottom: 30px;}
+.credit-rating-chart::after {content: ''; position: absolute; left: 24px; right: 24px; bottom: 0; height: 1px; border-bottom: 1px solid $kb-ui09;}
+.credit-rating-chart + .credit-rating-chart::after {height: 10px; left: 0; right: 0; background-color: $kb-ui10; border-bottom: 0;}
+.credit-rating-chart .h4 {margin-bottom: 20px;}
+// .credit-rating-chart .chart-area {height: calc((100vw - 48px) * 0.5259);}
+.app-lnb + .app-content .kb-sec.credit-rating-chart:first-child {padding-top: 28px;}
+
+.credit-rating-details .h4 {margin-bottom: 20px;}
+.credit-rating-details .accordian {padding: 11px 0; margin-bottom: 10px; border-top: 1px solid #484b51; border-bottom: 1px solid #dde1e4;}
+.credit-rating-details .accordian > dd {padding: 11px 2px; border-bottom: 0;}
+.credit-rating-details .accordian > dt {border-top: 0; padding: 11px 0;}
+.credit-rating-details .accordian > dt.is-active {font-weight: normal;}
+.credit-rating-details .accordian > dt button {margin-top: -7px;}
+.credit-rating-details .stit {position: relative; display: block; padding: 0 2px 0 2px; margin: 6px 0 19px; font-weight: bold;}
+// .credit-rating-details .stit::before {content: ''; position: absolute; left: 0; top: 0; width: 24px; height: 24px; background-color: rgba(255,0,0,.2);}
+.credit-rating-details .desc {padding: 0 2px 15px; @include text($text02, normal);}
+.credit-rating-details .tag-label {position: absolute; right: 30px; top: 7px;}
+.credit-rating-details .rating-flag {position: absolute; right: 30px; top: 7px; width: 69px; height: 30px; border-radius: 30px; border: 1px solid $kb-ui08; font-size: $text03; line-height: 30px; font-weight: normal; color: $kb-ui02; text-align: center;}
+.credit-rating-details .rating-1, 
+.credit-rating-details .rating-2,
+.credit-rating-details .rating-3 {background-color: #edf6ff;}
+.credit-rating-details .rating-4 {background-color: #f7f7f8;}
+.credit-rating-details .rating-5 {background-color: #fff9e4;}
+
+.nice-data-area strong {font-weight: bold;}
+.nice-data-area .items {padding: 6px 0 25px; /*border-top: 1px solid $kb-ui09;*/ border-bottom: 1px solid $kb-ui09;}
+.nice-data-area .item {position: relative; margin-bottom: 12px; padding-left: 12px; @include text($text02, normal); color: $kb-ui03;}
+.nice-data-area .item::before {content: ''; position: absolute; left: 2px; top: 9px; width: 3px; height: 3px; background-color: $kb-ui03;}
+.nice-data-area .item:last-child {margin-bottom: 0;}
+
+// 신용관리
+.credit-management .credit-point {padding-top: 30px; padding-bottom: 34px; border-bottom: 10px solid $kb-ui10;}
+.credit-management .bottom-simple-link {margin-top: 25px;}
+.credit-management .toggle-notice {padding-top: 30px;}
+
+.credit-management .summary {@include text($text02, normal); color: $kb-ui02;}
+.credit-management .summary strong {font-weight: bold;}
+.credit-management .summary .point {font-size: 15px;}
+.credit-management .summary .point.up {color: $color-red;}
+.credit-management .summary .point.down {color: $color-blue;}
+
+.credit-history {padding-bottom: 34px;}
+.credit-history .content-box {padding-bottom: 0;}
+.credit-history .button-area {margin-top: 20px;}
+.credit-history .summary {margin-bottom: 18px;}
+.credit-history .links {display: flex;}
+.credit-history .links .link {position: relative; display: block; height: 60px; flex: 1; text-align: center; font-size: 16px; line-height: 60px; color: $kb-ui04; overflow: hidden;}
+.credit-history .links .link .num {font-size: 17px; font-weight: bold; color: $kb-ui02;}
+.credit-history .links .link::before {content: ''; position: absolute; left: 0; top: 24px; bottom: 24px; width: 1px; background-color: $kb-ui09;}
+.credit-history .links .link:first-child::before {display: none;}
+.credit-history .links .link i {@include iconBullet($direction: 'right', $width: 8px, $height : 14px, $thick : 1px, $color : $kb-ui03); margin: 0 0 -1px 10px;}
+
+.alarm-message {position: relative; display: block; margin-bottom: 15px; padding: 8px 0 15px; border-radius: 2px; border-bottom: 1px solid $kb-ui09; overflow: hidden;}
+.alarm-message p {display: block; padding-left: 30px; @include text($text02, bold); color: $kb-ui03;}
+.alarm-message p i {position: absolute; right: 0; top: 0;}
+.alarm-message i.icon-bell2_24 {position: absolute; left: 0;}
+.alarm-message p {animation: alarmMessage 1s ease .3s forwards; opacity: 0;}
+@keyframes alarmMessage {
+	0% {transform: translateX(-100%);opacity: 0;}
+	100% {transform: translateX(0%);opacity: 1;}
+}
+.alarm-message p i {animation: alarmMessageArrow .5s ease 1.1s forwards; opacity: 0;}
+@keyframes alarmMessageArrow {
+	0% {transform: translateX(-100%);opacity: 0;}
+	100% {transform: translateX(0%);opacity: 1;}
+}
+.alarm-message i.icon-bell2_24 {animation: alarmMessageBell .5s ease 1.1s forwards, alarmMessageBell2 1.5s linear 1.3s infinite; opacity: 0; transform-origin: 50% 10%;}
+@keyframes alarmMessageBell {
+	0% {opacity: 0;}
+	100% {opacity: 1;}
+}
+@keyframes alarmMessageBell2 {
+	0% {transform: rotate(0deg);}
+	3% {transform: rotate(10deg);}
+	6% {transform: rotate(0deg);}
+	9% {transform: rotate(-10deg);}
+	12% {transform: rotate(0deg);}
+	15% {transform: rotate(10deg);}
+	18% {transform: rotate(0deg);}
+	21% {transform: rotate(-10deg);}
+	24% {transform: rotate(0deg);}
+	100% {transform: rotate(0deg);}
+}
+
+.my-credit-mng {padding-top: 30px;}
+.my-credit-mng .h4 {margin-bottom: 23px;}
+.my-credit-mng .h4 {margin-bottom: 23px;}
+.my-credit-mng .button-area {margin-top: 24px;}
+
+.icon-text-links {padding: 12px 2px; border-top: 1px solid $kb-ui03; border-bottom: 1px solid $kb-ui08;}
+.icon-text-links li .link {position: relative; display: block; padding: 12px 0;@include text($text02, normal); color: $kb-ui02;}
+.icon-text-links li .link i:first-child {margin-right: 9px;}
+.icon-text-links li .link i:last-child {@include iconBullet($direction: 'right', $width: 9px, $height : 18px, $thick : 1px, $color : $kb-ui05); position: absolute; right: 5px; margin-top: 2px;}
+
+.compare-bar-area {margin: 12px 0;}
+.compare-bar-area .row {position: relative; height: 28px;}
+.compare-bar-area .row .num {font-size: 15px;}
+.compare-bar-area .row.me {color: $kb-ui03;}
+.compare-bar-area .row.avg,
+.compare-bar-area .row.all {color: $kb-ui05;}
+.compare-bar-area .row .text {position: absolute; font-size: 14px; line-height: 38px;}
+.compare-bar-area .row .bar-zone {margin: 0 45px 0 62px; padding-top: 11px;}
+.compare-bar-area .row .bar {position: relative; display: block; height: 15px; border-radius: 15px;}
+.compare-bar-area .row .bar .value {position: absolute; top: 0; left: calc(100% + 5px); font-size: 14px;}
+.compare-bar-area .row.me .bar {background-color: #ffd338;}
+.compare-bar-area .row.avg .bar {background-color: #c6cbd0;}
+.compare-bar-area .row.all .bar {background-color: #c6cbd0;}
+.compare-bar-area.has-suffix .row .bar-zone {margin-right: 70px;}
+
+.compare-bar2-area {margin: 12px 0 25px;}
+.compare-bar2-area .row {position: relative; height: 38px;}
+.compare-bar2-area .row .num {font-size: 16px; font-weight: bold;}
+.compare-bar2-area .row.me,
+.compare-bar2-area .row.avg {color: $kb-ui02;}
+.compare-bar2-area .row .text {position: absolute; font-size: 14px; line-height: 38px;}
+.compare-bar2-area .row .bar-zone {margin: 0 45px 0 62px; padding-top: 11px;}
+.compare-bar2-area .row .bar {display: block; height: 17px; border-top-right-radius: 17px; border-bottom-right-radius: 17px;}
+.compare-bar2-area .row .bar .value {position: absolute; top: 50%; right: 2px; transform: translateY(-50%);}
+.compare-bar2-area .row.me .bar {background-color: #ff9901;}
+.compare-bar2-area .row.avg .bar {background-color: #c6cbd0;}
+.compare-bar2-area.has-suffix .row .bar-zone {margin-right: 70px;}
+.compare-bar2-area.increase .row.me .bar {background-color: #fa7b4e;}
+.compare-bar2-area.decrease .row.me .bar {background-color: #1dcfc1;}
+
+.credit-compare-details .compare-bar-container {margin-top: 45px;}
+.credit-compare-details .kb-sec:last-child {margin-top: 30px;}
+.credit-compare-details .info-msg {margin-top: 20px;}
+
+.my-credit-power {padding-top: 8px;}
+.my-credit-power:first-child {padding-top: 40px;}
+.my-credit-power dl {margin-top: 20px; padding: 8px 12px; border: 1px solid $kb-ui08; border-radius: 2px; @include text($text02, normal);}
+.my-credit-power dl::after {content: ''; clear: both; display: block;}
+.my-credit-power dt {float: left; color: $kb-ui04;}
+.my-credit-power dd {float: right; color: $kb-ui03;}
+.my-credit-power .chart-area {margin-top: 24px;}
+
+.compare-bar-container .compare-bar-area {margin-top: 20px; margin-bottom: 24px;}
+.compare-bar-container .compare-summary {padding: 15px; border: 1px solid $kb-ui08; @include text($text02, normal); color: $kb-ui03; border-radius: 2px;}
+.compare-bar-container .compare-summary .num {font-size: 17px;}
+.compare-bar-container .compare-summary strong {font-weight: bold;}
+.compare-bar-container .compare-summary strong:first-child {font-weight: normal;}
+
+.credit-my-position {position: relative;}
+.credit-my-position .toppos,
+.credit-my-position .point {position: absolute; left: 0; right: 0; text-align: center;}
+.credit-my-position .toppos {top: 47px; font-size: 14px; color: $kb-ui05;}
+.credit-my-position .toppos .num {font-size: 15px;}
+.credit-my-position .point {top: 68px; font-size: 25px; color: $kb-ui02; font-weight: bold;}
+.credit-my-position .point .num {font-size: 30px;}
+.credit-my-position .svg-area {display: block; width: 232px; height: 120px; margin: 0 auto;}
+
+// graph-gauge-circle
+svg.defs {display: none;}
+.svg-gauge-circle svg { width: 100px; height: 100px; }
+.svg-gauge-circle svg .bar-bg, 
+.svg-gauge-circle svg .bar-fg { stroke-width: 15; fill: none; stroke: #ebeef0; }
+.svg-gauge-circle2 svg { width: 134px; height: 134px; }
+.svg-gauge-circle2 svg .bar-bg, 
+.svg-gauge-circle2 svg .bar-fg { stroke-width: 17; fill: none; stroke: #ebeef0; }
+.svg-gauge-half svg { width: 232px; height: 120px; }
+.svg-gauge-half svg .bar-bg, 
+.svg-gauge-half svg .bar-fg { stroke-width: 20; fill: none; stroke: #ebeef0; }

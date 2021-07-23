@@ -1,0 +1,138 @@
+/* ICON */
+i[class*='icon-']{overflow:hidden;display:inline-block;white-space:nowrap;text-indent:300%;box-sizing:content-box;vertical-align:top;}
+// @include smallDevice{
+//     i[class*='icon-']{transform:scale(0.9);}
+// }
+
+.page-tit{position:relative;top:1px;font-size:$heading04;line-height:2.5rem;vertical-align:top;}
+
+body .app-lnb{line-height: 1;}
+.app-lnb .tab{padding-left:2.4rem;}
+
+.app-header{flex:0 0 4.8rem;}
+.app-header{position:fixed;top:0;left:0;z-index:$level40;width:100%;height:4.8rem;background-color:$kb-ui11;padding:1.2rem 4.8rem;text-align:center;}//padding:12px 48px;text-align:center;background-color:transparent;transition:background-color .1s;
+// .app-header.is-fixed{background-color:$kb-ui11;}
+
+.app-header .btn-close{
+    @include iconCancel($size: 16px, $thick: 2px, $color: $kb-ui02, $padding: 4px, $position: absolute);
+	right: 2.4rem;top: 1.2rem;
+}
+
+.app-header .btn-history-back,
+.app-header .btn-allmenu,
+.app-header .btn-close,
+.app-header .btn-notice-box{position:absolute;display:none;}
+.app-header .btn-notice-box,
+.app-header .btn-history-back{left:2.4rem;}
+.app-header .btn-allmenu{right:2.4rem;}
+.app-header .page-tit{@include ellipsis;}
+// .app-header{padding:12px 24px;}
+// .app-header .btn-history-back,
+// .app-header .page-tit{float:left;}
+// .app-header .btn-allmenu{float:right;}
+
+
+.app-header ~ .app-container{padding-top:4.8rem;}
+.app-header .icon-logo_mymoney {margin-top: 4px;}
+.app-header[data-type=close] .btn-history-back,
+.app-header[data-type=close] .btn-allmenu,
+.app-header[data-type=title] .btn-close,
+.app-header[data-type=title] .btn-history-back,
+.app-header[data-type=title] .btn-allmenu,
+.app-header[data-type=back] .btn-close,
+.app-header[data-type=back] .btn-allmenu{display:none;}
+.app-header[data-type=close] .app-menu,
+.app-header[data-type=title] .app-menu,
+.app-header[data-type=back] .app-menu{display:none;}
+
+/* SUBMAIN */
+//.app[data-page=submain]{display:block;background:#fff url(../images/theme/bg_purple.png) no-repeat fixed;background-size:100%;}
+.app[data-page=submain]{display:block;}
+.app[data-page=submain]:before{content:'';position:fixed;top:0;left:0;right:0;height:124.53vw;z-index:-1;background-color:#7794ff;}
+.app[data-page=submain] .app-sub-wrap{display:none;height:2.2rem;}
+.app[data-page=submain] .app-header{position:static;background-color:transparent;}
+.app[data-page=submain] .app-header ~ .app-container{padding-top:0;}
+.app[data-page=submain] .app-lnb{height:56px;padding-top:0;}
+.app[data-page=submain] .app-lnb.app-sub-active{height:11.5rem;}
+.app[data-page=submain] .app-lnb .app-gnb-wrap{padding-top:1.6rem;}
+
+// .app[data-theme=young],
+// .app[data-theme=young] .app-lnb.is-fixed{background-image:url(../images/theme/bg_young.png)}
+
+//.app[data-page=submain] .app-lnb.is-fixed .app-gnb-wrap{position:fixed;left:0;top:0;width:100%;z-index:$level50;background:#fff url(../images/theme/bg_purple.png) no-repeat fixed;background-size:100%;}
+.app[data-page=submain] .app-lnb.is-fixed .app-gnb-wrap{position:fixed;left:0;top:0;width:100%;z-index:$level50;background:#7794ff;}
+.app[data-page=submain] .app-lnb.is-fixed .app-sub-wrap{height:10.4rem;padding-top:8.2rem;}
+.app[data-page=submain] .app-gnb-wrap + .app-sub-wrap{height:4.7rem;padding-top:2.4rem;}
+
+body .tab{padding-left:2.4rem;padding-right:2.4rem;}
+
+.tab ul{display:flex;}
+.tab li{width:auto;padding-right:2.8rem;border-bottom:1px solid $kb-ui08;}
+.tab li:last-child{padding-right:0;}
+.tab li button,
+.tab li a{position:relative;display:block;min-width:3.2rem;padding:0.8rem 0.2rem 1.5rem 0.2rem;font-size:$text02;font-weight:bold;color:$kb-ui05;white-space:nowrap;text-align:center;}
+.tab li.is-active a:after,
+.tab li.is-active button:after{content:'';position:absolute;bottom:0;left:0;right:0;height:0.4rem;background-color:$kb-ui02;}
+.tab li button {outline: none;}
+.tab li.is-active a,
+.tab li.is-active button{color:$kb-ui02;font-weight:bold}
+.tab ~ .tab_contents > div{display:none;}
+.tab ~ .tab_contents > div.is-active{display:block;}
+
+.tab.depth2{border-bottom:none;}
+.tab.depth2 li{width:auto;border-bottom:none;}
+.tab.depth2 li.is-active a:after,
+.tab.depth2 li.is-active button:after{content:'';position:absolute;top:0;bottom:auto;left:calc(50% - 0.2rem);right:auto;width:0.3rem;height:0.3rem;border-radius:50%;background-color:$kb-ui02;}
+.tab.depth2 li a,
+.tab.depth2 li button{padding-top:0.9rem;padding-bottom:0;font-size:$text03;}
+
+.tab + .tab.depth2{margin-top:2.4rem}
+.tab-swiper-wrap .tab {padding: 0 0 2.4rem;}
+.tab .swiper-wrapper{width:auto;min-width:100%;}
+.tab .swiper-wrapper:after{content:'';position:absolute;bottom:0;left:0;right:0;height:1px;background-color:$kb-ui08;}
+
+.tab.app-gnb li button, 
+.tab.app-gnb li a, 
+.tab.app-sub li a,
+.tab.app-sub li button{color:$kb-ui02;}
+.tab.app-gnb li{border-bottom:1px solid rgba(0,0,0,0.2);}
+.tab.app-gnb .swiper-wrapper:after,
+.tab.app-sub .swiper-wrapper:after{content:none;}
+
+//전체 메뉴
+.app-menu{position:fixed;top:0;left:100%;bottom:0;z-index:$level70;width:100%;transition: left .2s ease-in-out;}
+.app-menu.is-active{left:0;}
+.all-menu-top{padding:5.3rem 2.4rem 2.4rem 2.4rem;background-color:#ffda48}
+.app-menu .util-menu{display:flex;justify-content:flex-end;font-size:0;}
+.app-menu .util-menu button,
+.app-menu .util-menu a[role=button]{display:inline-block;margin-left:2rem;padding-top:0.4rem;}
+.app-menu .util-menu .btn-close{@include iconCancel($size: 18px, $padding: 3px);margin-top:0.4rem;}
+.app-menu .user-name{margin-top:1.1rem;padding-top:2rem;font-size:2.2rem;}
+.app-menu .user-name strong{font-weight:bold;}
+.app-menu .user-name .icon-move{margin-top:1px;margin-left:0.8rem;}
+.all-menu-notice{position:relative;}
+.all-menu-notice.new:after{content:'';position:absolute;top:0;right:-0.6rem;width:0.6rem;height:0.6rem;border-radius:50%;background-color:$color-red;}
+.major-menu{display:flex;justify-content:space-between;padding:1.6rem 2.4rem 1.4rem 2.4rem;background-color:$color-yellow-negative;}
+.major-menu li{width:6.4rem;}
+.major-menu span{position:relative;display:block;width:3rem;height:3rem;margin:0 auto;}
+.major-menu strong{@include text($size: $text03);display:block;margin-top:0.8rem;text-align:center;line-height:1}
+.all-menu-list-wrap{position:relative;background-color:$kb-ui10;height:calc(100% - 24rem)}
+.all-menu-list-wrap .manage-mydata{@include clfix;padding:2.1rem 2.4rem 1.7rem 2.4rem;background-color:$kb-ui11;border-bottom:1px solid $kb-ui09;}
+.all-menu-list-wrap .manage-mydata .tit{@include text($size: $text01, $line-height:1, $weight: bold);float:left;}
+.all-menu-list-wrap .manage-mydata a{float:right;}
+.all-menu-list-wrap .manage-mydata span{@include number($size: 24px, $line-height: 1);color:$color-blue;}
+.all-menu-list-wrap .manage-mydata .icon-move{margin-top:0.3rem;margin-left:0.8rem;}
+.all-menu-list{overflow:auto;width:13.6rem;height:calc(100% - 6.4rem);padding-bottom:2rem;}
+.all-menu-list > li > a{@include text($size: 15px);position:relative;z-index:1;display:flex;align-items:center;height:4.4rem;padding:0 2rem;color:$kb-ui03;}
+.all-menu-list > li.is-active > a{font-weight:bold;background-color:$kb-ui11;color:$kb-ui02;}
+.all-menu-list > li > a + ul{display:none;overflow:auto;position:absolute;top:6.4rem;left:13.6rem;right:0;bottom:0;padding-left:2rem;padding-right:2.4rem;padding-bottom:2rem;background-color:$kb-ui11;}
+.all-menu-list > li > a + ul:before{content:'';position:absolute;bottom:100%;height:5.6rem;left:0;right:0;background-color:$kb-ui11;}
+.all-menu-list > li > a + ul a{@include text($size: 15px, $line-height:22px);display:block;padding:1.2rem 0;}
+.all-menu-list > li.is-active ul{display:block;}
+
+.ios.homebar .all-menu-list,
+.ios.homebar .all-menu-list > li > a + ul{padding-bottom:5.4rem;}
+
+// DPlan wrapview.do에서 DPlan css 로딩 전에 모달이 보이는 부분 방지를 위해 추가
+.layered .modal {display: none;}
+.layered .bottom-sheet { position: fixed; left: 0; right: 0; bottom: -1.6rem; transform: translateY(100%);}

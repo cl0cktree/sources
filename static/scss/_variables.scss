@@ -1,0 +1,59 @@
+$sqrt_2: 1.41421356237;
+$breakpoint-small-desktop: 359px;
+
+//Color
+$kb-ui01 : #000000;
+$kb-ui02 : #26282c;
+$kb-ui03 : #484b51;
+$kb-ui04 : #696e76;
+$kb-ui05 : #8c949e;
+$kb-ui06 : #aab0b8;
+$kb-ui07 : #c6cbd0;
+$kb-ui08 : #dde1e4;
+$kb-ui09 : #ebeef0;
+$kb-ui10 : #f7f7f8;
+$kb-ui11 : #fff;
+
+// Primary Color
+$color-yellow: #ffd338;
+$color-yellow-positive: #ffbc00;
+$color-yellow-negative: #ffcc00;
+$color-red: #ff5858;
+$color-blue: #287eff;
+
+$color-hint: $kb-ui07;
+$color-disable: $kb-ui09;
+
+//Text Color
+$text-color: $kb-ui02;
+$text-color-blur: $kb-ui04;
+$caption-color: $kb-ui03;
+
+//Input Text
+$input-color: $kb-ui02;
+$input-color-placeholder: $kb-ui06;
+$input-color-readonly: $kb-ui06;
+
+//Font Size
+$heading01 : 2.8rem;
+$heading02 : 2.4rem;
+$heading03 : 2rem;
+$heading04 : 1.8rem;
+$text01 : 1.8rem;
+$text02 : 1.6rem;
+$text03 : 1.4rem;
+
+//Dim
+$dim-color: rgba(0,0,0,0.3);
+
+// z-index Level
+$level10: 1;
+$level20: 10;   
+$level30: 50;   
+$level40: 100;  
+$level50: 150;  
+$level60: 200;  /* Sticky */
+$level70: 250;  /* All Menu, DIM */
+$level80: 300;  /* Layer */
+$level90: 350;  /* Bottom Sheet */
+$level100: 400;  /* Modal, Loader */

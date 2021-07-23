@@ -1,0 +1,9 @@
+.highcharts-box{padding-bottom:20px}
+.highcharts-box .graph-area{padding:0 24px}
+.highcharts-box .highcharts-figure{padding:25px 20px;background-color:$kb-ui11;box-shadow:0 2px 2px 0 rgba(0, 0, 0, 0.11)}
+.highcharts-box.full-type,
+.highcharts-box.full-type .graph-area,
+.highcharts-box.full-type .highcharts-figure{padding:0}
+.highcharts-box.full-type .highcharts-figure{box-shadow:none}
+
+img.temp{width:100%}

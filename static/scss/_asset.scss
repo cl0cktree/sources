@@ -1,0 +1,877 @@
+/* 공통 */
+.percentage-graph { position: relative; }
+.percentage-graph .graph-area { position: relative; width: 100%; height: 20px; border-radius: 20px; background-color: #ebeef0;overflow:hidden;}
+.percentage-graph .graph-area > span { position: absolute; left: 0; width: 0; height: 100%; border-radius: 20px; background-color: #8c949e; transform: width .2s; overflow:hidden;;color:transparent;text-indent:-9999px;}
+.percentage-graph .graph-txt {@include text($size:14px);color:$kb-ui04;display: block; position: relative; margin-top: 5px;}
+.percentage-graph .graph-txt .num{@include number($size:15px);color:$kb-ui02;}
+.percentage-graph .graph-txt:after { content: ''; display: block; clear: both; }
+.percentage-graph .graph-txt .start-txt { float: left; margin-left: 5px; text-align: left; }
+.percentage-graph .graph-txt .end-txt { float: right; margin-right: 5px; text-align: right; }
+.percentage-graph .graph-txt .current-txt { position: absolute;text-overflow:ellipsis;white-space:nowrap;}
+.percentage-graph.type1 .graph-area > span{background-color:#96857f;}
+.percentage-graph.mint div.graph-area > span{background-color:#67d3d3;} 
+.percentage-graph.cobalt div.graph-area > span{background-color:#4dabff;} 
+.percentage-graph.orange div.graph-area > span{background-color:#fa7b4e;}  
+.percentage-graph.type2 .graph-area > span{background-color:$color-yellow;}
+.percentage-graph.type2 .graph-txt .num{color:$kb-ui04;}
+.percentage-graph.type2  .graph-txt .current-txt{top:-52px;margin-left:-35px;background-color:$kb-ui03;padding:2px 11px;;border-radius:22px;color:#fff;}
+.percentage-graph.type2  .graph-txt .current-txt .num{@include number($size:13px,$weight:bold);color:#fff;}
+/*.percentage-graph.type2  .graph-txt .current-txt{top:-45px;margin-left:-70px;background-color:#fff;padding:4px 5px;border-radius:2px;box-shadow: 0px 1px 5px 0 rgba(0, 0, 0, 0.2);}*/
+/*.percentage-graph.type2  .graph-txt .current-txt:after{position: absolute;display:inline-block;bottom: -6px;left: 50%;margin-left: -6px;width:12px;height:6px;content:'';background:url(../../static/images/asset/bg_d_day.png) no-repeat 0 0;background-size:cover;}
+.percentage-graph.type2  .graph-txt .current-txt .num{@include number($size:15px,$weight:bold);color:$kb-ui03;}*/
+.percentage-graph.type3{background:url(../../static/images/asset/bg_percent_chart.png) repeat 0 0;background-size:43px auto;}
+.percentage-graph.type3 .graph-area{height:12px;background-color:transparent;border-radius:0 20px 20px 0;}
+.percentage-graph.type3 .graph-area > span{height:12px;background-color:#ffd237;border-radius:0 20px 20px 0;}  
+.percentage-graph.type4 .graph-area{height:17px;border-radius:20px 0 0 20px;background-color:$kb-ui10}
+.percentage-graph.type4 .graph-area > span{height:17px;background-color:#feb333;border-radius:20px 0 0 20px;left:auto;right:0;}  
+.percentage-graph.type5 .graph-area{height:17px;background-color:$kb-ui10;border-radius:0 20px 20px 0;}
+.percentage-graph.type5 .graph-area > span{height:17px;background-color:#feb333;border-radius:0 20px 20px 0;}  
+.btn-add-data{display:block;width:100%;text-align:center;color:$kb-ui05;padding:10px;margin-top:10px;}
+.btn-add-data i{vertical-align:middle;}
+.search-con{background-color:$kb-ui10;text-align:right;padding:10px 24px;margin:0 -24px;color:$kb-ui04;}
+.search-con>span{vertical-align:middle;}
+.search-con .btn-search{margin-left:10px;vertical-align:middle;}
+.bottom-sheet[data-layered-name=assetFinancialInstitution] .grid-list li img,
+.bottom-sheet[data-layered-name=mys_as_04_02_00_p1] .grid-list li img{width:24px;height:24px;}
+.no-data-wrap{margin-top:3.8rem;margin-bottom:10rem;}
+
+
+/* chart */
+.chart-flex{display:flex;}
+.chart-flex div{flex:1;}
+.legend-unit{font-size:14px;color:#696e76;max-width:400px;margin:auto;}
+.legend-unit ul li{display:inline-block;width:calc(22% - 4px);padding:5px 3px 5px 12px;position:relative;vertical-align:top;line-height:1.4;white-space:nowrap;}
+.legend-unit ul li:nth-child(4n+1){width:calc(34% - 4px);}
+.legend-unit ul li:before{content:'';position:absolute;left:0;top:10px;width:9px;height:9px;border-radius:50%;display:inline-block;margin-right:5px;}
+.legend-unit ul li.yellow:before{background-color:#ffd435;}
+.legend-unit ul li.brown:before{background-color:#978680;}
+.legend-unit ul li.magenta:before{background-color:#d676ca;}
+.legend-unit ul li.blue:before{background-color:#3d70d2;}
+.legend-unit ul li.orange:before{background-color:#f7966c;}
+.legend-unit ul li.sky:before{background-color:#67d4d4;}
+.legend-unit ul li.pink:before{background-color:#f675cd;}
+.legend-unit ul li.green:before{background-color:#40b78f;}
+.legend-unit ul li.lightGreen:before{background-color:#c2d467;}
+.legend-unit ul li.gray:before{background-color:#eceff0;}
+.legend-unit ul li.purple:before{background-color:#9e6eda;}
+.legend-unit ul li.coral:before{background-color:#f76c6c;}
+
+/* 자산 공통 */
+.my-asset .asset-registration{margin-top:50px;}
+.my-asset .asset-type{margin-top:20px;}
+.my-asset .asset-type .kb-form{display:none;}
+.my-asset .cash-registration{margin-top:50px;}
+.my-asset .cash-type{margin-top:20px;}
+.my-asset .cash-type .kb-form{display:none;}
+.my-asset .nickname{margin-top:20px;}
+.my-asset .cash-type .kb-form .btn-line{margin-top:8px;}
+.bottom-sheet[data-layered-name="assetFinancialInstitution"] .grid-list li span {word-break:break-word;}
+.my-asset .tag-label{font-size:12px;padding:3px 5px;vertical-align: top;}
+.my-asset .content-box + .content-box{margin-top: 16px;}
+.my-asset .content-box .compare-box{position:relative;background-color:#fdf8e4;padding:18px;}
+.my-asset .content-box .compare-box .tit{@include text($size:14px,$weight:bold);text-align:center;margin-bottom:14px;}
+.my-asset .content-box .compare-box > ul{display:flex;justify-content:space-between;align-items:center;}
+.my-asset .content-box .compare-box > ul > li{display:inline-block;text-align:center;}
+.my-asset .content-box .compare-box .type{@include text($size:14px);margin-bottom:5px;}
+.my-asset .asset-gravity .content-box .info{@include text($size:14px);color:$kb-ui04;margin-top:10px;}
+.my-asset .asset-gravity .content-box .tooltip .info{font-size:1.2rem;color:$kb-ui08;}
+.my-asset .content-box .compare-box .amount{font-weight:bold;}
+.my-asset .content-box .compare-box .compare{@include iconBullet($direction : 'up', $width: 24px, $height: 13px, $color: $kb-ui05);position:absolute;left:50%;bottom:25px;margin-left:-10px;}
+.my-asset .content-box .compare-box dd.mine{margin-right:20px;}
+.my-asset .content-box .compare-box dd.other{margin-left:20px;}
+.my-asset .content-box .compare-box .compare.gt{transform:rotate(90deg);content:'보다 큽니다.';}
+.my-asset .content-box .compare-box .compare.lt{transform:rotate(270deg);content:'보다 적습니다.'}
+.my-asset .compare-con{padding-top:24px;padding-bottom:30px;}
+.my-asset .compare-con > .h4{margin-bottom:12px;}
+.my-asset .compare-con .content-box > .msg{margin-bottom:10px;line-height:1.4;}
+.my-asset .compare-con .content-box .plus{color:$color-blue;}
+.my-asset .compare-con .content-box .minus{color:$color-red;}
+.my-asset .compare-con .content-box > .bottom-msg{margin-top:10px;}
+.my-asset .compare-con .content-box > .bottom-msg .num{@include number($size:19px);}
+.my-asset .account-top.bottom-line{border-bottom:1px solid $kb-ui07;}
+.my-asset .account-top .account-wrap{background-color:$kb-ui10;padding:30px 24px;}
+.my-asset .account-top .account-wrap .btn-hide-account{top:32px;right:24px;z-index:2;}
+/*.my-asset .account-top .account-wrap .icon-con span{background-color:#fff;}*/
+
+/* 자산통합조회 */
+.my-asset.asset-index{overflow:hidden;}
+.my-asset.asset-index .asset-summary .swiper-container{overflow:visible;}
+.my-asset.asset-index .asset-summary .swiper-wrapper{z-index:160;}
+.my-asset .asset-summary .highcharts-box .graph-info>.h4{ position:relative;margin-bottom:10px;}
+.my-asset .asset-summary .highcharts-box .graph-info>.h4>.btn-more{position:absolute;top:0;right:0;margin-top:0;}
+.my-asset .asset-summary .highcharts-box .graph-info .graph-msg{display:flex;justify-content:space-between;align-items:flex-start;}
+.my-asset .asset-summary .highcharts-box .graph-info .graph-msg .btn-more{margin-top:0;}
+.my-asset .asset-summary .highcharts-box .highcharts_column{height:calc((100vw - 56px) * 0.58);}
+.my-asset .asset-summary .highcharts-box .highcharts_column img{width:100%;}
+.my-asset .asset-summary .highcharts-box .graph-info .txt{@include text;margin-bottom:28px;}
+.my-asset .asset-summary .highcharts-box .graph-info .txt em{color:$color-red;@include text($weight:bold);}
+.my-asset .asset-summary .highcharts-box .graph-info .txt .plus {color:$color-red;}
+.my-asset .asset-summary .highcharts-box .graph-info .txt .minus {color:$color-blue;}
+.my-asset .asset-summary .highcharts-box .graph-info .txt small {font-size: 14px;}
+.my-asset .asset-summary .highcharts-box .graph-info .tooltip .txt{color:$kb-ui08;margin-bottom:0.5rem;}
+.my-asset.asset-index .tooltip .cont .tit{margin-bottom:1.2rem;}
+.my-asset .asset-summary .highcharts-box .graph-info .tooltip .info{color:$kb-ui08;font-size: 1.4rem;font-weight: normal; line-height: 2.0rem;letter-spacing: -0.01em;margin-top:1rem;}
+.my-asset .asset-summary .highcharts-box .graph-info .tooltip .info + .info{margin-top:0.25rem;}
+
+.my-asset .asset-summary .highcharts-box .graph-info .graph-tit{align-items:center;flex-wrap:inherit;justify-content:space-between;}
+.my-asset .asset-summary .highcharts-box .graph-info .price-wrap{font-weight:bold;}
+.my-asset .asset-summary .highcharts-box .graph-info .price-wrap .num{@include number($size:19px);}
+.my-asset .asset-summary .highcharts-box .my-average{@include text($size:14px);text-align:center;margin-top:5px;}
+.my-asset .asset-summary .highcharts-box .my-average > em{display:inline-block;padding-left:36px;background:url(../../static/images/asset/bg_my_average.png) no-repeat 0 center;background-size:26px auto;}
+.my-asset .asset-summary .highcharts-box .my-average .num{@include number($size:15px);}
+.my-asset .asset-summary .top-area .msg{@include text($size:16px);margin-bottom:20px;}
+.my-asset .asset-summary .variance-box{margin-top:20px;background-color:$kb-ui10;border-radius:2px;padding:20px;}
+.my-asset .asset-summary .variance-box .description-list-variable{@include text($size:14px);}
+.my-asset .asset-summary .variance-box .description-list-variable .tit{color:$kb-ui02;}
+.my-asset .asset-summary .variance-box .description-list-variable .num{@include number($size:15px);display:inline-block;}
+.my-asset .asset-summary .variance-box .description-list-variable .plus{color:$color-red;}
+.my-asset .asset-summary .variance-box .description-list-variable .minus{color:$color-blue;}
+.my-asset .asset-summary + .list-area .p-list{padding-top:48px;}
+.my-asset .asset-list>ul{padding:12px 0 0;}
+.my-asset .asset-list>ul>li{padding-left:24px;padding-right:24px;}
+.my-asset .asset-list>ul>li .detail-con{display:flex;justify-content:space-between;align-items:center;padding:20px 0;width:100%;border-bottom:1px solid $kb-ui09;}
+.my-asset .asset-list>ul>li.total{@include text($size:20px,$weight:bold);}
+.my-asset .asset-list>ul>li.total .num{@include number($size:21px);}
+.my-asset .asset-list>ul>li i{vertical-align:middle;}
+.my-asset .asset-list>ul>li .type{font-weight:bold;}
+.my-asset .asset-list>ul>li .type em{color:$color-blue;font-weight:bold;}
+.my-asset .asset-list>ul>li.split{border-bottom:10px solid $kb-ui10;}
+.my-asset .asset-list>ul>li.split .detail-con{border-bottom:none;}
+.my-asset .asset-list>ul>li:last-child .detail-con{border-bottom:none;}
+.my-asset .asset-gravity{padding-top:24px;}
+.my-asset .asset-gravity .top-area{display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid $kb-ui09;padding-bottom:14px;}
+.my-asset .asset-gravity .graph-area{padding-top:20px;}
+.my-asset .asset-gravity .graph-area .msg{margin:14px 0;line-height:1.4;}
+.my-asset .asset-gravity .point{color:$color-blue;font-weight:bold;}
+.my-asset .asset-gravity .content-box + .content-box{margin-top:16px;}
+.my-asset .account-top .d-day-con{padding:0 24px 24px;background-color:$kb-ui10;}
+.my-asset .asset-solution .grid-list{margin-top:40px;}
+.my-asset .asset-solution .grid-list > li{position:relative;}
+.my-asset .asset-solution .grid-list > li > button{position:relative;color:$kb-ui05;width:60px;}
+.my-asset .asset-solution .grid-list > li > button > b{@include text($size:14px,$weight:bold);}
+.my-asset .asset-solution .grid-list button > em{display: block;    width: 60px;height: 60px;border-radius: 60px;background-color: #f7f7f8;padding-top: 16px;}
+.my-asset .asset-solution .grid-list > li.on button > em{background-color:#fede6c;}
+.my-asset .asset-solution .grid-list > li > button > span{color:$kb-ui05;margin-top: 10px;}
+.my-asset .asset-solution .grid-list > li .total{@include text($size:14px);display:none;position:absolute;top:-25px;left:9px;letter-spacing:-0.03em;text-overflow: ellipsis;white-space: nowrap;background-color:#fff;border-radius:2px;box-shadow: 0px 1px 5px 0 rgba(0, 0, 0, 0.2);padding: 5px 10px;z-index:2;}
+.my-asset .asset-solution .grid-list > li .total:after{display:block;position:absolute;bottom:-5px;left:12px;width:12px;height:5px;content:'';background:url(../../static/images/asset/bg_d_day.png) no-repeat 0 0;background-size:12px auto;}
+.my-asset .asset-solution .grid-list > li.on .total{display:block;}
+.my-asset .asset-solution .grid-list > li:last-child.on .total{left:auto;right:9px;}
+.my-asset .asset-solution .grid-list > li:last-child .total:after{left:auto;right:12px;}
+.my-asset .asset-solution .grid-list > li.on > button > span{color:$kb-ui02;}
+.my-asset .asset-solution .grid-list > li.on > button > b{color:$kb-ui02;}
+.my-asset .asset-solution .grid-list > li .total .num{display:inline-block;@include number($size:15px);}
+
+/* 상세조회 */
+.my-asset .top-summary .msg-box{background-color:$kb-ui10;margin:0 -24px;padding:30px 25px;}
+.my-asset .top-summary .msg-box .msg{line-height:1.2;}
+.my-asset .top-summary .chart-con{margin-top:34px;}
+.my-asset .top-summary .chart-con > ul > li{position:relative;}
+.my-asset .sort-area{text-align:right;padding:30px 24px 10px;/* margin:0 24px; */}
+.my-asset .sort-area .btn-line_form{padding:0 14px;}
+.my-asset .sort-area .btn-line_form.is-active{border-color:$kb-ui02;}
+.badge-my-data{display:inline-block;@include text($size: 12px);color:$color-blue;vertical-align:middle;margin-left:7px;}
+.my-asset .account-wrap{position:relative;display:flex;justify-content:space-between;align-items:flex-start;}
+.my-asset .icon-con{width:42px;}
+.my-asset .icon-con span{display:block;width:32px;height:32px;border-radius:32px;margin-top:-7px;}
+.my-asset .icon-con span img{width:32px;height:32px;}
+.my-asset .txt-con{width:calc( 100% - 42px );}
+
+.my-asset .txt-con>.num{display:block;}
+.my-asset .txt-con .description-list{display:grid;}
+.my-asset .txt-con .agency{display:block;font-weight:bold;margin-bottom:7px;line-height:1.4;}
+.my-asset .txt-con .bank-book{display:block;margin-bottom:5px;word-break:break-all;line-height: 1.4;}
+.my-asset .txt-con .stock-item{display:block;margin:5px 0;font-weight:bold;}
+.my-asset .txt-con .p-name{display:block;}
+.my-asset .txt-con .outlink {display: inline-block; margin-top: 5px; padding: 7px 8px; font-size: 14px; color: $kb-ui03; background-color: #fff; border: 1px solid #c7cbcf; border-radius: 2px;}
+.my-asset .p-list.agency{display:none;}
+.my-asset .p-list > dl > dt{border-top:1px solid $kb-ui03;border-bottom:1px solid $kb-ui09;}
+.my-asset .p-list > dl > dt .type{display:block;@include text($size: 18px,$weight:bold);}
+.my-asset .p-list > dl > dt .total{display:block;margin-top:7px;}
+.my-asset .p-list > dl > dt .btn-more-view{position:relative;display:block;padding:14px 0;}
+.my-asset .p-list > dl > dt .btn-more-view .arrow{display:block;position:absolute;top:50%;right:4px;margin-top:-4px;}
+.my-asset .p-list > dl > dt .btn-more-view em span{display:block;width:0;height:0;text-indent:-9999px;overflow:hidden;}
+.my-asset .p-list .more-view-box dt .btn-more-view i{@include iconBullet($direction: 'down', $width: 16px, $height: 9px, $thick: 1px, $color: $kb-ui03);margin:0;}
+.my-asset .p-list .more-view-box > dd{display:none;}
+.my-asset .p-list .more-view-box .percentage-graph.type2{margin-top:40px;}
+.my-asset .p-list > dl > dd{position:relative;border-bottom:1px solid $kb-ui09;padding-bottom:16px;}
+.my-asset .p-list > dl > dd:last-child{padding-bottom:20px;}
+.my-asset .p-list > dl > dd .account-wrap{margin-top:30px;}
+.my-asset .p-list > dl > dd .btn-account-detail{display:block;;width:100%;text-align:left;}
+.my-asset .p-list > dl > dd .txt-con .type{display:inline-block;@include text($size: 12px);border:1px solid $kb-ui02;border-radius:2px;padding:3px 6px;margin-bottom:8px;}
+.my-asset .p-list > dl > dd .txt-con .prod-kind{margin-bottom:8px;}
+.my-asset .p-list > dl > dd .txt-con .account{display:block;color:$kb-ui04;}
+.my-asset .p-list>dl>dd .txt-con .pay-txt{display:block;color:$kb-ui04;}
+.my-asset .p-list > dl > dd .balance{display:block;text-align:right;margin-top:16px;}
+.my-asset .p-list > dl > dd .count{display:block;text-align:right;}
+.my-asset .p-list > dl > dd .creat-date{display:block;text-align:right;color:$kb-ui04;}
+.my-asset .p-list > dl > dd .exchange{@include text($size:14px);display:block;text-align:right;color:$kb-ui03;}
+.my-asset .p-list > dl > dd .exchange .num{@include number($size:15px);}
+.my-asset .btn-hide-account{position:absolute;top:0;right:0;}
+.my-asset .btn-hide-account span{display:block;width:0;height:0;overflow:hidden;text-indent:-9999px;}
+.my-asset .list-area .no-data{border-top:1px solid $kb-ui02;margin-top:0;padding-top:67px;padding-bottom:67px;}
+.my-asset .recommend-prod{padding-top:30px;padding-bottom:30px;border-bottom:10px solid $kb-ui10;}
+.my-asset .recommend-prod .tit{@include text($size: 14px);color:$kb-ui02;margin-top:4px;}
+.my-asset .recommend-prod .list>li{margin-top:18px;}
+.my-asset .recommend-prod .list button{display:block;width:100%;padding:26px 20px;border:1px solid $kb-ui08;text-align:left;}
+.my-asset .recommend-prod .list button .info{@include text($size: 14px);display:block;}
+.my-asset .recommend-prod .list button .tit{@include text($size: 18px,$weight:bold);;display:block;color:$kb-ui02;margin-top:4px;}
+.my-asset .recommend-prod .list button .rate{display:flex;margin-top:10px;}
+.my-asset .recommend-prod .list button .rate span{padding-left:15px;@include text($size: 14px);color:$kb-ui03;}
+.my-asset .recommend-prod .list button .rate span:first-child{padding-left:0;}
+.my-asset .recommend-prod .list button .rate span:after{display:block;content:'';width:1px;height:10px;background-color:$kb-ui06;margin-top:-16px;margin-left:-7px;}
+.my-asset .recommend-prod .list button .rate span:first-child:after{display:none;}
+.my-asset .recommend-prod .list button .rate span.danger {color: $color-red;}
+.my-asset .recommend-prod .list button .hash-tag{@include text($size:14px);color:$kb-ui04;margin-top:4px;}
+.my-asset .best-list-con{padding-top:34px;}
+.my-asset .best-list-con .top-area{@include text($size: 18px);vertical-align:top;}
+.my-asset .best-list-con .top-area .btn-similar{vertical-align:top;}
+.my-asset .btn-similar{border-bottom:2px solid $kb-ui09;padding-bottom:6px;margin-bottom:4px;margin-right:4px;}
+.my-asset .btn-similar .arrow{@include iconBullet($direction: 'down', $width: 16px, $height : 9px, $thick : 1px, $color : $kb-ui05,);vertical-align:middle;}
+.my-asset .best-tit-con{margin-top:32px;}
+.my-asset .best-tit-con .tit .h4,
+.my-asset .best-tit-con .tit .btn-question{display:inline-block;}
+.my-asset .best-list-con .except_kb{margin-top:15px;}
+.my-asset .btn-question span{display:block;width:0;height:0;overflow:hidden;text-indent:-9999px;}
+.my-asset .best-list-con .list{margin-top:12px;}
+.my-asset .best-list-con .list li{position:relative;margin-top:20px;}
+.my-asset .best-list-con .list li:first-child{margin-top:0;}
+.my-asset .best-list-con .list .flag{position:absolute;top:0;right:0;width:34px;height:34px;background-color:$color-yellow;text-align:center;border-radius:2px;}
+.my-asset .best-list-con .list .flag .num{display:block;font-weight:bold;line-height:34px;}
+.my-asset .best-list-con .list button{display:block;width:100%;padding:28px 20px;border:1px solid $kb-ui08;text-align:left;}
+.my-asset .best-list-con .list .account-wrap .agency{margin-bottom:6px;}
+.my-asset .best-list-con .list .account-wrap .user-info{@include text($size: 14px);border-top:1px solid $kb-ui08;padding-top:10px;margin-top:10px;color:$kb-ui04;}
+.my-asset .best-list-con .list .account-wrap .user-info .num{color:$kb-ui04;@include text($size: 15px);}
+.my-asset .best-list-con .list .account-wrap .user-info em{color:$kb-ui02;}
+
+/* 계좌세부조회 */
+.my-asset.pop-account-detail{margin-bottom:0;padding-bottom:60px;}
+.my-asset.pop-account-detail .account-top{position:relative;padding:0;margin-top:-10px;}
+.my-asset.pop-account-detail .account-top .account-wrap .txt-con .creat-date{color:$kb-ui04;margin-top:7px;}
+.my-asset.pop-account-detail .account-top .balance{margin-top:14px;margin-bottom:20px;text-align:right;}
+.my-asset.pop-account-detail .account-top .balance.mb0{margin-bottom: 0;}
+.my-asset.pop-account-detail .account-top .balance>span{display:inline-block;}
+.my-asset.pop-account-detail .account-top .balance>small {display: block;font-size:16px; margin-top:5px;}
+.my-asset.pop-account-detail .account-top .balance .amount{@include text($size: 26px,$weight:bold);}
+.my-asset.pop-account-detail .account-top .balance .amount .num{@include text($size: 30px);letter-spacing:-0.06em;}
+.my-asset.pop-account-detail .account-top .interest-rate{padding:13px 0;}
+.my-asset.pop-account-detail .account-top .interest-rate.more-view-box{padding-bottom:0;}
+.my-asset.pop-account-detail .account-top .interest-rate dt{color:$kb-ui04;}
+.my-asset.pop-account-detail .account-top .interest-rate .rate{margin-top:18px;}
+.my-asset.pop-account-detail .account-top .interest-rate .rate li{text-align:right;margin-top:5px;}
+.my-asset.pop-account-detail .account-top .interest-rate .rate li:first-child{margin-top:0;}
+.my-asset.pop-account-detail .account-top .description-list-variable li{margin:5px 0;}
+.my-asset.pop-account-detail .account-top .more-view-box .description-list-variable{padding:0 26px;}
+.my-asset.pop-account-detail .account-top .description-list{padding:0 24px;}
+.my-asset.pop-account-detail .account-top .investment-desc .description-list {padding: 20px 24px;}
+.my-asset.pop-account-detail .account-top .more-view-box .description-list dt{margin:5px 0;}
+.my-asset.pop-account-detail .account-top .more-view-box .list{padding:0 24px;}
+.my-asset.pop-account-detail .account-top .more-view-box .btn-more-view{border-top:1px solid $kb-ui08;margin-top:10px;padding:18px 0;}
+.my-asset.pop-account-detail .account-top .more-view-box .btn-more-view i{@include iconBullet($direction: 'down', $width: 16px, $height: 9px, $thick: 1px, $color: $kb-ui03);}
+.my-asset.pop-account-detail .account-top .more-view-box .btn-more-view .blind{@include ir;height:0;}
+.my-asset.pop-account-detail .account-detail .price-wrap .description-list{margin-top:14px;padding:0;}
+.my-asset.pop-account-detail .account-detail .price-wrap .description-list .amount{font-size:18px}
+.my-asset.pop-account-detail .account-detail .price-wrap .description-list .amount .num{font-size:20px;font-weight:bold}
+
+/* 계좌세부조회(외화) */
+.my-asset.pop-account-detail .foreign .account-top{border-bottom:none;}
+.my-asset.pop-account-detail .foreign .account-detail{margin-top:0;}
+.my-asset.pop-account-detail .foreign .account-detail .d-list .price-wrap .txt-con .amount{@include text($weight: normal);}
+.my-asset.pop-account-detail .foreign .account-detail .d-list .price-wrap .txt-con .exchange{display:block;}
+
+/* 계좌세부조회(대출) */
+.my-asset.pop-account-detail .foreign .account-top .more-view-box .description-list-variable{margin-bottom:2rem;}
+.my-asset.pop-account-detail .loan .account-detail .d-list .price-wrap .txt-con>.amount>.num,
+.my-asset.pop-account-detail .loan .account-detail .d-list .price-wrap .txt-con>.amount strong{font-weight:bold}
+.my-asset.pop-account-detail .loan .account-detail .d-list .price-wrap .txt-con>.amount .nu{display:inline-block;font-weight:bold;vertical-align:middle}
+.my-asset.loan .p-list .description-list{margin-top: 15px;padding: 10px 20px;background-color: #f7f7f8;}
+
+/* 계좌세부조회(예적금) */
+
+.my-asset.pop-account-detail .account-detail .search-con{background-color:$kb-ui10;text-align:right;padding:10px 24px;margin:0 -24px;color:$kb-ui04;}
+.my-asset.pop-account-detail .account-detail .search-con>span{vertical-align:middle;}
+.my-asset.pop-account-detail .account-detail .search-con .btn-search{margin-left:10px;vertical-align:middle;}
+.my-asset .account-detail .d-list .date{@include number($size: 15px);color:$kb-ui06;}
+.my-asset.pop-account-detail .account-detail .d-list .price-wrap{margin-top:7px;}
+.my-asset.pop-account-detail .account-detail .d-list .price-wrap .txt-con{text-align:right;width:auto;}
+.my-asset.pop-account-detail .account-detail .d-list .price-wrap .type{@include text($weight: bold);}
+.my-asset.pop-account-detail .account-detail .d-list .price-wrap .txt-con .amount{@include text($size:18px,$weight:bold);display:block;}
+.my-asset.pop-account-detail .account-detail .d-list .price-wrap .txt-con .plus{color:$color-blue;}
+.my-asset.pop-account-detail .account-detail .d-list .price-wrap .txt-con .minus{color:$color-red;}
+.my-asset.pop-account-detail .account-detail .d-list .price-wrap .txt-con .total{display:block;}
+.my-asset.pop-account-detail .account-detail .d-list .price-wrap .txt-con .memo{display:block;margin-top:6px;}
+.my-asset.deposit .p-list .description-list { margin-top: 15px; padding: 10px 20px; background-color: #f7f7f8; }
+.my-asset .due-to-expire .h5{@include text($size:18px,$weight:bold);}
+.my-asset .due-to-expire .msg{margin-top:12px;}
+.my-asset .due-to-expire .count{margin-top:24px;text-align:center;@include text($size:20px);}
+.my-asset .due-to-expire .count .num{@include number($size:52px)}
+.my-asset .due-to-expire .btn-area{margin-top:12px;}
+.my-asset .asset-summary .subscription-box{display:flex;justify-content:space-between;align-items:flex-start;height:45.6vw;}
+.my-asset .asset-summary .subscription-box .box{width:calc(50% - 8px);background:$kb-ui10;border-radius:2px;padding:34px 0;text-align:center;}
+.my-asset .asset-summary .subscription-box .box .tit{@include text($size:27px,$weight:bold);}
+.my-asset .asset-summary .subscription-box .box .tit .num{@include number($size:28px);}
+.my-asset .asset-summary .subscription-box .box .txt{margin-top:5px;}
+.my-asset .exchange-Rate{padding-top:30px;padding-bottom:30px;padding-right:0;border-bottom:10px solid $kb-ui10;}
+.my-asset .exchange-Rate .h4{position:relative;margin-bottom:12px;margin-right:24px;}
+.my-asset .exchange-Rate .h4 .btn-text{position:absolute;right:0;top:0;}
+.my-asset .exchange-Rate .swiper-slide{width:155px;}
+.my-asset .exchange-Rate .swiper-slide button{display:flex;justify-content:space-between;align-items:center;border:1px solid $kb-ui08;padding:8px 12px;width:100%;}
+.my-asset .exchange-Rate .swiper-slide button.is-active{border-color:$kb-ui02;}
+.my-asset .exchange-Rate .swiper-slide .tit{font-weight:bold;}
+.my-asset .exchange-Rate .swiper-slide .num{color:$kb-ui04;}
+.my-asset .exchange-Rate .highcharts_column{margin-right:24px;}
+.my-asset.foreign-currency .recommend-prod{border-bottom:none;}
+.my-asset .exchange-Rate .icon-con img{width:24px;height:24px;}
+
+/*포트폴리오 분석*/
+.my-asset.recommend-portfolio .swiper-button-next, 
+.my-asset.recommend-portfolio .swiper-button-prev{@include iconBullet($direction : 'up', $width: 18px, $height: 10px, $color: $kb-ui05,$thick : 1px);position:absolute;top:10px;margin-top:0;width:24px;height:24px;}
+.my-asset.recommend-portfolio .swiper-button-next:after, 
+.my-asset.recommend-portfolio .swiper-button-prev:after{display:none;}
+.my-asset.recommend-portfolio .swiper-button-next{right:24px;transform:rotate(90deg);}
+.my-asset.recommend-portfolio .swiper-button-prev{left:auto;right:75px;transform:rotate(270deg);}
+.my-asset.recommend-portfolio .swiper-container-horizontal>.swiper-pagination-bullets, .my-asset.recommend-portfolio .swiper-pagination-custom, .swiper-pagination-fraction{@include number($size:15px);color:$kb-ui06;}
+.my-asset.recommend-portfolio .swiper-pagination-current{color:$kb-ui03;font-weight:bold;}
+.my-asset.recommend-portfolio .swiper-pagination{top:12px;text-align:right;padding-right:51px;height:20px;}
+.my-asset.recommend-portfolio .maturity-top{text-align:center;background:$kb-ui10;}
+.my-asset.recommend-portfolio .maturity-top .tit{@include text($size: 20px,$weight:bold);margin-top:7px;}
+.my-asset.recommend-portfolio .maturity-top .txt{margin-top:7px;}
+.my-asset.recommend-portfolio .maturity-prod{padding-top:20px;}
+.my-asset.recommend-portfolio .maturity-prod .h5{margin-left: 24px; margin-bottom:12px;}
+.my-asset.recommend-portfolio .maturity-prod .swiper-container{padding:12px 0 30px;}
+.my-asset.recommend-portfolio .maturity-prod li {padding: 0 24px;}
+.my-asset.recommend-portfolio .maturity-prod li>a{display:block;border:1px solid $kb-ui09;padding:25px 20px 13px;}
+.my-asset.recommend-portfolio .maturity-prod li.is-active>a{border-color:$kb-ui03;}
+.my-asset.recommend-portfolio .maturity-prod .prod-wrap{display:flex;justify-content:space-between;align-items:flex-start;margin-right:30px;}
+.my-asset.recommend-portfolio .maturity-prod .prod-wrap .txt-con .num{@include number($size: 15px);color:$kb-ui03;}
+.my-asset.recommend-portfolio .maturity-prod .description-list{margin-top:22px;border-top:1px solid $kb-ui09;padding-top:14px;}
+.my-asset.recommend-portfolio .maturity-prod .maturity-tag{text-align:right;}
+.my-asset.recommend-portfolio .maturity-prod .maturity-tag .tag-label{font-size:12px;padding:3px 5px;}
+.my-asset.recommend-portfolio .maturity-prod .btn-line{margin-top:30px;}
+.my-asset.recommend-portfolio .maturity-prod .description-list.type4 dt{margin:5px 0;}
+.my-asset.recommend-portfolio .tab-graph{padding-top:40px;padding-bottom:60px;background-color:#fff;}
+.my-asset.recommend-portfolio .tab-graph.is-active{display:block;}
+.my-asset.recommend-portfolio .portfolio-con .top-con{text-align:center;}
+.my-asset.recommend-portfolio .portfolio-con .top-con .msg{@include text($size:20px,$weight:bold);margin-bottom:6px;}
+.my-asset.recommend-portfolio .portfolio-con .top-con .amount b{@include text($size:20px,$weight:bold);}
+.my-asset.recommend-portfolio .portfolio-con .top-con .amount .num{@include number($size: 21px,$weight:bold);}
+.my-asset.recommend-portfolio .portfolio-con .s-txt{@include text($size: 14px);color:$kb-ui03;margin-top:4px;}
+.my-asset.recommend-portfolio .portfolio-con .graph-con{background-color:$kb-ui08;padding:50px;margin-top:18px;}
+.my-asset.recommend-portfolio .maturity-prod li>a>i{display:block;position: absolute;top: 20px;right: 20px;width: 24px;height: 24px;background-image: url(../images/common/common.png);background-repeat: no-repeat;background-size: 162px;background-position: -112px -52px;}
+.my-asset.recommend-portfolio .maturity-prod li.is-active>a>i{background-position: 0 -92px;}
+.my-asset.recommend-portfolio .rocommend-tab{padding-top:40px;}
+.my-asset.recommend-portfolio .rocommend-tab .tab{margin-left:0;margin-right:-24px;}
+.my-asset.recommend-portfolio .rocommend-tab .tab_contents .list >ul{margin-top:20px;}
+.my-asset.recommend-portfolio .rocommend-tab .tab_contents .list li{border-bottom:1px solid $kb-ui09;padding:20px 0 16px;}
+.my-asset.recommend-portfolio .rocommend-tab .tab_contents .list li:first-child{margin-top:0;}
+.my-asset.recommend-portfolio .rocommend-tab .tab_contents .list .prod-wrap{display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:12px;}
+.my-asset.recommend-portfolio .rocommend-tab .tab_contents .list .prod-wrap .tit{font-weight:bold;color:$kb-ui02;padding-left:2px;}
+.my-asset.recommend-portfolio .rocommend-tab .tab_contents .list .prod-wrap .rate{font-weight:bold;}
+
+/* 계좌숨기기 팝업 */
+.bottom-hide-account .pop-notice{@include text($size: 18px);color:$kb-ui02;}
+.bottom-hide-account .account-area{display:flex;justify-content:space-between;margin-top:32px;}
+
+.bottom-hide-account .account-area .icon-con span{display:block;width:48px;border-radius:24px;}
+.bottom-hide-account .account-area .icon-con .currency{margin-top:0;}
+
+
+.bottom-hide-account .account-area .txt-con .tit{display:block;font-weight:bold;}
+.bottom-hide-account .account-area .txt-con .s-txt{display:block;margin-top:4px;}
+.bottom-hide-account .account-area .txt-con .num{display:block;color:$kb-ui04;margin-top:2px;}
+.bottom-hide-account .account-area .txt-con .account .num{display:inline-block;}
+.bottom-hide-account .account-area .txt-con .pay-txt{display:block;margin-top:4px;color:$kb-ui04;}
+.bottom-hide-account .menu-info{@include text($size: 14px);color:$kb-ui05;margin-top:20px;}
+.bottom-hide-account .menu-info .s-txt{display:block;text-indent:6px;letter-spacing:-0.05em;}
+
+/* 상품안내 팝업 */
+.prod-kind{@include text($size: 12px);display:inline-block;padding:4px 10px;border-radius:3px;min-width:42px;}
+.prod-kind.deposit-withdrawal{background-color:#ffefee;color:#fb0000;}
+.prod-kind.fund{background-color:#ecf0ff;color:#1544bc;}
+.prod-kind.deposit-savings{background-color:#fff4df;color:#f95a00;}
+.prod-kind.insurance{background-color:#e3f5fb;color:#0791b2;}
+.prod-kind.loan{background-color:#e8f1ff;color:#0073fb;}
+.prod-kind.foreign-currency{background-color:#f9efe3;color:#995c14;}
+.prod-kind.stock{background-color:#faeffa;color:#cc0ccc;}
+.prod-kind.trust{background-color:#f5f0fe;color:#7a1df0;}
+.prod-kind.retirement-pension{background-color:#e4f6e9;color:#11a740;}
+.prod-kind.derivatives{background-color:#e7ebf4;color:#536284;}
+.prod-kind.etc{background-color:#f0f0f0;color:#696e76;}
+
+
+.bottom-prod-info .account-area .tit{display:block;@include text($size: 18px, $weight:bold);margin-top:10px;}
+.bottom-prod-info .account-area .s-txt{display:block;margin-top:6px;}
+.bottom-prod-info .account-detail{margin-top:10px;}
+.bottom-prod-info .account-detail li{display:table;padding:20px 0;width:100%;box-sizing:border-box;}
+.bottom-prod-info .account-detail li:last-child{padding-bottom:0;}
+.bottom-prod-info .account-detail li+li{border-top:1px solid $kb-ui08;}
+.bottom-prod-info .account-detail .icon-con{display:table-cell;width:56px;}
+.bottom-prod-info .account-detail .icon-con span{display:block;width:48px;height:48px;border-radius:24px;padding:12px 8px;/*background-color:$kb-ui10;*/}
+.bottom-prod-info .account-detail .icon-con span > i{display:inline-block}
+.bottom-prod-info .account-detail .txt-con{display:table-cell;vertical-align:middle;}
+
+/* 자산직접등록 */
+.pop-my-asset .tit{@include text($size: 18px,$weight : bold);}
+.pop-my-asset .pop-notice{@include text;color:$kb-ui02;}
+.pop-my-asset .pop-notice em{display:block;color:$color-red;}
+.pop-my-asset .fund-inquiry .btn-line{margin-top:12px;}
+.pop-my-asset .register-box .r-wrap{position:relative;display:block;padding-top:32px;padding-bottom:32px;}
+.pop-my-asset .register-box .r-wrap > i{position:absolute;top:32px;left:0;}
+.pop-my-asset .register-box + .register-box .r-wrap{border-top:1px solid $kb-ui09;}
+.pop-my-asset .register-box .r-wrap .txt-con{padding-left:42px;}
+.pop-my-asset .register-box .r-wrap .txt-con em{@include text($weight : bold);display:block;}
+.pop-my-asset .register-box .r-wrap .txt-con span{@include text($size: 14px);display:block;}
+.pop-my-asset .register-box:last-child{margin-bottom:32px;}
+.pop-my-asset .register-box .register-type{margin:0 -2px}
+.pop-my-asset .register-box .register-type a{display:block;border:1px solid $kb-ui08;width: calc( 100% - 4px );padding:32px 0;}
+.pop-my-asset .register-box .register-type a span{color:$kb-ui02;}
+
+/* 자산항목편집 */
+/* sortable */
+.ui-sortable {border-top:1px solid $kb-ui09;}
+.ui-sortable li{position:relative;padding:15px 36px 15px 0;border-bottom:1px solid $kb-ui09;border-top:1px solid $kb-ui09;background-color:#fff;margin-top:-1px;}
+.ui-sortable li .btn-switch{margin-right:10px;}
+.ui-sortable li .btn-switch label{vertical-align:middle;}
+.ui-sortable li .btn-handle{display:block;position:absolute;top:50%;right:0;width:24px;height:24px;margin-top:-12px;}
+.ui-sortable li .btn-handle span{display:block;width:0;height:0;text-indent:9999px;overflow:hidden;}
+.ui-sortable .ui-state-highlight{height:60px;background:$kb-ui10;border:none;}
+
+/* 자산통합조회 */
+.my-asset .asset-modify .asset-modify-top{display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:20px;}
+.my-asset .asset-modify .asset-modify-top .total em{font-weight:bold;}
+.my-asset .asset-modify .description-list dt{color:$kb-ui02;}
+
+/* 입출금 관리 */
+.my-asset.pay .asset-summary .highcharts-box .highcharts_column{height:53.3vw;}
+.my-asset.pay .smart-loan-banner{margin-top:0;}
+.my-asset.pay .recommend-prod .list  .smart-loan-banner button{border:none;background:url(../../static/images/asset/banner_smart_loan2.png) no-repeat right center $kb-ui10;background-size:106px auto;}
+.my-asset .smart-fund-banner button{display:block;width:100%;text-align:left;background:url(../../static/images/asset/banner_smart_loan.png) no-repeat right center $kb-ui10;background-size:75px auto;padding:20px 26px;}
+.my-asset .smart-fund-banner .tit{display:block;@include text($size:18px,$weight:bold);}
+.my-asset .smart-fund-banner .s-txt{display:block;@include text($size:14px);color:$kb-ui04;margin-top:4px;}
+
+
+
+/* 예적금 관리 */
+
+
+
+/* 투자 관리 */
+.my-asset.investment .asset-summary .highcharts-box .highcharts_column{height:51vw;}
+.my-asset.investment .recommend-prod{border-bottom:none;}
+/* 보험 */
+
+/* 연금 */
+
+/* 대출·부채 */
+.my-asset .credit-score{padding-top:36px;padding-bottom:30px;border-bottom:10px solid $kb-ui10;}
+.my-asset .credit-score .btn-more{position:relative;margin-top:0;width:100%;text-align:left;display:block;}
+.my-asset .credit-score .btn-more>span{@include ir;width:0;height:0;}
+.my-asset .credit-score .btn-more>i{@include iconBullet($width: 16px, $height : 9px, $thick : 1px, $color : $kb-ui05);position:absolute;right:0;top:50%;margin-top:-4px;transform:rotate(90deg);}
+.my-asset .credit-score .btn-more>i:before{left:auto;right:0}
+.my-asset .credit-score .btn-area{margin-top:12px;}
+.my-asset .credit-score .btn-area .btn-line{height:52px;}
+.my-asset .credit-score .btn-area .btn-line>span{@include text($size: 18px,$weight:bold);}
+.my-asset .credit-score .box-area{@include text($size:18px,$weight:bold);display:grid;grid-template-columns: 1fr 1fr;background-color:$kb-ui09;padding:12px;margin-top:7px;}
+.my-asset .credit-score .box-area .num{@include number($size:19px);}
+.my-asset .credit-score .box-area .score{text-align:right;padding-right:10px;}
+.my-asset .credit-score .box-area .percent:before{display:inline-block;content:'|';padding-right:10px;}
+.my-asset .loan-interest-rate{padding-top:36px;padding-bottom:30px;border-bottom:10px solid $kb-ui10;}
+.my-asset .loan-interest-rate .description-list{margin-top:10px;}
+.my-asset .loan-interest-rate .description-list dt{@include text($size: 14px);}
+.my-asset .loan-interest-rate .description-list dd{@include text($size: 14px);}
+.my-asset .loan-interest-rate .description-list dd .num{@include number($size: 15px);}
+.my-asset .loan-interest-rate .rate-cut-box{margin-top:12px;background-color:#e4e8f9;padding:20px;}
+.my-asset .loan-interest-rate .rate-cut-box .tit{@include text($size: 14px);}
+.my-asset .loan-interest-rate .rate-cut-box .info{@include text($weight: bold);margin-top:2px;}
+.my-asset .loan-interest-rate .rate-cut-box>button{margin-top:10px;}
+.my-asset .loan-interest-rate .rate-cut-box>button>span{@include text($size: 12px);border-bottom:1px solid $kb-ui03;}
+.my-asset .loan-interest-rate p[data-style=list]{margin-top:10px;@include text($size: 14px);color:$kb-ui02;}
+.my-asset .loan-interest-rate .btn-text{@include text($size:14px);display:inline-block;margin-top:10px;line-height:20px;}
+.my-asset .loan-interest-rate .btn-text i{vertical-align:top;}
+.my-asset.loan .recommend-prod{padding-top:42px;}
+.my-asset .best-list-con{padding-bottom:48px;}
+.my-asset .best-list-con .tab{margin-top:20px;margin-right:-24px;}
+.my-asset .best-list-con .tab_contents .list{margin-top:20px;}
+.my-asset .best-list-con .tab_contents .list .except_kb{margin-bottom:10px;}
+.my-asset.pop-account-detail .loan .account-detail .price-wrap .description-list.type3{grid-row-gap:0;}
+.my-asset.pop-account-detail .loan .account-detail .price-wrap .description-list.type3 .memo{margin-top:4px;}
+.my-asset.pop-account-detail .loan .account-top .more-view-box .description-list dt{align-items:flex-start;}
+.my-asset.pop-account-detail .loan .account-top .more-view-box .description-list dd{margin:0.5rem 0;}
+
+
+
+/* 외화 */
+.my-asset .currency-modify .currency-top .s-txt{@include text($size:14px);color:$kb-ui06;margin-bottom:20px;}
+.my-asset .currency-modify .ui-state-disabled {pointer-events: auto;opacity:0.5;}
+
+/* 적립포인트 */
+.my-asset.point .asset-summary .highcharts-box .graph-info > .h4{padding-right:30px;}
+.my-asset .c-point{display:inline-block;padding-right:18px;background:url(../images/asset/i_point.png) no-repeat 100% 50%;background-size:14px auto;vertical-align: middle;}
+.my-asset .point-list>li+li{margin-top:20px;}
+.my-asset .point-list .line-box{padding:20px;border:1px solid $kb-ui09;}
+.my-asset .point-list .line-box .account-wrap{position:relative;align-items:center;}
+.my-asset .point-list .line-box .account-wrap .btn-hide-account{top:50%;margin-top:-12px;}
+.my-asset .point-list .line-box .description-list-variable{border-top:1px solid $kb-ui09;margin-top:20px;padding-top:20px;}
+.my-asset .point-list .line-box .description-list-variable .btn-hide-account{position:relative;display:inline-block;margin-left:6px;}
+.my-asset .point-list .line-box .description-list-variable .point-info{@include text($size:14px);color:$kb-ui06;margin-top:4px;}
+.my-asset .point-list .line-box .description-list-variable .point-info .num{@include number($size:15px);}
+.my-asset .point-list .line-box .description-list-variable>li+li{margin-top:14px;}
+.my-asset .point-con .btn-area{margin-top:24px;}
+.my-asset .point-con ul[data-style=list]{margin-top:28px;margin-bottom:36px;}
+
+/* My금고 */
+.my-asset.cash .asset-summary{padding-bottom:30px;}
+.my-asset.cash .p-list > dl > dd .memo{@include text($size:14px);text-align:right;margin-top:10px;color:$kb-ui04;}
+.my-asset.cash .p-list > dl > dd .memo .num{@include number($size:15px);}
+.my-asset.cash .p-list > dl > dd .memo+.memo{margin-top:0;}
+.my-asset.cash .p-list > dl > dd ul.balance {margin-top:14px;}
+.my-asset.cash .p-list > dl > dd ul.balance>li{margin-top:6px}
+.my-asset.cash .p-list > dl > dd ul.balance .date{color:$kb-ui06;@include number($size:17px);}
+
+/* 부동산 */
+.my-asset .pop-notice{line-height:1.4;}
+/* 수정 2021-07-01 // */ 
+.my-asset .realty-index{height: calc(100vh - 250px);background-color:#fff;margin-top:14px;}
+.my-asset.house .realty-index{height: calc(100vh - 181px);min-height: calc(568px - 129px + 45px);padding-top: 30%;} 
+.my-asset .realty-index .index-visual{display: flex;flex-direction: column;}
+.my-asset .realty-index .index-visual [class^=info_type]{margin: 24px 0 25%;text-align:center;color:$kb-ui04;line-height:1.4;}
+.my-asset .realty-index .index-visual .info_type2{margin: 24px 0 20%;}
+.kb-sec.index-area{background-color: $kb-ui11;height: calc(100vh - 132px);}
+.kb-sec.index-area .index-visual{margin: 26px 0 31px;}
+/* // 수정 2021-07-01 */ 
+
+.my-asset.house .kb-sec:last-child{padding-bottom:60px;}
+.my-asset.house .asset-summary{padding-bottom:30px;}
+.my-asset.house .asset-summary .wish-msg{color:$kb-ui03;line-height:1.4;}
+.my-asset.house .asset-summary .wish-msg .num{color:$color-blue;}
+.realty-index .btn-area{margin-bottom:20px;}
+.my-asset .my-address-list{margin-top:40px;}
+.my-asset .my-address-list > ul{padding:10px 0;border-top:1px solid $kb-ui03;border-bottom:1px solid $kb-ui08;margin-top:20px;}
+.my-asset .my-address-list > ul > li{display:flex;justify-content:space-between;align-items:center;padding:10px 0;min-height:28px;}
+.my-asset .my-address-list > ul > li .txt-con{line-height:1.4;color:$kb-ui03;}
+.my-asset .my-address-list > ul > li .txt-con b{@include text($size:14px,$weight:bold);display:block;}
+.my-asset .address-search{margin-top:40px;}
+.my-asset .address-search .kb-form{margin-top:18px;}
+.my-asset .search-result{margin-top:30px;border-bottom:1px solid $kb-ui09;padding-bottom:10px;}
+.my-asset .search-result > li{@include ellipsis;display:block;padding:10px 0;}
+.my-asset .h-category{@include text($size:12px);border:1px solid $kb-ui02;padding:1px 6px;border-radius:2px;letter-spacing:-0.48px;}
+.my-asset .h-category + .h-category{margin-left:4px;}
+.my-asset .search-result > li .keyword{margin-left:5px}
+.my-asset .address-search .btn-view-more{display: block;padding: 15px 0;width: 100%;margin-top:16px;}
+.my-asset .selected-address{padding:0;}
+.my-asset .selected-address .my-address-box{background-color:$kb-ui10;padding:30px 24px;}
+.my-asset .selected-address .my-address-box .category-group{margin-bottom:14px;}
+.my-asset .selected-address .my-address-box .tit{@include text($size:18px,$weight:bold);}
+.my-asset .selected-address .my-address-box .address{margin-top:14px;}
+.my-asset .selected-address .require-txt{@include text($size:14px);margin:20px 0;text-align:right;color:$kb-ui04;padding:0 24px;}
+.my-asset .my-purchase-price .info-msg {margin-top:8px;}
+.my-asset .select-account {margin-top:28px;margin-bottom:20px;}
+.my-asset .select-account .list{border-top:1px solid $kb-ui03;padding-top:24px;margin-top:20px;}
+.my-asset .select-account .list>li{padding:24px 0;border-bottom: 1px solid #ebeef0;}
+.my-asset .select-account .list>li:first-child{padding-top:0;}
+.my-asset .select-account .list>li .description-list{margin-left:32px;}
+.my-asset .select-account .credit-list{border-top:1px solid $kb-ui03;padding-top:24px;margin-top:20px;}
+.my-asset .select-account .credit-list.type2 .tit{font-weight:normal;}
+.my-asset .select-account .credit-list.type2 .account{@include number;color:$kb-ui04;}
+.my-asset .select-account .credit-list.type2 .amount{color:$kb-ui03;}
+.my-asset .check-management{margin-top:28px;}
+.my-asset .check-management .btn-switch{display:block;}
+.my-asset .check-management .btn-switch label{display:block;}
+.my-asset .check-management .btn-switch label span{@include text($size:18px,$weight:bold);} 
+.my-asset .check-management .info{margin-top:20px;}
+.my-asset .my-house .possession{margin-top:20px;}
+.my-asset .my-house .rental{display:none;margin-top:20px;}
+.my-asset .house-add-complete .house-btns {text-align: center;}
+.my-asset .house-add-complete .house-btns button {display: block; width: 190px; margin: 0 auto 24px;}
+.my-asset .house-add-complete .complete-msg {margin-top: 34px;}
+.my-asset .house-add-complete .house-btns {margin-top: 45px;}
+.my-asset .house-add-complete .sticky-bottom .btn-area{position:fixed;bottom:0;left:0;z-index:$level60;width:100%;}
+.my-asset .house-add-complete .btn-line{padding:0 8px} /* 추가 2021-07-01 */ 
+.my-asset .house-add-complete .btn-line span{font-size:16px;letter-spacing: -0.64px;} /* 추가 2021-07-01 */ 
+.my-asset .consent-area{margin-bottom:24px;}
+.my-asset .consent-area .tit{@include text($size:18px,$weight:bold);}
+.my-asset .consent-area .btn-area{margin-top:24px;}
+.my-asset .conditions-con{@include text($size:14px);}
+.my-asset .conditions-con dt{font-weight:bold;margin-top:5px;}
+.my-asset .conditions-con dd{display:inline-block;margin-right:4px;}
+.my-asset .conditions-con .btn-line_table{@include text($size:14px);}
+.my-asset .conditions-con .btn-line_table.disabled{background-color:$kb-ui10;border-color:$kb-ui08;color:$kb-ui05;}
+.my-asset .conditions-con .tit{display:inline-block;padding-left:24px;background-repeat:no-repeat;background-position:0 center;background-size:24px auto;}
+.my-asset .conditions-con .tit.kb{background-image:url(../../static/images/asset/chart_realty_line_01.png);}
+.my-asset .conditions-con .tit.selling{background-image:url(../../static/images/asset/chart_realty_line_02.png);}
+.my-asset .conditions-con .tit.publish{background-image:url(../../static/images/asset/chart_realty_line_03.png);}
+.my-asset .conditions-con .tit.kb.lent{background-image:url(../../static/images/asset/chart_realty_line_04.png);}
+.my-asset .conditions-con .tit.selling.lent{background-image:url(../../static/images/asset/chart_realty_line_05.png);}
+/* My House 상세 */
+.percent-chart-list>li{display:table;width:100%;table-layout:fixed;min-height:24px;}
+.percent-chart-list>li .legend-txt{display:table-cell;width:130px;padding-right:10px;text-align:right;@include text($size:14px);}
+.percent-chart-list>li .percentage-graph{display:table-cell;padding:8px 0;}
+.percent-chart-list>li .chart-amount{@include text($size:14px);display:table-cell;width:67px;padding-left:10px;text-align:right;}
+.percent-chart-list>li .chart-amount .num{@include number($size:15px);}
+.percent-chart-list>li.show-later{display:none;}
+.other-expenses .percent-chart-list{margin-top:20px;}
+.other-expenses .percent-chart-list>li .legend-txt{width:100px;}
+.other-expenses .percent-chart-list>li .chart-amount{width:80px;}
+
+/* wish house 플래너 */
+.my-asset.wish-house-planer .top-area .msg{@include text($size:20px,$weight:bold);}
+.my-asset.wish-house-planer .top-area .msg b{color:$color-blue;}
+.my-asset.wish-house-planer .top-area .msg .num{@include number($size:21px,$weight:bold);}
+.my-asset.wish-house-planer .planer{padding-top:24px;}
+.my-asset.wish-house-planer .progress-wrap{position:relative;padding-top:50px;}
+.my-asset.wish-house-planer .progress-wrap .animation{background-color:#fff;width:0;z-index:5;right:0;left:auto;transition: all 1.8s ease-out;transition-delay:.5s;opacity:1;}
+.my-asset.wish-house-planer .progress-wrap .animation.is-active{width:100%;}
+.my-asset.wish-house-planer .progress-wrap>span{display:block;position:absolute;height:5px;bottom:0;text-align:right;width:0;transition: all .3s linear;}
+.my-asset.wish-house-planer .progress-wrap>span:after{display:inline-block;width:20px;height:20px;content:'';margin-top:-25px;vertical-align:top;transition: all .1s linear;opacity:0;}
+.my-asset.wish-house-planer .progress-wrap>span.is-active:after{opacity:1;margin-right:0;}
+.my-asset.wish-house-planer .progress-wrap>span.stop:after{opacity:0;}
+.my-asset.wish-house-planer .progress-wrap .total{width:100%;left:0;z-index:1;background-color:#287eff;}
+.my-asset.wish-house-planer .progress-wrap .my-house{left:0;background-color:#ff9901;z-index:2;}
+.my-asset.wish-house-planer .progress-wrap .my-house:after{content:'';width:22px;height:20px;background:url(../../static/images/asset/ico_my_house.png) no-repeat 0 0;background-size:cover;margin-top:-22px;}
+.my-asset.wish-house-planer .progress-wrap span.stop{width:0 !important;}
+.my-asset.wish-house-planer .progress-wrap .my-cash{background-color:#ffd237;z-index:4}
+.my-asset.wish-house-planer .progress-wrap .my-cash:after{content:'';width:20px;height:20px;background:url(../../static/images/asset/ico_my_cash.png) no-repeat 0 0;background-size:cover;margin-top:-22px;}
+.my-asset.wish-house-planer .progress-wrap .wish-gap{background-color:#287eff;z-index:3;}
+.my-asset.wish-house-planer .progress-wrap .wish-gap:after{content:'';width:23px;height:30px;background:url(../../static/images/asset/ico_wish_house.png) no-repeat 0 0;background-size:cover;margin-left:-20px;margin-top: -32px;}
+.my-asset.wish-house-planer .progress-wrap .my-cash{background-color:#ffd237;z-index:4}
+.my-asset.wish-house-planer .progress-wrap .my-cash:after{content:'';width:20px;height:20px;background:url(../../static/images/asset/ico_my_cash.png) no-repeat 0 0;background-size:cover;margin-top:-22px;}
+.my-asset.wish-house-planer .progress-wrap .my-loan{background-color:#96857f;z-index:3;}
+.my-asset.wish-house-planer .progress-wrap .my-loan:after{content:'';width:17px;height:20px;background:url(../../static/images/asset/ico_my_loan.png) no-repeat 0 0;background-size:cover;margin-top:-22px;}
+.my-asset.wish-house-planer .progress-wrap .wish-house{width:23px;height:20px;border-radius:20px;bottom:-8px;z-index:5;text-align:center;margin-left:-23px;}
+.my-asset.wish-house-planer .progress-wrap .wish-house:after{content:'';width:23px;height:30px;background:url(../../static/images/asset/ico_wish_house.png) no-repeat 0 0;background-size:cover;margin-left:-20px;}
+.my-asset.wish-house-planer .progress-wrap .wish-house.is-active:after{margin-left:0;}
+.my-asset.wish-house-planer .wish-house-price{@include text($size:18px,$weight:bold);display:flex;justify-content:space-between;align-items:center;margin-top:20px;padding-bottom:20px;border-bottom:1px solid $kb-ui09;}
+.my-asset.wish-house-planer .wish-house-price .num{@include number($size:21px);}
+.my-asset.wish-house-planer .my-money-list{padding:12px 0;border-bottom:1px solid $kb-ui09;}
+.my-asset.wish-house-planer .my-money-list > ul > li{display:flex;justify-content:space-between;align-items:center;}
+.my-asset.wish-house-planer .my-money-list > ul > li .txt{background-repeat:no-repeat;background-position:0 center;background-size:20px auto;padding:12px 0 12px 24px;color:$kb-ui04;}
+.my-asset.wish-house-planer .my-money-list > ul > li.mine .txt{background-image:url(../images/asset/i_wish_house_planer_1.png);}
+.my-asset.wish-house-planer .my-money-list > ul > li.cash .txt{background-image:url(../images/asset/i_wish_house_planer_2.png);}
+.my-asset.wish-house-planer .my-money-list > ul > li.loan .txt{background-image:url(../images/asset/i_wish_house_planer_3.png);}
+.my-asset.wish-house-planer .my-money-list > ul > li.mine .amount{color:$kb-ui03;}
+.my-asset.wish-house-planer ul[data-style=list]{color:$kb-ui03;margin-top:20px;}
+.my-asset.wish-house-planer ul[data-style=list] .btn-text u{@include text($size:14px);}
+.my-asset.wish-house-planer .btn-solid_sticky > span{@include text($size:18px,$weight:bold);}
+
+/* My House 지출 */
+.my-asset.my-house-expens .top-area .info{color:$kb-ui04;margin-top:8px;}
+.my-asset.my-house-expens .graph-area{margin-top:20px;}
+.my-asset.my-house-expens .my-average{@include text($size:14px);text-align:center;margin-top:5px;}
+.my-asset.my-house-expens .my-average > em{display:inline-block;position:relative;padding-left:15px;}
+.my-asset.my-house-expens .my-average > em:before{display:inline-block;position:absolute;top:50%;left:0;margin-top:-4px;width:7px;height:7px;border-radius:7px;background-color:$kb-ui08;content:'';}
+.my-asset.my-house-expens .my-average .num{@include number($size:15px);}
+.my-asset.my-house-expens .expens-list{margin-top:40px}
+.my-asset.my-house-expens .expens-list .h4{margin-bottom:20px;}
+.my-asset.my-house-expens .expens-list > ul{border-top:1px solid  $kb-ui09;}
+.my-asset.my-house-expens .expens-list > ul > li{padding:20px 0;border-bottom:1px solid $kb-ui09;}
+.my-asset.my-house-expens .expens-list > ul > li .tit{@include text($weight:bold);margin-bottom:3px;}
+.my-asset.my-house-expens .expens-list > ul > li .date{@include number;}
+.my-asset.my-house-expens .expens-list .no-data{margin-top:100px;}
+
+/* My house, Wish House 상세페이지 */
+.my-asset.house-view .top-area{padding-bottom:20px;border-bottom:1px solid $kb-ui09;}
+.my-asset.house-view .top-area .address{@include text($size:18px,$weight:bold);}
+.my-asset.house-view .top-area .nick-name{color:$kb-ui03;margin-top:12px;}
+.my-asset .house-data-list{padding:10px 0 48px;border-bottom:10px solid $kb-ui10;}
+.my-asset .house-data-list.expens{border-bottom:none;}
+.my-asset .house-data-list.wish{border-bottom:none;}
+.my-asset .house-data-list .house-data-tit{padding:25px 0;margin:0 24px;border-bottom:1px solid $kb-ui09;}
+.my-asset .house-data-list .house-data-tit .address{@include text($size:18px,$weight:bold);display:block;position:relative;margin-bottom:10px;padding-right:30px;}
+.my-asset .house-data-list .house-data-tit .address i{position:absolute;top:50%;right:0;margin-top:-12px;}
+.my-asset .house-data-list.expens .house-data-tit .data-wrap{display:flex;justify-content:space-between;align-items:center;}
+.my-asset .house-data-list.expens .house-data-tit .tit{@include text($size:18px,$weight:bold);}
+.my-asset .house-data-list.expens .house-data-tit .amount{font-weight:bold;}
+.my-asset .house-data-list .nick-name-area{display:flex;justify-content:space-between;align-items:center;}
+.my-asset .house-data-list .nick-name-area .txt{color:$kb-ui03;}
+.my-asset .house-data-list .house-data-tit + .description-list{margin-top:10px;margin-bottom:0;}
+.my-asset .house-data-list.wish .house-data-tit + .description-list{border-bottom:none;}
+.my-asset .house-data-list .description-list dt{text-overflow:ellipsis;white-space:nowrap;}
+.my-asset .house-data-list .description-list.type2 dt{margin:4px 0;}
+.my-asset .house-data-list .description-list{margin:0 24px;border-bottom:1px solid $kb-ui09;padding-bottom:12px;}
+.my-asset .house-data-list.expens .description-list{border-bottom:none;}
+.my-asset .house-data-list .plus{color:$color-red;}
+.my-asset .house-data-list .minus{color:$color-blue;}
+.my-asset .house-data-list .triangle{@include text($size:10px);}
+.my-asset .house-data-list em:before{display:inline-block;@include text($size:10px);content:'';margin-right:5px;}
+.my-asset .house-data-list .plus em:before{color:$color-red;content:'▲'}
+.my-asset .house-data-list .minus em:before{color:$color-blue;content:'▼'}
+.my-asset .house-data-list .description-list + .btn-area{margin-top:10px;}
+.my-asset .house-data-list.wish .description-list + .btn-area{border-bottom:1px solid $kb-ui09;padding-bottom:24px;margin:0 24px;}
+.my-asset.house-view .kb-conditions{border-bottom:10px solid $kb-ui10;padding-top:40px;padding-bottom:40px;}
+.my-asset.house-view .kb-conditions .h4{margin-bottom:20px;}
+.my-asset.house-view .my-house-loan{padding-top:40px;padding-bottom:48px;border-bottom:10px solid $kb-ui10;}
+.my-asset.house-view .my-house-loan .h4{margin-bottom:12px;}
+.my-asset.house-view .my-house-loan .description-list dt{margin:6px 0;}
+.my-asset.house-view .percentage-graph{margin-top:14px;}
+.my-asset.house-view .my-house-loan .btn-area{margin-top:28px;}
+.my-asset.house-view .other-conditions{padding-top:40px;}
+.my-asset.house-view .other-conditions .h4{margin-bottom:12px;}
+.my-asset.house-view .other-conditions .average-box{display:none;position:absolute;top:46px;left:0;text-align:center;}
+.my-asset.house-view .other-conditions .btn-segmented .is-selected + .average-box{display:block;}
+.my-asset.house-view .other-conditions .btn-segmented li:last-child .average-box{left:auto;right:0;}
+.my-asset.house-view .other-conditions .average-box > span{display:block;position:relative;@include text($size:14px);display:inline-block;box-shadow: 0px 1px 5px 0 rgba(0, 0, 0, 0.2);background-color:#fff;border-radius:3px;margin-top:5px;padding:4px;text-overflow:ellipsis;
+    white-space:nowrap;}
+.my-asset.house-view .other-conditions .average-box>span:after{display:block;position:absolute;top:-6px;left:50%;margin-left:-6px;width:13px;height:6px;content:'';background:url(../../static/images/asset/bg_average_box.png)no-repeat 0 0;background-size:cover;}
+.my-asset.house-view .other-conditions .average-box > span{color:$kb-ui05;}
+.my-asset.house-view .other-conditions .average-box > span > em{color:$kb-ui02;}
+.my-asset.house-view .other-conditions .average-box > span > em .num{@include number($size:15px);}
+.my-asset.house-view .other-conditions .graph-area .h5{margin-top:60px;}
+.my-asset.house-view .other-conditions .graph-area .unit-type
+{@include text($size:14px);color:$kb-ui04;text-align:right;margin:10px 0;}
+.my-asset.house-view .other-conditions .info-box{display:none;@include text($size:14px);border:1px solid #d7d7d7;border-radius:4px;padding:14px 20px 14px 42px;color:$kb-ui04;text-indent:-24px;margin-top:40px;}
+.my-asset.house-view .other-conditions .info-box .num{@include number($size:15px);}
+.my-asset.house-view .other-conditions .graph-area .highcharts_column.type2{display:none;}
+.my-asset.house-view .other-conditions .graph-area.is-active .highcharts_column.type1{display:none;}
+.my-asset.house-view .other-conditions .graph-area.is-active .highcharts_column.type2{display:block;}
+.my-asset.house-view .other-conditions .btn-view-more{display:block;text-align:center;width:100%;padding:10px;margin-top:10px;}
+.my-asset.house-view .other-conditions{padding-bottom:38px;border-bottom:10px solid $kb-ui10;}
+.my-asset.house-view .other-expenses{padding-top:40px;padding-bottom:38px;}
+.my-asset.house-view .other-expenses .h4{margin-bottom:12px;}
+.my-asset .liiv-banner{margin-top:24px;}
+.my-asset .liiv-banner button{display:block;width:100%;text-align:left;background:url(../../static/images/asset/banner_liiv.png) no-repeat right center $kb-ui10;background-size:135px auto;padding:20px 26px;}
+.my-asset .liiv-banner .tit{display:block;@include text($size:18px,$weight:bold);}
+.my-asset .liiv-banner .s-txt{display:block;@include text($size:14px);color:$kb-ui04;margin-top:4px;}
+.my-asset .smart-loan-banner{margin-top:24px;}
+.my-asset .smart-loan-banner button{display:block;width:100%;text-align:left;background:url(../../static/images/asset/banner_smart_loan.png) no-repeat right center $kb-ui10;background-size:75px auto;padding:20px 26px;}
+.my-asset .smart-loan-banner .tit{display:block;@include text($size:18px,$weight:bold);}
+.my-asset .smart-loan-banner .s-txt{display:block;@include text($size:14px);color:$kb-ui04;margin-top:4px;}
+
+/* 자산/지출 숨김 설정 */
+.app-content.my-item-edit{padding-bottom:0;}
+.my-item-edit .top-info{margin-top:12px;}
+.my-item-edit .my-item-list{margin-top:48px;}
+.my-item-edit .my-item-list .no-data{margin-top:100px;}
+.my-item-edit .my-item-list .no-data + .btn-area{margin-top:42px;}
+.my-item-edit .my-item-list .top-count{@include text($size: 18px,$weight:bold);margin-bottom:20px;}
+.my-item-edit .my-item-list .top-count .count{@include number($size: 18px,$weight:bold);color:$color-blue;}
+.my-item-edit .my-item-list .accordian > dt .count{font-size:18px;color:$color-blue;}
+.my-item-edit .my-item-list .accordian > dd > ul >li{display:flex;justify-content:space-between;align-items:center;margin-top:20px;}
+.my-item-edit .my-item-list .accordian > dd > ul >li:first-child{margin-top:0;}
+.my-item-edit .my-item-list .accordian > dd > ul >li .switch-wrap{margin-top:4px;text-align:center;}
+.my-item-edit .my-item-list .accordian > dd > ul >li .switch-wrap.has-delete .btn-switch{display:block;margin-bottom:8px;}
+.my-item-edit .my-item-list .accordian > dd > ul >li .agency{font-weight:bold;}
+.my-item-edit .my-item-list .accordian > dd > ul >li .account{color:$kb-ui04;margin-top:4px;}
+.my-item-edit .my-item-list .accordian > dd > ul >li .nick-name{color:$kb-ui04;margin-top:4px;}
+
+/* menu 페이지 */
+.menu-push .top-info{text-align:center;margin-top:12px;}
+.menu-push .top-info .btn-text{display:inline-block;margin-top:7px;}
+.menu-push .top-info .no-data{margin-top:100px;}
+.menu-push .line-box > .date{@include number($size: 15px);color:$kb-ui06}
+.menu-push .price-wrap{margin-top:12px;}
+.menu-push .price-wrap .type{font-weight:bold;}
+.menu-push .price-wrap .info-txt{@include text($size: 16px);margin-top:16px;}
+.menu-push .price-wrap .txt-con{border-top:1px solid $kb-ui09;margin-top:18px;padding-top:18px;}
+.menu-push .price-wrap .p-name{@include text($size: 14px,$weight:bold);}
+.menu-push .price-wrap .description-list-variable {@include text($size: 16px);}
+.menu-push .price-wrap .p-name + .description-list-variable{margin-top:13px;}
+.menu-push .price-wrap .description-list-variable + .description-list-variable{margin-top:12px;}
+.menu-push .price-wrap .description-list-variable p:last-child{color:$kb-ui04;}
+.menu-push .price-wrap .description-list-variable .num,
+.menu-push .price-wrap .description-list-variable .date{@include number($size: 17px, $line-height:1);display:inline-block;}
+.menu-push .price-wrap .description-list-variable .date:last-child:not(:first-child){@include number($size: 15px, $line-height:1);display:inline-block;}
+.menu-push .price-wrap .description-list-variable .memo{margin-top:3px;}
+.menu-push .price-wrap .description-list-variable > li{margin:4px 0;}
+.menu-push .price-wrap .description-list-variable > li:first-child{margin-top:0;}
+.menu-push .price-wrap .description-list-variable > li > p:first-child{color:$kb-ui04;}
+.menu-push .price-wrap .description-list-variable.point-info > li > p{color:$kb-ui02;font-weight:bold;}
+.menu-push .price-wrap .description-list-variable.point-info .num,
+.menu-push .price-wrap .description-list-variable.point-info .date{font-weight:bold;}
+.menu-push .price-wrap .notice{@include text($size: 14px);margin-top:20px;}
+.menu-push .price-wrap .btn-text{@include btnText($size: 14px);display:block;margin-top:12px;color:$kb-ui04;text-align:right;}
+.bottom-sheet[data-layered-name=mys_mn_02_00_00_search] .btn-segmented button{height:100%;padding:10px 0;}
+.bottom-sheet[data-layered-name=mys_mn_02_00_00_search] .btn-segmented button span{line-height:1.4;}
+
+.menu-my-info .top-info{text-align:center;margin-top:12px;}
+.menu-my-info .my-info{margin-top:40px;}
+.menu-my-info .my-info .h4{margin-bottom:24px;}
+
+/* 보험 세부조회 */
+
+.insurance-prd-info{padding:0 20px;border:1px solid $kb-ui08}
+.insurance-prd-info .summary-info{display:flex;align-items:flex-end;padding-top:25px;padding-bottom:14px;text-align:center}
+.insurance-prd-info .summary-info dl{flex:1}
+.insurance-prd-info .summary-info dl:not(.dday){padding-top:14px}
+.insurance-prd-info .summary-info dl+dl{border-left:1px solid $kb-ui08}
+.insurance-prd-info .summary-info dd,
+.insurance-prd-info .summary-info dd .num{font-size:24px;font-weight:bold}
+.insurance-prd-info .summary-info dd .date{display:block;font-weight:normal;font-size:14px;line-height:15px}
+.insurance-prd-info .summary-info .dday dd,
+.insurance-prd-info .summary-info .dday dd .num{font-size:20px}
+.insurance-prd-info .summary-info dt{margin-top:15px}
+.insurance-prd-info .description-list .num{color:$kb-ui04}
+.account-wrap + .insurance-prd-info{margin-top:26px}
+.my-asset.asset-insurance .p-list > dl > dd .balance .amount{display:block;}
+.my-asset.asset-insurance .p-list > dl > dd .balance .amount + .amount{margin-top:7px;}
+
+// 건강보험 주요 보장내역 분석
+.insu-report-circles {position: relative; padding: 24px 0 45px; display: flex; justify-content: space-between; align-items: center;}
+.insu-report-circles .report-circle {position: relative;}
+.insu-report-circles .point, 
+.insu-report-circles .cate, 
+.insu-report-circles .btm {position: absolute; left: 0; right: 0; text-align: center;}
+.insu-report-circles .point {left: 50%; top:-20px; background-color: #fff; padding: 4px 5px; border-radius:2px;box-shadow: 0px 1px 5px 0 rgba(0, 0, 0, 0.2); transform: translateX(-50%); font-size: 14px; color: $kb-ui03;}
+.insu-report-circles .point:after{position: absolute;display:inline-block;bottom: -6px; left: 50%;margin-left: -6px;width:12px;height:6px;content:'';background: url(../../static/images/asset/bg_d_day.png) no-repeat 0 0; background-size: cover;}
+.insu-report-circles .point .num {font-size: 15px; font-weight: bold;}
+.insu-report-circles .cate {top: 42px; font-size: 16px; color: $kb-ui02; font-weight: bold;}
+.insu-report-circles .btm {top: 112px;}
+.insu-report-circles .btm::before {display: block; margin-bottom: 3px; font-size: 14px;}
+.insu-report-circles .report-circle[data-status=good] .btm::before {content: '충분'; color: #4dabff;}
+.insu-report-circles .report-circle[data-status=caution] .btm::before {content: '유의'; color: #ffd338;}
+.insu-report-circles .report-circle[data-status=short] .btm::before {content: '부족'; color: #d672f6;}
+.insu-report-circles .btm .count {display: block; font-size: 16px; color: $kb-ui02;}
+.insu-report-circles .btm .count .num {font-size: 17px; font-weight: bold;}
+.maturity-dday-circles {position: relative; display: flex; justify-content: space-between; align-items: flex-start;}
+.maturity-dday-circles .dday-circle {position: relative; flex: 1;}
+.maturity-dday-circles .dday-circle svg {display: block; margin: 0 auto 18px;}
+.maturity-dday-circles .dday {position: absolute; left: 0; right: 0; top: 45px; text-align: center; font-size: 16px; line-height: 23px; font-weight: bold; color: $kb-ui02;}
+.maturity-dday-circles .dday .num {font-size: 17px;}
+.maturity-dday-circles .btm-text {font-size: 14px; line-height: 1.4; color: $kb-ui03; text-align: center;}
+
+/* 자산공통 팝업 */
+.bottom-sheet[data-layered-name="mys_as_07_00_00_p1"] .select-lists {display:table;width:100%;}
+.bottom-sheet[data-layered-name="mys_as_07_00_00_p1"] .select-lists dl{display:table-cell;}
+.bottom-sheet[data-layered-name="mys_as_07_00_00_p1"] .select-lists .select-list .tit{text-overflow: ellipsis;white-space: nowrap;}
+.bottom-sheet[data-layered-name="mys_as_05_00_01_p1"] .tag-label.t02{vertical-align:middle;}
+
+/* 종합솔루션 */
+.my-asset.solution .chart-area{padding-top:10px;}
+.my-asset.solution .solution-list th{font-weight:normal;}
+.my-asset.solution .solution-list .blind{@include hidden;}
+.my-asset.solution .solution-list thead th{padding-bottom:15px;line-height:1.5;}
+.my-asset.solution .solution-list thead th .btn-similar{margin-bottom:0;}
+.my-asset.solution .solution-list tbody td{padding:5px;}
+.my-asset.solution .top-area .h4{margin-bottom:20px;}
+
+.my-asset.solution .asset-summary{padding-bottom:24px;}
+.my-asset.solution .solution-more{padding-top:32px;padding-bottom:32px;border-bottom:10px solid $kb-ui10;}
+.my-asset.solution .solution-more .grid-list{margin-top:20px;}
+.my-asset.solution .solution-more .grid-list li{position:relative;}
+.my-asset.solution .solution-more .grid-list li.on:after{display:block;position:absolute;bottom:-20px;content:'';left:50%;margin-left:-7px;width:14px;height:6px;background:url(../../static/images/asset/bg_solution_box.png) no-repeat 0 0;background-size:contain;}
+.my-asset.solution .solution-more .grid-list button > em{display:block;width:60px;height:60px;border-radius:60px;background-color:$kb-ui10;padding-top:16px;}
+.my-asset.solution .solution-more .grid-list button > span{display:block;margin-top:10px;}
+.my-asset.solution .solution-more .grid-list button > b{@include text($size:14px,$weight:bold);}
+.my-asset.solution .solution-more .grid-list li.on button > em{background-color:#fede6c;}
+.my-asset.solution .solution-more .more-list > li{display:none;}
+.my-asset.solution .solution-more .more-list .info-box{background-color:$kb-ui10;margin-top:20px;padding:20px;border-radius:5px;}
+.my-asset.solution .solution-more .more-list .info-box .num{@include number($size:15px);}
+.my-asset.solution .solution-more .more-list .info-box,
+.my-asset.solution .solution-more .more-list .description-list,
+.my-asset.solution .solution-more .more-list .description-list-variable,
+.my-asset.solution .solution-more .info-box .solution-msg{@include text($size:14px);}
+.my-asset.solution .solution-more .more-list .description-list-variable .tit{color:$kb-ui02;position:relative;padding-left:10px;}
+.my-asset.solution .solution-more .more-list .description-list-variable .tit:before {position:absolute;top:50%;left:2px; display:block; content: ''; width: 3px; height: 3px; background-color: #484b51; margin-right: 5px;margin-top:-2px; }
+.my-asset.solution .solution-more .info-box .solution-msg{position:relative;padding:20px 20px 0;margin:20px -20px 0;border-top:1px solid $kb-ui07;text-align:center;}
+.my-asset.solution .solution-more .info-box .solution-msg img{width:24px;margin-right:10px;vertical-align:middle;}
+.my-asset.solution .key-point{padding-top:32px;padding-bottom:32px;border-bottom:10px solid $kb-ui10;}
+.my-asset.solution .key-point .tit{margin-top:20px;}
+.my-asset.solution .key-point .txt{@include text($size:14px);margin-top:18px;}
+.my-asset.solution .key-point .btn-area{margin-top:28px;}
+.my-asset.solution .solution-tip{padding-top:32px;}
+.my-asset.solution .solution-tip > .tit{line-height:1.4;margin-top:24px;}
+.my-asset.solution .solution-tip .tab{margin-top:28px;margin-right:-24px;}
+.my-asset.solution .solution-tip .tab_contents{padding-bottom:30px;}
+.my-asset.solution .solution-tip .info-box{position:relative;background-color:$kb-ui10;border-radius:2px;margin-top:24px;padding:24px 40px 24px 20px;}
+.my-asset.solution .solution-tip .info-box .link{position:absolute;right:20px;top:50%;margin-top:-12px;width:24px;height:24px;}
+.my-asset.solution .solution-tip .info-box .link > span{@include hidden;}
+.my-asset.solution .solution-tip .info-box .tit{font-weight:bold;line-height:1.4;}
+.my-asset.solution .solution-tip .info-box .txt{color:$kb-ui04;margin-top:4px;}

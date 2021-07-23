@@ -1,0 +1,86 @@
+@import 'layered';
+
+.app{min-height:100%}
+
+.app-lnb{padding-top:20px;}
+.app-lnb:empty{padding-top:0;}
+// .app-lnb + .app-content .kb-sec:first-child{padding-top:0;}
+.app-content{padding-bottom:24px;}
+.app-content.bg-gray-bottom{padding-bottom:0px;}
+.app-content.bg-gray-bottom .kb-sec:last-of-type{padding-bottom:24px;}
+.ios.homebar .app-content{padding-bottom:58px;}
+
+.account-info li{@include text(14px);display:flex;justify-content:space-between;}
+.account-info li + li{margin-top:20px;}
+.account-info li .num{@include number(15px)}
+.account-info li > div{text-align:right;}
+
+
+
+//App Header 없는 풀페이지 팝업형 페이지
+.page-header{position:fixed;top:0;left:0;z-index:$level40;width:100%;min-height:48px;padding:12px 48px;background-color:$kb-ui11;text-align:center;}
+.page-header .tit{display:inline-block;line-height:24px;}
+.page-header .btn-close {
+    @include iconCancel($size: 16px, $thick: 2px, $color: $kb-ui02, $padding: 4px, $position: absolute);
+	right: 24px;top: 12px;
+}
+.page-header .btn-history-back{position:absolute;left:24px}
+.page-header + .kb-sec{margin-top:68px;}
+.page-header + .kb-sec .h1{padding-top:12px;}
+
+.app-pagination{display:flex;justify-content:center;align-items:center;margin-top:20px;}
+.app-pagination > .btn-prev{margin-left:12px;}
+.app-pagination > .btn-next{margin-right:12px;}
+.app-pagination .page-number{margin-left:20px;margin-right:20px;font-size:0;}
+.app-pagination .page-number span,
+.app-pagination .page-number strong{@include number($size:17px, $line-height:20px);display:inline-block;}
+.app-pagination .page-number strong{color:$kb-ui03;}
+.app-pagination .page-number span{margin-left:5px;color:$kb-ui05;}
+.app-pagination .page-number span:before{content:'/';display:inline-block;margin-right:5px;}
+
+//Datepicker
+.calendar-nav{position:relative;display:flex;justify-content:center;align-items:center;margin-left:(-2.4rem);margin-right:(-2.4rem);padding:17px 40px;background-color:$kb-ui10;}
+.calendar-nav strong{margin:0 16px;font-size:17px;font-weight:bold;line-height:20px;}
+.calendar-nav .btn-text{@include btnText($size:14px);position:absolute;left:24px;top:20px;}
+.calendar-nav .btn-text:after{content:'';position:absolute;bottom:0;left:0;right:0;height:2px;background-color:$kb-ui02}
+.calendar-nav .btn-text span{line-height:1;}
+.calendar-nav .btn-prev,
+.calendar-nav .btn-last{margin-left:10px;}
+.calendar-area{margin-top:16px;padding-top:24px;border-top:1px solid $kb-ui09;}
+.calendar-area th,
+.calendar-area td{text-align:center;}
+.calendar-area th{padding-top:0;padding-bottom:12px;color:$kb-ui04;line-height:1;}
+.calendar-area td{height:36px;font-size:17px;color:$kb-ui02;font-weight:bold;}
+.calendar-area td.today button{width:36px;height:36px;border-radius:50%;background-color:$color-yellow}
+.calendar-area .ui-datepicker{padding:0;}
+.calendar-area .ui-widget.ui-widget-content{width:100%;border:none;}
+.calendar-area .ui-datepicker table{margin-bottom:0;}
+.calendar-area .ui-datepicker .ui-datepicker-header{display:none;}
+.calendar-area .ui-datepicker-calendar{font-family:'KBFGText';}
+.calendar-area .ui-datepicker-calendar th span{@include text($size: 14px, $line-height:1, $weight: normal)}
+.calendar-area .ui-datepicker td span, 
+.calendar-area .ui-datepicker td a{@include number($size: 17px, $line-height:1, $weight: bold);width:36px;height:36px;margin:0 auto;padding:0;line-height:36px;text-align:center;}
+
+.calendar-area .ui-state-default, 
+.calendar-area .ui-widget-content .ui-state-default, 
+.calendar-area .ui-widget-header .ui-state-default, 
+.calendar-area .ui-button, 
+.calendar-area .ui-button.ui-state-disabled:hover, 
+.calendar-area .ui-button.ui-state-disabled:active{border:none;background-color:transparent;color:$kb-ui02;}
+.calendar-area .ui-state-disabled, 
+.calendar-area .ui-widget-content .ui-state-disabled, 
+.calendar-area .ui-widget-header .ui-state-disabled{opacity:1;}
+.calendar-area .ui-state-disabled .ui-state-default, 
+.calendar-area .ui-widget-content .ui-state-disabled .ui-state-default, 
+.calendar-area .ui-widget-header .ui-state-disabled .ui-state-default{color:$kb-ui07;}
+
+
+
+.calendar-area .ui-widget-content .ui-state-active{border:none;background-color:$color-yellow;border-radius:50%;}
+.calendar-area .ui-widget-content .ui-datepicker-today .ui-state-highlight{position:relative;}
+.calendar-area .ui-widget-content .ui-datepicker-today .ui-state-highlight:after{content:'';position:absolute;top:0;left:calc(50% - 2px);width:4px;height:4px;border-radius:50%;background-color:$color-yellow}
+
+.pdf-viewer{overflow:auto;display:flex;flex-flow:column;height:calc(100vh - 48px);padding:0;background-color:red;}
+.pdf-viewer .pdf-area{flex:1;}
+.pdf-viewer .sticky-bottom.sticky-bottom:not(.popup_buttons){padding-top:0;height:52px;}
+.ios.homebar .pdf-viewer > section + .sticky-bottom.sticky-bottom:not(.popup_buttons){height:86px;}

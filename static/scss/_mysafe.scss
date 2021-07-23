@@ -1,0 +1,246 @@
+/*전체 공통*/
+.safe-display-none{display:none!important;}
+.safe-flex100{flex:100%;}
+.safe-bg-gray{background-color: #f7f7f8;}
+.safe-plus{color:#ff5858;}
+.safe-minus{color:#287eff;}
+.safe-zero{color:#696e76;}
+.safe-content-plus{color:#ff5858;}
+.safe-content-plus:before{content:'';display:inline-block;width:0rem;height:0rem;margin-right:0.4rem;border-left:0.7rem solid transparent;border-right:0.7rem solid transparent;border-bottom:1.1rem solid #ff5858;}
+.safe-content-minus{color:#287eff;}
+.safe-content-minus:before{content:'';display:inline-block;width:0rem;height:0rem;margin-right:0.4rem;border-left:0.7rem solid transparent;border-right:0.7rem solid transparent;border-bottom:1.1rem solid #287eff;transform:rotate(180deg);}
+.safe-content-zero:before{content:'';display:inline-block;width:1.1rem;height:calc(0.5em - 0.2rem);margin-right:0.4rem;border-top:0.2rem solid #696e76;}
+
+/*히스토리백을 가진 풀팝업 공통*/
+.my-safe-back-top .btn-allmenu{display:none!important;}
+.my-safe-back-top .app-lnb{display:none;}
+.my-safe-back-top .content-box{margin-left:0;margin-right:0;}
+
+/* My금고 메인화면 공통 */
+.my-safe.bg-gray{background-color: #f7f7f8;}
+.my-safe .kb-sec .content-box{margin-left:0;margin-right:0;}
+.my-safe>.asset-my-safe{padding-bottom:1.6rem;font-weight:400;}
+.my-safe>.asset-my-safe .top-area{margin: 0 auto;}
+.my-safe>.asset-my-safe .top-area>.name-wrap{font-size:2.2rem;border-bottom:0rem solid #ffd338;}
+.my-safe>.asset-my-safe .top-area>.name-wrap .ctm-name{font-size:2.2rem;font-weight:bold;}
+.my-safe>.asset-my-safe .bottom-area .index-visual>img{width:28.7rem;height:auto;}
+.my-safe>.safe-asset-list .my-safe-asset-box{padding:0 2rem;}
+.my-safe>.safe-asset-list .my-safe-asset-box>li{height:7.2rem;border-bottom:0.1rem solid #ebeef0;line-height:7.2rem;}
+.my-safe>.safe-asset-list .my-safe-asset-box>li:last-of-type{border-bottom:0rem solid #ebeef0;}
+.my-safe>.safe-asset-list .my-safe-asset-box .h4{height:3.2rem;margin-left:1rem;font-size:1.6rem;line-height:3.2rem;}
+.my-safe>.safe-asset-list .my-safe-asset-box a{display:block;position:relative;width:100%;height:100%;}
+.my-safe>.safe-asset-list .my-safe-asset-box .icon-my-safe{background-color:#f2f2f2;background-image:url('../images/mysafe/main_icon_img.png');background-size:6.4rem 6.4rem;width:3.2rem;height:3.2rem;border-radius:50%;margin-top:2rem;}
+.my-safe>.safe-asset-list .my-safe-asset-box .icon-my-safe-01{background-position:0rem 0rem;}
+.my-safe>.safe-asset-list .my-safe-asset-box .icon-my-safe-02{background-position:3.2rem 0rem;}
+.my-safe>.safe-asset-list .my-safe-asset-box .icon-my-safe-03{background-position:0rem 3.2rem;}
+.my-safe>.safe-asset-list .my-safe-asset-box .icon-my-safe-04{background-position:3.2rem 3.2rem;}
+.my-safe>.safe-asset-list .my-safe-asset-box .my-safe-right-icon{position:absolute;top:50%;margin-top:-0.8rem;right:0;}
+.my-safe>.safe-asset-list .my-safe-asset-box .icon-arrow-right:before {border-top:0.1rem solid #484b51;border-right: 0.1rem solid #484b51;}
+
+/* My금고 바텀시트 공통 */
+.coffer-line>ul>li:first-of-type{border-top:0.1rem solid #ebeef0;}
+.coffer-line>ul>li{height:5.8rem;line-height:5.8rem;border-bottom:0.1rem solid #ebeef0;}
+.coffer-line>ul>li button{padding-right:0;text-align:center;font-weight:700;}
+.coffer-line>ul>li button:focus{outline:0;}
+.bottom-sheet .mysafe-btn-close{display:none;}
+
+/* [MYS_AS_17_01_00_P1] 메인화면(자산등록 전) */
+.my-safe>.data-bottom-empty{padding-bottom:14.4rem!important;}
+.my-safe>.asset-my-safe .bottom-area.empty-data{font-size:2rem;}
+.my-safe>.asset-my-safe .bottom-area.empty-data>p{line-height:2.5rem;font-size:1.6rem;padding:1rem 0rem 3rem;}
+.my-safe>.asset-my-safe .my-safe-asset-box .h4{height:3.2rem;margin-left:1rem;font-size:1.6rem;line-height:3.2rem;}
+
+/* [MYS_AS_17_01_00_P2] 메인화면(자산등록 후) */
+.my-safe>.asset-my-safe .bottom-area.en-data{padding-top:3rem;font-size:2rem;}
+.my-safe>.asset-my-safe .bottom-area.en-data>.my-safe-status>p{padding-bottom:1rem;font-size:1.4rem;line-height:1.4rem;}
+.my-safe>.asset-my-safe .bottom-area.en-data>.my-safe-status>p>.num{font-size:1.4rem;}
+.my-safe>.asset-my-safe .bottom-area.en-data>.my-safe-status>.my-safe-msg{line-height:1.8rem;font-size:1.8rem;padding:0;}
+.my-safe>.asset-my-safe .bottom-area.en-data>.my-safe-status>.my-total-value{padding-bottom:1.6rem;border-bottom:0.1rem solid #ebeef0;font-size:2rem;}
+.my-safe>.asset-my-safe .bottom-area.en-data>.my-safe-status>.my-total-value .num{font-size:2.2rem;font-weight:bold;}
+.my-safe>.asset-my-safe .bottom-area.en-data>.my-safe-status>.my-total-value .h4{font-size:inherit;}
+
+.my-safe .safe-asset-list-data .my-safe-asset-box{padding:0rem 2rem 0.8rem 2rem;}
+.my-safe .safe-asset-list-data .my-safe-asset-box>li{display:block;width:100%;height:inherit;line-height:inherit;}
+.my-safe .safe-asset-list-data .my-safe-asset-box>li:nth-of-type(1){height:7.2rem;border-bottom:0.1rem solid #ebeef0;line-height:7.2rem;}
+.my-safe .safe-asset-list-data .my-safe-asset-box>li:nth-of-type(1) a{display:block;position:relative;width:100%;height:100%;}
+.my-safe .safe-asset-list-data .my-safe-asset-box>li:last-of-type{padding-top:1.2rem;padding-bottom:1.2rem;}
+
+.my-safe .safe-asset-list-data .my-safe-asset-box>.total-my-safe-value{padding-top:2rem;padding-bottom:1rem;border-top:0.1rem solid #ebeef0;font-size:1.6rem;font-weight:bold;}
+.my-safe .safe-asset-list-data .my-safe-asset-box .description-list{font-size:1.4rem;}
+.my-safe .safe-asset-list-data .my-safe-asset-box>li>dl>dd .num{font-size:1.6rem;}
+.my-safe .safe-asset-list-data .my-safe-asset-box .description-list .num{font-size:1.4rem;}
+.my-safe .safe-asset-list-data .my-safe-asset-box>li:last-of-type{border-top:0.1rem solid #484b51;}
+.my-safe .safe-asset-list-data .my-safe-asset-box>li a{display:-ms-flexbox;display:flex;-ms-flex-pack:justify;justify-content:space-between;-ms-flex-align:center;align-items:center;width:100%;height:auto;padding-bottom:1.2rem;}
+.my-safe .safe-asset-list-data .my-safe-asset-box>li a .h4{flex:calc(100% - 1.8rem);font-size:1.6rem;line-height:1.6rem;}
+.my-safe .safe-asset-list-data .my-safe-asset-box>li a .my-safe-right-icon{flex:1;}
+.my-safe .safe-asset-list-data .my-safe-asset-box>li>dl{display:-ms-flexbox;display:flex;-ms-flex-pack:justify;justify-content:space-between;-ms-flex-align:center;align-items:center;width:100%;}
+
+.my-safe .safe-asset-list-data .my-safe-asset-box>li>ul>li{border-bottom:0.1rem solid #ebeef0;}
+.my-safe .safe-asset-list-data .my-safe-asset-box>li>ul>li{padding-top:1.2rem;padding-bottom:1.2rem;}
+.my-safe .safe-asset-list-data .my-safe-asset-box>li>ul>li:first-of-type{padding-top:0.8rem;padding-bottom:1.2rem;}
+.my-safe .safe-asset-list-data .my-safe-asset-box>li>ul>li:last-of-type{border-bottom:0rem solid #ebeef0;padding-top:1.2rem;padding-bottom:0rem;}
+.my-safe .safe-asset-list-data .my-safe-asset-box>li>ul>li>.description-list{display:flex;justify-content:space-between;font-size:1.6rem;line-height:1.6rem;}
+.my-safe .safe-asset-list-data .my-safe-asset-box>li>ul>li>.description-list>dt{margin:0;}
+.my-safe .safe-asset-list-data .my-safe-asset-box>li>ul>li>.description-list>dd .num{font-size:1.6rem;line-height:1.6rem;}
+
+
+
+/* [MYS_AS_17_01_02_P1] My자산 등록 */
+.my-safe-enrollment .kb-sec>.name-wrap{font-size:2.2rem;border-bottom:0rem solid #ffd338;padding: 1rem 0rem;}
+.my-safe-enrollment .kb-sec>.name-wrap .ctm-name{font-size:2.2rem;font-weight:bold;}
+.my-safe-enrollment .kb-sec>p{line-height:2.5rem;font-size:1.6rem;padding:1rem 0rem;}
+.my-safe-enrollment .kb-sec .index-visual>img{width:5.3rem;height:auto;}
+
+.my-safe-enrollment .my-safe-asset-box{padding:0 2rem;}
+.my-safe-enrollment .my-safe-asset-box>li{height:7.2rem;border-bottom:0.1rem solid #ebeef0;line-height:7.2rem;}
+.my-safe-enrollment .my-safe-asset-box>li:last-of-type{border-bottom:0rem solid #ebeef0;}
+.my-safe-enrollment .my-safe-asset-box .h4{height:3.2rem;margin-left:1rem;font-size:1.6rem;line-height:3.2rem;}
+.my-safe-enrollment .my-safe-asset-box a{display:block;position:relative;width:100%;height:100%;}
+.my-safe-enrollment .my-safe-asset-box .icon-my-safe{background-color:#f2f2f2;background-image:url('../images/mysafe/main_icon_img.png');background-size:6.4rem 6.4rem;width:3.2rem;height:3.2rem;border-radius:50%;margin-top:2rem;}
+.my-safe-enrollment .my-safe-asset-box .icon-my-safe-01{background-position:0rem 0rem;}
+.my-safe-enrollment .my-safe-asset-box .icon-my-safe-02{background-position:3.2rem 0rem;}
+.my-safe-enrollment .my-safe-asset-box .icon-my-safe-03{background-position:0rem 3.2rem;}
+.my-safe-enrollment .my-safe-asset-box .icon-my-safe-04{background-position:3.2rem 3.2rem;}
+.my-safe-enrollment .my-safe-asset-box .my-safe-right-icon{position:absolute;top:50%;margin-top:-0.8rem;right:0;}
+.my-safe-enrollment .my-safe-asset-box .icon-arrow-right:before {border-top:0.1rem solid #484b51;border-right: 0.1rem solid #484b51;}
+
+/* [MYS_AS_17_01_03_P1] 현금(원화/외화) 목록 */
+
+
+/* 금 공통 */
+.my-safe-pop-gold>.kb-sec .empty-gold-unit-info{padding-left:0.2rem;color:#696e76;}
+.my-safe-pop-gold>.kb-sec label{padding-top:0.4rem;}
+.my-safe-pop-gold>.kb-sec .pop-notice .h4{display:block;width:90%;min-width:23.1rem;line-height:2.3rem;}
+.my-safe-pop-gold>.kb-sec .pop-notice.wide .h4{width:100%;}
+.my-safe-pop-gold>.kb-sec.gold-input-form{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:flex-end;width:100%;}
+.my-safe-pop-gold>.kb-sec .gold-input-form{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:baseline;width:100%;}
+.my-safe-pop-gold>.kb-sec .safe-relative-flex{display:flex;position:relative;flex-wrap:wrap;justify-content:space-between;align-items:flex-end;width:100%;padding-bottom:28px;}
+.my-safe-pop-gold>.kb-sec .pop-notice.header {width:100%;padding-bottom:4.6rem;color:#26282c;font-weight:bold;border-bottom:0.1rem solid #484b51;}
+.my-safe-pop-gold>.kb-sec .tit {flex:100%;display:block;width:100%;font-size:1.6rem;font-weight:normal;line-height:2.4rem;}
+.my-safe-pop-gold>.kb-sec .my-gold-conversion{font-size:1.4rem;line-height:2rem;}
+.my-safe-pop-gold>.kb-sec .my-gold-conversion-position{position:absolute;right:0;bottom:0;font-size:1.4rem;line-height:2rem;}
+.my-safe-pop-gold>.kb-sec .gold-input-num{flex:1;max-width:69%;}
+.my-safe-pop-gold>.kb-sec .gold-unit-form{flex:1;max-width:27%;margin-top:0;}
+.my-safe-pop-gold>.kb-sec .button-area{margin-top:1rem;}
+.my-safe-pop-gold>.kb-sec p{margin-top:1rem;}
+.my-safe-pop-gold>.kb-sec .gold-input-shape{margin-top:1rem;}
+
+.my-safe-pop-gold>.kb-sec .safe-flex-wrap{display:flex;flex:100%;flex-wrap:nowrap;-ms-flex-pack:justify;justify-content:space-between;-ms-flex-align:center;align-items:center;}
+.my-safe-pop-gold>.kb-sec .safe-flex-wrap p{display:flex;flex:80%;align-items:flex-start;opacity:0;}
+.my-safe-pop-gold>.kb-sec .safe-flex-wrap .tit{display:inherit;display:flex;flex:inherit;flex:27%;flex-direction:row-reverse;align-items:flex-end;width:15.2rem!important;padding-right:0.4rem;color:#696e76;}
+
+/* 기타자산 공통 */
+.my-safe-pop-etc>.kb-sec .empty-etc-unit-info{color:#696e76;}
+.my-safe-pop-etc>.kb-sec .etc-input-form{width:100%;}
+.my-safe-pop-etc>.kb-sec label{padding-top:0.4rem;}
+.my-safe-pop-etc>.kb-sec .pop-notice .h4{display:block;width:70.78%;min-width:23.1rem;line-height:2.3rem;}
+.my-safe-pop-etc>.kb-sec .pop-notice.header{width:100%;padding-bottom:4.6rem;color:#26282c;font-weight:bold;border-bottom:0.1rem solid #484b51;}
+.my-safe-pop-etc>.kb-sec{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:baseline;}
+.my-safe-pop-etc>.kb-sec .tit {flex:100%;display:block;width:100%;font-size:1.6rem;font-weight:normal;line-height:2.4rem;}
+.my-safe-pop-etc>.kb-sec .my-etc-conversion{font-size:1.4rem;line-height:2rem;}
+.my-safe-pop-etc>.kb-sec .button-area{margin-top:1rem;}
+.my-safe-pop-etc>.kb-sec p{margin-top:1rem;}
+.my-safe-pop-etc>.kb-sec .etc-input-shape{margin-top:1rem;}
+
+.my-safe-pop-etc>.kb-sec .my-etc-value-info{flex:1;opacity:0;}
+
+/* 목록 공통 */
+.my-safe-list.bg-gray{background-color: #f7f7f8;}
+.my-safe-list .kb-sec:first-child{padding-top:3.5rem;}
+.my-safe-list>.kb-sec .pop-notice.header{padding-bottom:1.3rem;color:#26282c;font-weight:bold;border-bottom:0.1rem solid #484b51;}
+.my-safe-list>.kb-sec .pop-notice.header>span{display:flex;}
+.my-safe-list>.kb-sec .pop-notice.header .icon-my-safe-list{flex:1;width:6.5rem;height:6.5rem;}
+.my-safe-list>.kb-sec .pop-notice.header .icon-my-safe-list-money{background-image:url(../images/mysafe/list_top_money.png);background-repeat:no-repeat;background-size:5.2rem;background-position:0rem 0.3rem;}
+.my-safe-list>.kb-sec .pop-notice.header .icon-my-safe-list-gold{background-image:url(../images/mysafe/list_top_gold.png);background-repeat:no-repeat;background-size:4.2rem;background-position:0.5rem 0rem;}
+.my-safe-list>.kb-sec .pop-notice.header .icon-my-safe-list-etc{background-image:url(../images/mysafe/list_top_etc.png);background-repeat:no-repeat;background-size:5rem;background-position:0rem 0.4rem;}
+.my-safe-list>.kb-sec .pop-notice.header .h4{flex:calc(100% - 14rem);line-height:2.4rem;}
+
+.my-safe-list>.kb-sec .my-safe-status{font-size:2rem;font-weight:bold;}
+.my-safe-list>.kb-sec .my-safe-status .my-total-value{height:6rem;border-bottom:0.1rem solid #ebeef0;line-height:6rem;}
+.my-safe-list>.kb-sec .my-safe-status .my-total-value>dl{width:100%;height:100%;}
+.my-safe-list>.kb-sec .my-safe-status .my-total-value .num{font-size:1.8rem;}
+.my-safe-list>.kb-sec .my-safe-status .my-total-value .description-list.type2 dt .total-safe-info{font-size:1.8rem;font-weight:bold;color:#26282c;}
+.my-safe-list>.kb-sec .my-safe-status .my-total-value .description-list.type2 dd{font-size:1.8rem;font-weight:bold;}
+
+.my-safe-list>.kb-sec .my-safe-status .my-variance-value{height:5.3rem;padding-top:2.4rem;}
+.my-safe-list>.kb-sec .my-safe-status .my-variance-value .description-list{height:1.6rem;padding:0;line-height:1.6rem;}
+.my-safe-list>.kb-sec .my-safe-status .my-variance-value .description-list.type2 dt{margin:0;font-size:1.4rem;}
+// .my-safe-list>.kb-sec .my-safe-status .my-variance-value .num:before{content:'';display:inline-block;width:0rem;height:0rem;margin-right:0.4rem;border-left:0.7rem solid transparent;border-right:0.7rem solid transparent;border-bottom:1.1rem solid #ff5858;}
+.my-safe-list>.kb-sec .my-safe-status .description-list dd.safe-content-plus{color:#ff5858;}
+.my-safe-list>.kb-sec .my-safe-status .description-list dd.safe-content-minus{color:#287eff;}
+.my-safe-list>.kb-sec .my-safe-status .my-variance-value .num{font-size:1.4rem;}
+.my-safe-list>.kb-sec .my-safe-status .my-variance-value .num.safe-minus{color:#287eff;}
+
+.my-safe-list>.kb-sec .my-safe-asset-box{padding:2rem 2rem 0.8rem 2rem;}
+.my-safe-list>.kb-sec .my-safe-asset-box>li{display:block;width:100%;}
+.my-safe-list>.kb-sec .my-safe-asset-box>li:nth-of-type(2){padding-top:1.2rem;padding-bottom:1.2rem;border-top:0.1rem solid #ebeef0;}
+.my-safe-list>.kb-sec .my-safe-asset-box>li a{display:-ms-flexbox;display:flex;-ms-flex-pack:justify;justify-content:space-between;-ms-flex-align:center;align-items:center;width:100%;height:auto;padding-bottom:1.2rem;}
+.my-safe-list>.kb-sec .my-safe-asset-box>li a .h4{flex:calc(100% - 1.8rem);font-size:1.6rem;line-height:1.6rem;}
+.my-safe-list>.kb-sec .my-safe-asset-box>li a .my-safe-right-icon{flex:1;}
+.my-safe-list>.kb-sec .my-safe-asset-box>li>dl{display:-ms-flexbox;display:flex;-ms-flex-pack:justify;justify-content:space-between;-ms-flex-align:center;align-items:center;width:100%;}
+.my-safe-list>.kb-sec .my-safe-asset-box>li>dl dt{color:#696e76;}
+.my-safe-list>.kb-sec .my-safe-asset-box>li>dl dt .num{font-size:1.6rem;}
+.my-safe-list>.kb-sec .my-safe-asset-box>li>dl dd{font-weight:bold;}
+
+.my-safe-list>.kb-sec .my-safe-asset-box .my-variance-value{display:none;padding-bottom:1.2rem;}
+.my-safe-list>.kb-sec .my-safe-asset-box .my-variance-value .description-list{height:1.6rem;padding:0;line-height:1.6rem;}
+.my-safe-list>.kb-sec .my-safe-asset-box .my-variance-value .description-list.type2 dt{margin:0;font-size:1.4rem;}
+.my-safe-list>.kb-sec .my-safe-asset-box .my-variance-value .description-list.type2 dd{font-weight:normal;}
+// .my-safe-list>.kb-sec .my-safe-asset-box .my-variance-value .num:before{content:'';display:inline-block;width:0rem;height:0rem;margin-right:0.4rem;border-left:0.7rem solid transparent;border-right:0.7rem solid transparent;border-bottom:1.1rem solid #ff5858;}
+.my-safe-list>.kb-sec .my-safe-asset-box .my-variance-value .num{font-size:1.4rem;}
+.my-safe-list>.kb-sec .my-safe-asset-box .my-variance-value .num.safe-plus{color:#ff5858;}
+.my-safe-list>.kb-sec .my-safe-asset-box .my-variance-value .num.safe-minus{color:#287eff;}
+
+/* [MYS_AS_17_01_07_P1] 금 목록 */
+
+/* [MYS_AS_17_01_08_P1] 금 등록 */
+
+/* [MYS_AS_17_01_08_BS1] 금 형태선택(바텀시트) */
+
+/* [MYS_AS_17_01_08_BS2] 금 단위선택(바텀시트) */
+
+/* [MYS_AS_17_01_08_P2] 금 조회 및 수정/삭제 */
+
+/* [MYS_AS_17_01_09_P1] 휴대폰 목록 */
+
+/* [MYS_AS_17_01_10_P1] 휴대폰 등록 */
+
+/* [MYS_AS_17_01_10_BS1] 제조사(바텀시트) */
+
+/* [MYS_AS_17_01_10_BS2] 모델(바텀시트) */
+
+/* [MYS_AS_17_01_10_BS3] 용량(바텀시트) */
+
+/* [MYS_AS_17_01_10_P2] 휴대폰 조회 및 수정/삭제 */
+
+/* [MYS_AS_17_01_10_P3] 휴대폰 시세조회 */
+
+/* [MYS_AS_17_01_09_P2] 휴대폰 모델 등록(아이폰 S) */
+
+/* [MYS_AS_17_01_09_P3] 휴대폰 모델 등록(아이폰 A) */
+
+/* [MYS_AS_17_01_09_P4] 휴대폰 모델 등록(아이폰 B) */
+
+/* [MYS_AS_17_01_09_P5] 휴대폰 모델 등록(아이폰 C) */
+
+/* [MYS_AS_17_01_09_P6] 휴대폰 모델 등록(아이폰 D) */
+
+/* [MYS_AS_17_01_09_P7] 휴대폰 모델 등록(갤럭시 및 기타 S) */
+
+/* [MYS_AS_17_01_09_P8] 휴대폰 모델 등록(갤럭시 및 기타 A) */
+
+/* [MYS_AS_17_01_09_P9] 휴대폰 모델 등록(갤럭시 및 기타 B) */
+
+/* [MYS_AS_17_01_09_P10] 휴대폰 모델 등록(갤럭시 및 기타 C) */
+
+/* [MYS_AS_17_01_09_P11] 휴대폰 모델 등록(갤럭시 및 기타 D) */
+
+/* [MYS_AS_17_01_11_P1] 기타자산 목록 */
+
+/* [MYS_AS_17_01_12_P1] 기타자산 등록 */
+
+/* [MYS_AS_17_01_12_BS1] 기타자산 종류(바텀시트) */
+
+/* [MYS_AS_17_01_12_P2] 기타자산 조회 및 수정/삭제 */
+
+/* [MYS_AS_17_01_13_P1] 자산등록완료 */
